@@ -10,12 +10,12 @@
 $brand-primary: #0d9dff !default;
 $brand-success: #84ce3c !default;
 $brand-warning: #fcd116 !default;
-$brand-danger:  #fc483f !default;
-$brand-info:    #114fc9 !default;
-$grey:    #cccccc !default;
-$black:    #000000 !default;
-$blue-dark:   #0c5c81 !default;
-$white:   #ffffff !default;
+$brand-danger: #fc483f !default;
+$brand-info: #114fc9 !default;
+$grey: #cccccc !default;
+$black: #000000 !default;
+$blue-dark: #0c5c81 !default;
+$white: #ffffff !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 body {
   padding-top: 70px;
@@ -36,17 +36,18 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
   display: block;
 }
-a, .btn {
+.btn,
+a {
   cursor: pointer;
   @include transition(all ease 300ms);
 }
 //bootstrap forms
-.input-lg,
+.btn,
+.form-control,
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
-.btn,
-.form-control {
+.input-lg {
   border-radius: 0;
   @include box-shadow(none);
 }
@@ -55,6 +56,161 @@ a, .btn {
   outline: 0;
   @include box-shadow(none);
 }
+.navbar-default .navbar-nav > li > a {
+  border-right: 2px solid #36438c;
+  margin: 18px 0;
+  padding: 0 14px;
+  line-height: 10px;
+}
+.hbc {
+  border: none;
+  background-color: #F3CB2C;
+}
+.yec {
+  background: #ffd72b;
+}
+.ims {
+  width: 100%;
+}
+.himg {
+  height: 65px;
+  width: 66px;
+  background-color: #fff;
+  box-shadow: 0 0 0 5px #ffffff;
+}
+.hdp {
+  width: 255px;
+  padding: 25px 0 4px;
+  font-weight: 700;
+  color: #0b358c;
+}
+.imgab {
+  width: 29%;
+  position: absolute;
+}
+.himg2 {
+  display: inline-block;
+  width: 44%;
+  text-align: left;
+  background: rgba(2, 44, 125, 0.77);
+  padding: 3% 2% 3% 16%;
+  margin-left: 15%;
+  margin-top: 2.5%;
+  border-radius: 24px;
+}
+label {
+  font-size: 26px;
+}
+.form-control {
+  border-bottom: 4px solid #ffd72b;
+  font-size: 32px;
+  color: #fdd52b;
+  padding: 0 12px 2px 0;
+  height: auto;
+  background: rgba(0, 0, 0, 0);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-weight: bolder;
+}
+option {
+  font-size: 20px;
+}
+.arow {
+  padding: 5%;
+  text-align: center;
+}
+.m2 {
+  padding: 2%;
+  background: #fff;
+}
+.hdn {
+  width: 233px;
+  padding: 25px 0 0;
+  font-weight: bolder;
+  color: #0b358c;
+  font-size: 17px;
+}
+.navbar-brand {
+  float: left;
+  padding: 10px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 50px;
+}
+.imAb {
+  width: 250px;
+}
+.spAb {
+  display: inline-block;
+  padding-left: 5%;
+  text-align: left;
+  h1 {
+    font-size: 56px;
+    font-weight: bolder;
+    color: #002b7f;
+  }
+}
+.ain {
+  font-size: 11px;
+  color: #002b7f;
+}
+.sado {
+  font-weight: 600;
+  float: right;
+  font-size: 13px;
+  color: #fff;
+  background-image: url("../img/btn-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 4px 25px;
+}
+.navbar-nav > li {
+  float: left;
+  color: #000;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #002b7f;
+}
+.tp {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+  padding-left: 77px;
+  color: #000;
+}
+figure {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding: 0;
+  color: #fff;
+  margin: 0;
+}
+figure:hover figcaption {
+  opacity: 1;
+}
+figure figcaption {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  height: auto;
+}
+figure .links {
+  text-align: center;
+  margin: 10% 0;
+  height: 100%;
+}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
+@media (max-width: 768px) {
+  .tp {
+    padding-left: 2px;
+  }
+}
