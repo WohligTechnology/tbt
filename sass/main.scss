@@ -322,6 +322,8 @@ strong{  color: #ffd72b;
     //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
+@import "main2";
+@import "mobile";
 @media (max-width: 768px) {
   .tp {
     padding-left: 2px;
