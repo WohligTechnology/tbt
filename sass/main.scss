@@ -18,7 +18,7 @@ $blue-dark: #0c5c81 !default;
 $white: #ffffff !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 body {
-  padding-top: 70px;
+  padding-top: 59px;
 }
 img.loading {
   text-align: center;
@@ -62,10 +62,15 @@ a {
   padding: 0 14px;
   line-height: 10px;
 }
-.row{margin:0px !important}
+.row {
+  margin: 0 !important;
+}
 .hbc {
   border: none;
   background-color: #F3CB2C;
+  .rit {
+    text-align: right;
+  }
 }
 .yec {
   background: #ffd72b;
@@ -73,8 +78,53 @@ a {
 .ims {
   width: 100%;
 }
-.inm,.inm2{margin: 3% 3% 0% 3%;
-.p{    font-weight: 600;
+.inm {
+  margin: 6% 5% 0;
+}
+.arrow {
+  background: #f3cb2c;
+  color: #f3cb2c;
+  padding: 2px 0;
+}
+.mararrow {
+  margin: 0 5%;
+}
+.pcolHup {
+  background: linear-gradient(to right, rgb(255, 255, 255) 41%,rgb(255, 255, 255) 41%,rgb(255, 255, 255) 41%,rgb(255, 255, 255) 47%,rgb(243, 203, 44) 47%);
+}
+.pcolDown {
+  background: linear-gradient(to right, rgb(243, 203, 44) 41%,rgb(243, 203, 44) 41%,rgb(243, 203, 44) 41%,rgb(243, 203, 44) 47%,rgb(255, 255, 255) 47%);
+}
+.inm,
+.inm2 {
+  .backcolor {
+    background: (rgba(255, 0, 0, 0));
+    background: -webkit-linear-gradient(rgba(255, 0, 0, 0), rgba(62, 62, 60, 0.65));
+    background: -o-linear-gradient(rgba(255, 0, 0, 0), rgba(62, 62, 60, 0.65));
+    background: -moz-linear-gradient(rgba(255, 0, 0, 0), rgba(62, 62, 60, 0.65));
+    background: linear-gradient(rgba(255, 0, 0, 0), rgba(62, 62, 60, 0.65));
+  }
+  .padup {
+    padding: 81% 0 0;
+    p {
+      font-weight: 600;
+    }
+  }
+  .bg {
+    background: rgba(24, 60, 135, 0.7);
+  }
+  .inmIMG {
+    width: 46%;
+    margin-bottom: 28%;
+  }
+  .imghover {
+    padding: 39% 0 0;
+    p {
+      font-weight: 600;
+    }
+  }
+  .p {
+    font-weight: 600;
     float: right;
     font-size: 24px;
     color: #fff;
@@ -82,13 +132,45 @@ a {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 5px 25px;
-    margin: 0px;}
-  .p2{    margin: 0px;
-    font-size: 50px;
-    font-weight: bold;
-    color: #f3cb2c;}}
-
-.inm2{margin: 0% 3% 3% 3%;}
+    margin: 0;
+  }
+  .p1 {
+    margin-right: 16%;
+  }
+  .p2 {
+    font-size: 57px;
+    font-weight: bolder;
+    color: #f3cb2c;
+    position: absolute;
+  }
+  .p22 {
+    text-align: right;
+    margin-right: -9px;
+    z-index: 10;
+    margin-top: 22px;
+  }
+  .p222 {
+    margin: 8% 0 0 -3%;
+  }
+  .pcol {
+    padding: 22px 0 0 !important;
+  }
+  .pcol2 {
+    padding: 0 0 22px !important;
+  }
+  .colba {
+    background: #f3cb2c;
+  }
+}
+.inm2 {
+  margin: 0 5% 6%;
+}
+.colup {
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 20%,rgba(255,255,255,1) 17%,rgba(255,255,255,1) 17%,rgb(255, 215, 43) 17%);
+}
+.coldown {
+  background: linear-gradient(to bottom, rgb(255, 215, 43) 29%,rgb(234, 206, 38) 80%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%,rgba(255,255,255,1) 100%);
+}
 .himg {
   height: 65px;
   width: 66px;
@@ -131,8 +213,7 @@ label {
   font-weight: bolder;
 }
 option {
-
-    color: #33548e;
+  color: #33548e;
   font-size: 20px;
 }
 .arow {
@@ -144,7 +225,6 @@ option {
   background: #fff;
 }
 .hdn {
-  width: 233px;
   padding: 25px 0 0;
   font-weight: bolder;
   color: #0b358c;
@@ -159,7 +239,7 @@ option {
 }
 .imAb {
   width: 250px;
-      margin-top: -97px;
+  margin-top: -97px;
 }
 .spAb {
   width: 50%;
@@ -172,12 +252,11 @@ option {
     color: #002b7f;
   }
   .ain {
-        margin: 0px;
+    margin: 0;
     font-size: 13px;
     color: #002b7f;
   }
 }
-
 .sado {
   font-weight: 600;
   float: right;
@@ -186,7 +265,7 @@ option {
   background-image: url("../img/btn-bg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-      padding: 12px 25px;
+  padding: 12px 25px;
 }
 .navbar-nav > li {
   float: left;
@@ -286,7 +365,7 @@ figure .links {
     color: #555555;
     background-color: #fff;
     background-image: none;
-    border-radius: 0px;
+    border-radius: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -294,32 +373,65 @@ figure .links {
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   }
 }
-  .stp{   padding: 0% 0% 23px 0%;
+.stp {
+  padding: 0 0 23px;
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+}
+.imgf {
+  margin: 0 0 0 -47px;
+  width: 237px;
+  position: absolute;
+}
+.mf {
+  padding: 3%;
+  background: #002b7f;
+  .st {
     display: block;
-    font-size: 20px;
-    font-weight: 500;
+    padding-left: 15px;
   }
-  .imgf{    margin: -1px 0px 0px -47px;
-width: 237px;
-position: absolute;}
-.mf{    padding: 3%;
-    background: #002b7f;
-    .st{display: block;
-        padding-left: 15px;
-      }
-      a{    color: #ffd72b;}
-      a:hover{color: #ffd72b;}
-  p{ color:#fff;font-size: 17px;
-    word-spacing: 6px;}
-strong{  color: #ffd72b;
-    }}
-    .footb{background: #000;
-    .fc{    padding: 1% 0%;}
-    .fcenter{text-align: center}
-  p{    margin: 0px;
+  a {
+    color: #ffd72b;
+  }
+  a:hover {
+    color: #ffd72b;
+  }
+  p {
+    color: #fff;
+    font-size: 17px;
+    word-spacing: 6px;
+  }
+  strong {
+    color: #ffd72b;
+  }
+}
+.footb {
+  background: #000;
+  .fc {
+    padding: 1% 0;
+  }
+  .fcenter {
+    text-align: center;
+  }
+  p {
+    margin: 0;
     font-size: 12px;
-    color: #807b7b;}}
-    //bootstrap forms
+    color: #807b7b;
+  }
+}
+@media (min-width: 768px){
+.container {
+    width: auto !important; 
+}
+}
+@media only screen and (max-width: 1205px) {
+  .tp {
+    padding-left: 0px;}
+
+}
+
+//bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
 @import "main2";
