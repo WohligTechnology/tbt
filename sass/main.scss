@@ -115,6 +115,8 @@ label {
   font-weight: bolder;
 }
 option {
+
+    color: #33548e;
   font-size: 20px;
 }
 .arow {
@@ -168,7 +170,7 @@ option {
   background-image: url("../img/btn-bg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  padding: 4px 25px;
+      padding: 12px 25px;
 }
 .navbar-nav > li {
   float: left;
@@ -276,7 +278,32 @@ figure .links {
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   }
 }
-//bootstrap forms
+  .stp{   padding: 0% 0% 23px 0%;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .imgf{    margin: -1px 0px 0px -47px;
+width: 237px;
+position: absolute;}
+.mf{    padding: 3%;
+    background: #002b7f;
+    .st{display: block;
+        padding-left: 15px;
+      }
+      a{    color: #ffd72b;}
+      a:hover{color: #ffd72b;}
+  p{ color:#fff;font-size: 17px;
+    word-spacing: 6px;}
+strong{  color: #ffd72b;
+    }}
+    .footb{background: #000;
+    .fc{    padding: 1% 0%;}
+    .fcenter{text-align: center}
+  p{    margin: 0px;
+    font-size: 12px;
+    color: #807b7b;}}
+    //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
 @media (max-width: 768px) {
