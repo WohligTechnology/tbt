@@ -17,6 +17,10 @@ $black: #000000 !default;
 $blue-dark: #0c5c81 !default;
 $white: #ffffff !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@font-face{
+  font-family:"PalanquinDark-Regular";
+  src:url("../fonts/PalanquinDark-Regular.ttf");
+}
 body {
   padding-top: 59px;
 }
@@ -422,7 +426,7 @@ figure .links {
 }
 @media (min-width: 768px){
 .container {
-    width: auto !important; 
+    width: auto !important;
 }
 }
 @media only screen and (max-width: 1205px) {
