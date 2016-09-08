@@ -18,20 +18,23 @@ $blue-dark: #0c5c81 !default;
 $white: #ffffff !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @font-face {
-  font-family: "font1";
+  font-family: "pregular";
   src: url("../fonts/PalanquinDark-Regular.ttf");
 }
 @font-face {
-  font-family: "font2";
+  font-family: "Roboto";
   src: url("../fonts/Roboto-Light_1.ttf");
+  font-weight: 300;
 }
 @font-face {
-  font-family: "font3";
+  font-family: "Robotor";
   src: url("../fonts/Roboto-Regular_1.ttf");
+  font-weight: 400;
 }
 @font-face {
-  font-family: "font4";
+  font-family: "theboldfont";
   src: url("../fonts/theboldfont.ttf");
+  font-weight: 700;
 }
 body {
   padding-top: 59px;
@@ -48,6 +51,24 @@ img {
 }
 img.doneLoading {
   opacity: 1;
+}
+.Roboto-r{  font-family: 'Robotor';}
+
+.p-regular{  font-family: 'pregular';}
+
+.theboldfont{  font-family: 'theboldfont';}
+
+.roboto-f{
+  font-family: 'roboto';
+}
+.f-bold{
+  font-weight: 700;
+}
+.f-light{
+  font-weight: 300;
+}
+.f-regular{
+  font-weight: 400;
 }
 nav li:hover .dropdown-menu {
   display: block;
