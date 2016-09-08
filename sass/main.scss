@@ -20,6 +20,16 @@ $white: #ffffff !default;
 @font-face{
   font-family:"PalanquinDark-Regular";
   src:url("../fonts/PalanquinDark-Regular.ttf");
+
+  font-family:"Roboto-Light_1";
+  src:url("../fonts/Roboto-Light_1.ttf");
+
+  font-family:"Roboto-Regular_1";
+  src:url("../fonts/Roboto-Regular_1.ttf");
+
+  font-family:"theboldfont";
+  src:url("../fonts/theboldfont.ttf");
+
 }
 body {
   padding-top: 59px;
@@ -61,14 +71,13 @@ a {
   @include box-shadow(none);
 }
 .navbar-default .navbar-nav > li > a {
+      font-family: PalanquinDark-Regular;
   border-right: 2px solid #36438c;
   margin: 18px 0;
   padding: 0 14px;
   line-height: 10px;
 }
-.row {
-  margin: 0 !important;
-}
+
 .hbc {
   border: none;
   background-color: #F3CB2C;
@@ -79,9 +88,7 @@ a {
 .yec {
   background: #ffd72b;
 }
-.ims {
-  width: 100%;
-}
+
 .inm {
   margin: 6% 5% 0;
 }
@@ -169,12 +176,6 @@ a {
 .inm2 {
   margin: 0 5% 6%;
 }
-.colup {
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 20%,rgba(255,255,255,1) 17%,rgba(255,255,255,1) 17%,rgb(255, 215, 43) 17%);
-}
-.coldown {
-  background: linear-gradient(to bottom, rgb(255, 215, 43) 29%,rgb(234, 206, 38) 80%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%,rgba(255,255,255,1) 100%);
-}
 .himg {
   height: 65px;
   width: 66px;
@@ -182,6 +183,7 @@ a {
   box-shadow: 0 0 0 5px #ffffff;
 }
 .hdp {
+  font-family: theboldfont;
   width: 255px;
   padding: 25px 0 4px;
   font-weight: 700;
@@ -220,19 +222,32 @@ option {
   color: #33548e;
   font-size: 20px;
 }
-.arow {
+.aboutin {
+  background: #ffd72b;
   padding: 5%;
   text-align: center;
 }
 .m2 {
   padding: 2%;
-  background: #fff;
+background: #fff;
+}
+.fcenter {
+  i{ background-color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  margin: 2px 1px;}
+    a{   color: #ffd72b; font-size: 10px;}
 }
 .hdn {
-  padding: 25px 0 0;
+  padding: 25px 10px 0;
   font-weight: bolder;
   color: #0b358c;
   font-size: 17px;
+  i{          background-color: white;
+    border-radius: 50%;
+    padding: 4px 6px;}
+    a{       color: #ffd72b;
+    font-size: 12px;}
 }
 .navbar-brand {
   float: left;
@@ -305,10 +320,14 @@ option {
   padding-left: 77px;
   color: #000;
 }
+.paddup{ background: linear-gradient(to bottom, white 31%, white 17%, white 17%, #ffd72b 17%);}
+
+.padddown{background: linear-gradient(to bottom, rgb(255, 215, 43) 29%,rgb(234, 206, 38) 80%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%,rgba(255,255,255,1) 100%); }
+
+.padd{ padding: 0% 6%;}
 figure {
   position: relative;
   display: block;
-  width: 100%;
   overflow: hidden;
   text-align: center;
   padding: 0;
@@ -328,9 +347,7 @@ figure figcaption {
   height: auto;
 }
 figure .links {
-  text-align: center;
   margin: 10% 0;
-  height: 100%;
 }
 .eupt {
   background: #eae9f1;
@@ -424,11 +441,7 @@ figure .links {
     color: #807b7b;
   }
 }
-@media (min-width: 768px){
-.container {
-    width: auto !important;
-}
-}
+
 @media only screen and (max-width: 1205px) {
   .tp {
     padding-left: 0px;}
