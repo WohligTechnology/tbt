@@ -25,6 +25,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 
 })
+
+.controller('StaticCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+
+  $scope.template = TemplateService.changecontent("tbtstatic");
+  $scope.menutitle = NavigationService.makeactive("TBTStatic");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+})
+
 .controller('DestinationCtrl', function($scope, TemplateService, NavigationService, $timeout) {
 
   $scope.template = TemplateService.changecontent("destination");

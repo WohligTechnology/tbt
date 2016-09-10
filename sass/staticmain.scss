@@ -52,22 +52,25 @@ img {
 img.doneLoading {
   opacity: 1;
 }
-.pregular{  font-family: 'pregular';}
-
-.Roboto{  font-family: 'Roboto';}
-
-.Robotor{  font-family: 'Robotor';}
-
-.theboldfont{
+.pregular {
+  font-family: 'pregular';
+}
+.Roboto {
+  font-family: 'Roboto';
+}
+.Robotor {
+  font-family: 'Robotor';
+}
+.theboldfont {
   font-family: 'theboldfont';
 }
-.f-bold{
+.f-bold {
   font-weight: 700;
 }
-.f-light{
+.f-light {
   font-weight: 300;
 }
-.f-regular{
+.f-regular {
   font-weight: 400;
 }
 nav li:hover .dropdown-menu {
@@ -100,6 +103,27 @@ a {
   padding: 0 14px;
   line-height: 10px;
 }
+.h1c {
+  font-size: 61px;
+  color: #002b7f;
+}
+.ap {
+  text-align: center;
+  padding: 2% 0;
+  background: #002b7f;
+  p {
+    color: #ffd72b;
+    font-size: 20px;
+  }
+}
+.ap3 {
+  padding: 3% 6%;
+  .cp {
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #002b7f;
+  }
+}
 .hbc {
   border: none;
   background-color: #F3CB2C;
@@ -107,8 +131,54 @@ a {
     text-align: right;
   }
 }
+.formf {
+  padding: 0 6%;
+  label {
+    font-size: 17px;
+    color: #002b7f;
+  }
+  .form-control {
+    margin-bottom: 3%;
+    display: block;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-radius: 0;
+    color: black;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    background-color: #fff;
+    background-image: none;
+    border-bottom: 1px solid #002b9b;
+    -webkit-box-shadow: inset 0 1px 1px rgb(255, 255, 255);
+    box-shadow: inset 0 1px 1px rgb(255, 255, 255);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  }
+}
 .yec {
   background: #ffd72b;
+}
+.marg3 {
+  margin: 3% 0 2%;
+}
+.subbt {
+  font-weight: 600;
+  float: right;
+  font-size: 24px;
+  color: #fff;
+  background-image: url("../img/btn-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 8px 61px;
+  margin: 0;
+  border: none;
+  background-color: #fff;
+  outline: none;
 }
 .inm {
   margin: 6% 5% 0;
@@ -120,12 +190,11 @@ a {
   box-shadow: 0 0 0 5px #ffffff;
 }
 .hdp {
-
   width: 255px;
-      padding: 19px 0 4px;
-      font-weight: 700;
-      color: #0b358c;
-      letter-spacing: 2px;
+  padding: 19px 0 4px;
+  font-weight: 700;
+  color: #0b358c;
+  letter-spacing: 2px;
 }
 .imgab {
   width: 29%;
@@ -141,11 +210,11 @@ a {
   margin-top: 2.5%;
   border-radius: 24px;
   .form-control {
-        letter-spacing: 3px;
+    letter-spacing: 3px;
     -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent url("../img/Vector-Smart-Object.png") no-repeat right center;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent url("../img/Vector-Smart-Object.png") no-repeat right center;
     border-bottom: 4px solid #ffd72b;
     font-size: 32px;
     color: #fdd52b;
@@ -155,14 +224,12 @@ a {
     border-left: none;
     border-right: none;
     font-weight: bolder;
-        width: 100%;
+    width: 100%;
   }
 }
 label {
-
   font-size: 26px;
 }
-
 option {
   color: #33548e;
   font-size: 20px;
@@ -178,11 +245,14 @@ option {
 }
 .fcenter {
   i {
+    border-radius: 4px;
+    margin: -3px 0;
     background-color: white;
-    border-radius: 2px;
-    padding: 5px 3px;
-    width: 20px;
-    margin: 2px 0;
+    padding: 0;
+    height: 25px;
+    width: 18px;
+    text-align: center;
+    line-height: 2;
   }
   a {
     color: #000000;
@@ -191,14 +261,16 @@ option {
 }
 .hdn {
   padding: 18px 10px 0;
-    color: #0b358c;
-    font-size: 17px;
+  color: #0b358c;
+  font-size: 17px;
+  letter-spacing: 1px;
   .m10 {
     margin-left: 10px;
   }
-  i {background-color: white;
+  i {
+    background-color: white;
     border-radius: 100%;
-    padding: 1px 0px;
+    padding: 1px 0;
     height: 25px;
     width: 25px;
     text-align: center;
@@ -226,7 +298,6 @@ option {
   padding-left: 5%;
   text-align: left;
   h1 {
-
     font-size: 56px;
     font-weight: bolder;
     color: #002b7f;
@@ -238,7 +309,6 @@ option {
   }
 }
 .sado {
-
   font-weight: 600;
   float: right;
   font-size: 13px;
@@ -263,14 +333,12 @@ option {
   float: right;
   background: rgba(0, 0, 152, 0.78);
   h1 {
-
     font-size: 70px;
     font-weight: bolder;
     text-align: left;
     padding: 6% 6% 0;
   }
   p {
-
     text-align: left;
     font-size: 20px;
     font-weight: bold;
@@ -289,11 +357,11 @@ option {
   margin: 8% 0;
   .mr {
     margin-right: 8%;
-margin-left: -7%;
+    margin-left: -7%;
   }
   .ml {
     margin-left: 17%;
-display: flex;
+    display: flex;
   }
 }
 .padng0 {
@@ -303,32 +371,12 @@ display: flex;
   background: linear-gradient(to right, white 58%, white 41%, white 41%, white 47%, #ffd72b 47%);
   border-right: 20px solid #ffd72b;
   padding: 20px;
-  position: relative;
-}
-.addimg{
-  position: absolute;
-    right: -38px;
-    bottom: 40%;
-      cursor: pointer;
-    img{
-      width: 35px;
-    }
-}
-.addimg1{
-  position: absolute;
-    left: -38px;
-    bottom: 40%;
-    cursor: pointer;
-    img{
-      width: 35px;
-    }
 }
 .borderdown {
   background: linear-gradient(to right, #ffd72b 41%, #f3cb2c 41%, #ffd72b 40%, #f3cb2c 40%, rgba(255, 255, 255, 0) 40%);
   border-left: 20px solid #ffd72b;
   padding: 20px;
   margin-top: -20px;
-  position: relative;
 }
 .backcolor {
   background: (rgba(255, 0, 0, 0));
@@ -373,17 +421,16 @@ display: flex;
   margin: 0;
 }
 .p1 {
-    letter-spacing: 3px;
+  letter-spacing: 3px;
   margin-left: 2%;
   float: left;
   margin-top: 7px;
 }
 .p11 {
-    letter-spacing: 3px;
+  letter-spacing: 3px;
   margin-right: 37px;
 }
 .p2 {
-
   font-size: 63px;
   font-weight: bolder;
   color: #f3cb2c;
@@ -424,7 +471,6 @@ figure:hover figcaption {
   opacity: 1;
 }
 figure figcaption {
-
   position: absolute;
   left: 0;
   width: 100%;
@@ -439,7 +485,7 @@ figure .links {
 .eupt {
   background: #eae9f1;
   p {
-        font-size: 18px;
+    font-size: 18px;
     font-weight: 600;
     float: left;
     font-size: 16px;
@@ -450,7 +496,6 @@ figure .links {
     padding: 10px 31px;
   }
   .ge {
-
     text-align: center;
     font-size: 27px;
     font-weight: 700;
@@ -460,28 +505,27 @@ figure .links {
   .ie {
     padding: 2% 0;
     .form-control {
-    border: 0px;
-    display: block;
-    width: 100%;
-    height: auto;
-    padding: 6px 12px;
-    font-size: 19px;
-    line-height: 1.42857;
-    color: #555555;
-    background-color: #fff;
-    background-image: none;
-    border-radius: 0px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-}
+      border: 0;
+      display: block;
+      width: 100%;
+      height: auto;
+      padding: 6px 12px;
+      font-size: 19px;
+      line-height: 1.42857;
+      color: #555555;
+      background-color: #fff;
+      background-image: none;
+      border-radius: 0;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    }
   }
   .es {
     padding: 2% 1% 1% 2%;
   }
-
 }
 .stp {
   padding: 0 0 23px;
@@ -490,7 +534,7 @@ figure .links {
   font-weight: 500;
 }
 .imgf {
-  margin: -5px 0 0px -47px;
+  margin: -5px 0 0 -47px;
   width: 237px;
   position: absolute;
 }
@@ -498,25 +542,21 @@ figure .links {
   padding: 3%;
   background: #002b7f;
   .st {
-
     display: block;
     padding-left: 15px;
   }
   a {
-
     color: #ffd72b;
   }
   a:hover {
     color: #ffd72b;
   }
   p {
-
     color: #fff;
     font-size: 17px;
     word-spacing: 6px;
   }
   strong {
-
     color: #ffd72b;
   }
 }
@@ -530,9 +570,9 @@ figure .links {
   }
   .fcenter {
     text-align: center;
+    padding: 0 0 9px;
   }
   p {
-
     margin: 0;
     font-size: 12px;
     color: #807b7b;
@@ -548,12 +588,11 @@ figure .links {
 }
 //bootstrap forms
 /* Start writing sass here */
-@import "fancybox-override";
-@import "main2";
-@import "staticmain";
-@import "mobile";
-@media (max-width: 768px) {
-  .tp {
-    padding-left: 2px;
-  }
-}
+// @import "fancybox-override";
+// @import "main2";
+// @import "mobile";
+// @media (max-width: 768px) {
+//   .tp {
+//     padding-left: 2px;
+//   }
+// }
