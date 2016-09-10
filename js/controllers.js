@@ -26,12 +26,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('StaticCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('StaticCtrl', function($scope, TemplateService, NavigationService, $timeout,$uibModal) {
 
   $scope.template = TemplateService.changecontent("tbtstatic");
   $scope.menutitle = NavigationService.makeactive("TBTStatic");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+  $scope.details = function() {
+         $uibModal.open({
+             animation: true,
+             templateUrl: "views/modal/details.html",
+             scope: $scope,
+             windowClass:"width80"
+         });
+     };
 
 })
 
