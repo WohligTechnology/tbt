@@ -59,11 +59,19 @@ img.loading {
   color: #ffca18 !important;
   text-decoration: none;
 }
+.yellow_back_color{background:  #ffca18 !important;}
 .grey_color {
   color: #807b7b !important;
 }
 .grey_color:hover {
   color: #807b7b !important;
+  text-decoration: none;
+}
+.grey_color2{
+  color: #bbb8b8 !important;
+}
+.grey_color2{
+  color: #bbb8b8 !important;
   text-decoration: none;
 }
 .list {
@@ -553,9 +561,50 @@ figure .links {
     color: #807b7b;
   }
 }
+.footb2 {
+    background: #002b7f;
+  .fc {
+    padding: 2% 0 0;
+  }
+  .fcenter {
+    text-align: center;
+  }
+  p {
+    margin: 0;
+    font-size: 12px;
+    color: #bbb8b8;
+  }
+}
 .footermenu {
   background: #012B7F;
 }
+
+//destination css start
+.fsiz{font-size: 80px;}
+.dlm{height: 29%;
+    width: 100%;
+    margin: 27% 0% 0% !important;
+    background: rgba(0, 0, 152, 0.78);
+    text-align: center;
+  h1{line-height: 80%;
+    font-size: 70px;
+    font-weight: bolder;
+    padding: 2% 0% 0;
+    text-align: center;}
+    }
+    .m4{    margin-top: -4%;
+      .m2{    margin: 0px 2%;
+      background: #ffca18 !important;
+      padding: 2% 9%;
+
+      .padup {
+    padding: 89% 0 0;
+}}
+      }
+
+    .padd5{    margin: 0px 2%;
+    background: #ffca18 !important;
+    padding: 2% 9%;}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
@@ -579,12 +628,12 @@ figure .links {
     padding-left: 0;
   }
   .navbar-default .navbar-nav > li > a {
-    color: #012B7F;
+    color: #263878;
     border: none;
   }
   .hdn {
     padding: 20px 10px 0;
-    color: #0b358c;
+    color: #263878;
     font-size: 16px;
     letter-spacing: 1px;
     .mt3 {

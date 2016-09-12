@@ -32,6 +32,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("TBTStatic");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+  TemplateService.header = "views/header2.html";
+TemplateService.footermenu = "views/footermenu2.html";
+TemplateService.footer = "views/footer2.html";
   $scope.details = function() {
          $uibModal.open({
              animation: true,
