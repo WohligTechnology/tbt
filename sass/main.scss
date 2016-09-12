@@ -53,10 +53,10 @@ img.loading {
   text-decoration: none;
 }
 .yellow_color {
-  color: #F3CB2C !important;
+  color: #ffca18 !important;
 }
 .yellow_color:hover {
-  color: #F3CB2C !important;
+  color: #ffca18 !important;
   text-decoration: none;
 }
 .grey_color {
@@ -124,7 +124,7 @@ a {
 }
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover {
-  color: #002b7f;
+  color: #012B7F;
 }
 .navbar-default .navbar-nav > li > a {
   letter-spacing: 1px;
@@ -132,7 +132,7 @@ a {
   margin: 14px 0;
   padding: 0 14px;
   line-height: 10px;
-  color: #002b7f !important;
+  color: #012B7F !important;
 }
 .navbar-default .navbar-nav > li > a:hover {
   color: #fff;
@@ -140,7 +140,7 @@ a {
 .hbc {
   text-align: center;
   border: none !important;
-  background-color: #F3CB2C !important;
+  background-color: #ffca18 !important;
   .rit {
     text-align: right;
   }
@@ -156,7 +156,7 @@ a {
   padding-top: 5px;
 }
 .yec {
-  background: #ffd72b;
+  background: #FDD116;
 }
 .inm {
   margin: 6% 5% 0;
@@ -193,7 +193,7 @@ a {
     -moz-appearance: none;
     appearance: none;
     background: transparent url("../img/Vector-Smart-Object.png") no-repeat right center;
-    border-bottom: 4px solid #ffd72b;
+    border-bottom: 4px solid #FDD116;
     font-size: 34px;
     color: #fdd52b;
     padding: 0 12px 2px 0;
@@ -213,7 +213,7 @@ option {
   font-size: 20px;
 }
 .aboutin {
-  background: #ffd72b;
+  background: #FDD116;
   padding: 5%;
   text-align: center;
 }
@@ -250,7 +250,7 @@ option {
     text-align: center;
   }
   a {
-    color: #ffd72b;
+    color: #FDD116;
     font-size: 12px;
   }
 }
@@ -273,12 +273,12 @@ option {
   h1 {
     font-size: 56px;
     font-weight: bolder;
-    color: #002b7f;
+    color: #012B7F;
   }
   .ain {
     margin: 0 0 18px;
     font-size: 14px;
-    color: #002b7f;
+    color: #012B7F;
   }
 }
 .sado {
@@ -292,7 +292,7 @@ option {
   padding: 12px 25px;
 }
 .lm {
-  height: 90% !important;
+  height: 90.1% !important;
   padding: 5% 0;
   width: 27%;
   margin: 2% !important;
@@ -329,8 +329,8 @@ option {
   padding: 0 !important;
 }
 .borderup {
-  background: linear-gradient(to right, white 58%, white 41%, white 41%, white 47%, #ffd72b 47%);
-  border-right: 20px solid #ffd72b;
+  background: linear-gradient(to right, white 58%, white 41%, white 41%, white 47%, #FDD116 47%);
+  border-right: 20px solid #FDD116;
   padding: 20px;
   position: relative;
 }
@@ -353,8 +353,8 @@ option {
   }
 }
 .borderdown {
-  background: linear-gradient(to right, #ffd72b 41%, #f3cb2c 41%, #ffd72b 40%, #f3cb2c 40%, rgba(255, 255, 255, 0) 40%);
-  border-left: 20px solid #ffd72b;
+  background: linear-gradient(to right, #FDD116 41%, #ffca18 41%, #FDD116 40%, #ffca18 40%, rgba(255, 255, 255, 0) 40%);
+  border-left: 20px solid #FDD116;
   padding: 20px;
   margin-top: -20px;
   position: relative;
@@ -418,7 +418,7 @@ option {
 .p2 {
   font-size: 63px;
   font-weight: bolder;
-  color: #f3cb2c;
+  color: #ffca18;
   position: absolute;
   line-height: 77%;
   padding-top: 26px;
@@ -435,7 +435,7 @@ option {
   margin: 10% 0 0 -3%;
 }
 .paddup {
-  background: linear-gradient(to bottom, white 31%, white 17%, white 17%, #ffd72b 17%);
+  background: linear-gradient(to bottom, white 31%, white 17%, white 17%, #FDD116 17%);
 }
 .padddown {
   background: linear-gradient(to bottom, rgb(255, 215, 43) 29%,rgb(234, 206, 38) 80%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%,rgba(255,255,255,1) 100%);
@@ -468,7 +468,7 @@ figure .links {
   margin: 10% 0;
 }
 .eupt {
-  background: #eae9f1;
+  background: #CCCCCC;
   p {
     font-size: 18px;
     font-weight: 600;
@@ -529,11 +529,11 @@ figure .links {
 }
 .mf {
   padding: 3%;
-  background: #002b7f;
+  background: #012B7F;
   .st {
     display: block;
-    padding-left: 15px;
-        padding-bottom: 2% !important;
+    padding-left: 15px !important;
+    padding-bottom: 2% !important;
   }
 }
 .bordern {
@@ -554,7 +554,7 @@ figure .links {
   }
 }
 .footermenu {
-  background: #002b7f;
+  background: #012B7F;
 }
 //bootstrap forms
 /* Start writing sass here */
@@ -579,7 +579,7 @@ figure .links {
     padding-left: 0;
   }
   .navbar-default .navbar-nav > li > a {
-    color: #002b7f;
+    color: #012B7F;
     border: none;
   }
   .hdn {
