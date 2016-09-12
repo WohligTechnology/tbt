@@ -45,7 +45,32 @@ img.loading {
   width: 32px !important;
   height: auto;
 }
-.whit_color{$white}
+.whit_color {
+  color: $white !important;
+}
+.whit_color:hover {
+  color: $white !important;
+  text-decoration: none;
+}
+.yellow_color {
+  color: #F3CB2C !important;
+}
+.yellow_color:hover {
+  color: #F3CB2C !important;
+  text-decoration: none;
+}
+.grey_color {
+  color: #807b7b !important;
+}
+.grey_color:hover {
+  color: #807b7b !important;
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+  padding: 3px 0;
+  font-size: 17px;
+}
 img {
   opacity: 0;
   @include transition(all 300ms ease);
@@ -127,7 +152,9 @@ a {
     color: #000;
   }
 }
-.p5{    padding-top: 5px;}
+.p5 {
+  padding-top: 5px;
+}
 .yec {
   background: #ffd72b;
 }
@@ -167,7 +194,7 @@ a {
     appearance: none;
     background: transparent url("../img/Vector-Smart-Object.png") no-repeat right center;
     border-bottom: 4px solid #ffd72b;
-    font-size: 32px;
+    font-size: 34px;
     color: #fdd52b;
     padding: 0 12px 2px 0;
     height: auto;
@@ -249,7 +276,7 @@ option {
     color: #002b7f;
   }
   .ain {
-      margin: 0 0 18px;
+    margin: 0 0 18px;
     font-size: 14px;
     color: #002b7f;
   }
@@ -265,7 +292,6 @@ option {
   padding: 12px 25px;
 }
 .lm {
-
   height: 90% !important;
   padding: 5% 0;
   width: 27%;
@@ -281,10 +307,10 @@ option {
   }
   p {
     text-align: left;
-font-size: 18px;
-font-weight: bold;
-padding: 0 7%;
-line-height: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 7%;
+    line-height: 100%;
   }
 }
 ///new css
@@ -375,8 +401,10 @@ line-height: 100%;
   padding: 5px 32px;
   margin: 0;
 }
-.labsec{    font-weight: 500 !important;
-    font-size: 22px;}
+.labsec {
+  font-weight: 500 !important;
+  font-size: 22px;
+}
 .p1 {
   letter-spacing: 3px;
   margin-left: 2%;
@@ -404,7 +432,7 @@ line-height: 100%;
   line-height: 79%;
 }
 .p222 {
-  margin: 10% 0 0 -3%
+  margin: 10% 0 0 -3%;
 }
 .paddup {
   background: linear-gradient(to bottom, white 31%, white 17%, white 17%, #ffd72b 17%);
@@ -453,6 +481,7 @@ figure .links {
     padding: 10px 31px;
   }
   .ge {
+    cursor: default;
     text-align: center;
     font-size: 27px;
     font-weight: 700;
@@ -485,10 +514,13 @@ figure .links {
   }
 }
 .stp {
-  padding: 0 0 23px;
+  padding: 0 0 5%;
   display: block;
   font-size: 20px;
   font-weight: 500;
+}
+.stp2 {
+  margin-bottom: 29%;
 }
 .imgf {
   margin: -5px 0 0 -47px;
@@ -501,27 +533,14 @@ figure .links {
   .st {
     display: block;
     padding-left: 15px;
-  }
-  a {
-    color: #ffd72b;
-  }
-  a:hover {
-    color: #ffd72b;
-  }
-  p {
-    color: #fff;
-    font-size: 17px;
-    word-spacing: 6px;
-  }
-  strong {
-    color: #ffd72b;
+        padding-bottom: 2% !important;
   }
 }
 .bordern {
   border: none !important;
 }
 .footb {
-  background: #000;
+  background: #121212;
   .fc {
     padding: 2% 0 0;
   }
