@@ -414,7 +414,8 @@ option {
 ///new css
 
 .m8 {
-    margin: 8% 0;
+    margin: 8%;
+    cursor: pointer;
 
     .mr {
         margin-right: 8%;
@@ -762,9 +763,10 @@ $yellow-brand: #fcd116;
     font-weight: 100;
     text-shadow: none;
     padding-right: 24px;
-padding-top: 24px;
+    padding-top: 24px;
     &:hover {
         color: #fcd116;
+        opacity: 1;
     }
 }
 
@@ -779,10 +781,13 @@ padding-top: 24px;
     }
 
     .submit-detail {
-        color: white;
+        color: #002b7f;
+        text-transform: uppercase;
         position: absolute;
         top: 50%;
         left: 50%;
+        font-size: 14px;
+        font-weight: 600;
         @include transform(translate(-50%,-50%));
 
         &:hover {
@@ -801,6 +806,8 @@ padding-top: 24px;
 }
 
 .width80 {
+  background: rgba(0, 43, 127, 0.59);
+
     .modal-dialog {
         width: 80%;
     }
