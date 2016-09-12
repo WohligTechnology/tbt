@@ -59,7 +59,9 @@ img.loading {
   color: #ffca18 !important;
   text-decoration: none;
 }
-.yellow_back_color{background:  #ffca18 !important;}
+.yellow_back_color {
+  background: #ffca18 !important;
+}
 .grey_color {
   color: #807b7b !important;
 }
@@ -67,10 +69,10 @@ img.loading {
   color: #807b7b !important;
   text-decoration: none;
 }
-.grey_color2{
+.grey_color2 {
   color: #bbb8b8 !important;
 }
-.grey_color2{
+.grey_color2 {
   color: #bbb8b8 !important;
   text-decoration: none;
 }
@@ -562,7 +564,7 @@ figure .links {
   }
 }
 .footb2 {
-    background: #002b7f;
+  background: #002b7f;
   .fc {
     padding: 2% 0 0;
   }
@@ -578,33 +580,61 @@ figure .links {
 .footermenu {
   background: #012B7F;
 }
-
 //destination css start
-.fsiz{font-size: 80px;}
-.dlm{height: 29%;
-    width: 100%;
-    margin: 27% 0% 0% !important;
-    background: rgba(0, 0, 152, 0.78);
-    text-align: center;
-  h1{line-height: 80%;
+.fsiz {
+  font-size: 80px;
+}
+.dlm {
+  height: 29%;
+  width: 100%;
+  margin: 27% 0 0 !important;
+  background: rgba(0, 0, 152, 0.78);
+  text-align: center;
+  h1 {
+    line-height: 80%;
     font-size: 70px;
     font-weight: bolder;
-    padding: 2% 0% 0;
-    text-align: center;}
-    }
-    .m4{    margin-top: -4%;
-      .m2{    margin: 0px 2%;
-      background: #ffca18 !important;
-      padding: 2% 9%;
-
-      .padup {
-    padding: 89% 0 0;
-}}
+    padding: 2% 0 0;
+    text-align: center;
+  }
+}
+.m4 {
+  margin-top: -4%;
+  .m2 {
+    margin: 0 3%;
+    background: #FDD116 !important;
+    padding: 2% 9%;
+    .pd15 {
+      padding: 0 15px;
+      h1 {
+        font-size: 63px;
+        line-height: 80%;
+        padding-top: 40px;
       }
-
-    .padd5{    margin: 0px 2%;
-    background: #ffca18 !important;
-    padding: 2% 9%;}
+    }
+    .padup {
+      padding: 89% 0 0;
+    }
+  }
+}
+.lodm {
+  padding: 5% 0 2%;
+  a {
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    background-image: url("../img/btn-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 10px 31px;
+    width: 199px;
+  }
+}
+.padd5 {
+  margin: 0 2%;
+  background: #ffca18 !important;
+  padding: 2% 9%;
+}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";

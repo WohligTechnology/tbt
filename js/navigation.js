@@ -9,7 +9,7 @@ else {
 
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function() {
+.factory('NavigationService', function($http) {
   var navigation = [{
     name: "Home",
     classis: "active",
@@ -34,6 +34,14 @@ var navigationservice = angular.module('navigationservice', [])
         }
       }
       return menuname;
+    },
+    submitForm: function(mydata, callback) {
+      $http({
+        url: 'http://thebachelortrip.com/mail.php',
+        method: 'POST',
+        withCredentials: true,
+        data: mydata
+      }).success(callback);
     },
 
   };

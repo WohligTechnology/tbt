@@ -1,83 +1,98 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ksSwiper'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-  //Used to name the .html file
+    //Used to name the .html file
 
-  console.log("Testing Consoles");
+    console.log("Testing Consoles");
 
-  $scope.template = TemplateService.changecontent("home");
-  $scope.menutitle = NavigationService.makeactive("Home");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
+    $scope.template = TemplateService.changecontent("home");
+    $scope.menutitle = NavigationService.makeactive("Home");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
 
-  $scope.mySlides = [
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-    'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
-  ];
-})
-.controller('ActivityCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    $scope.mySlides = [
+      'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
+      'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
+      'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
+      'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+    ];
+  })
+  .controller('ActivityCtrl', function($scope, TemplateService, NavigationService, $timeout) {
 
-  $scope.template = TemplateService.changecontent("activity");
-  $scope.menutitle = NavigationService.makeactive("Activity");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
+    $scope.template = TemplateService.changecontent("activity");
+    $scope.menutitle = NavigationService.makeactive("Activity");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
 
-})
+  })
 
-.controller('StaticCtrl', function($scope, TemplateService, NavigationService, $timeout,$uibModal) {
+.controller('StaticCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
 
   $scope.template = TemplateService.changecontent("tbtstatic");
   $scope.menutitle = NavigationService.makeactive("TBTStatic");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
   TemplateService.header = "views/header2.html";
-TemplateService.footermenu = "views/footermenu2.html";
-TemplateService.footer = "views/footer2.html";
+  TemplateService.footermenu = "views/footermenu2.html";
+  TemplateService.footer = "views/footer2.html";
+  $scope.flags = {};
+  $scope.flags.thankyou = false;
   $scope.details = function() {
-         $uibModal.open({
-             animation: true,
-             templateUrl: "views/modal/details.html",
-             scope: $scope,
-             windowClass:"width80"
-         });
-     };
+    $uibModal.open({
+      animation: true,
+      templateUrl: "views/modal/details.html",
+      scope: $scope,
+      windowClass: "width80"
+    });
+  };
+  $scope.formData = {};
+  $scope.submitForm = function() {
+    $scope.flags.thankyou = false;
+    console.log("ffff", $scope.formData);
+    NavigationService.submitForm($scope.formData, function(res) {
+      if(res.value){
+        $scope.flags.thankyou = true;
+        $scope.formData = {};
+      }else{
+
+      }
+    });
+  };
 
 })
 
 .controller('DestinationCtrl', function($scope, TemplateService, NavigationService, $timeout) {
 
-  $scope.template = TemplateService.changecontent("destination");
-  $scope.menutitle = NavigationService.makeactive("Destination");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
+    $scope.template = TemplateService.changecontent("destination");
+    $scope.menutitle = NavigationService.makeactive("Destination");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
 
-})
-.controller('PattayaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  })
+  .controller('PattayaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
 
-  $scope.template = TemplateService.changecontent("pattaya");
-  $scope.menutitle = NavigationService.makeactive("Pattaya");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
+    $scope.template = TemplateService.changecontent("pattaya");
+    $scope.menutitle = NavigationService.makeactive("Pattaya");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
 
-})
-.controller('WhatsHotCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  })
+  .controller('WhatsHotCtrl', function($scope, TemplateService, NavigationService, $timeout) {
 
-  $scope.template = TemplateService.changecontent("whats-hot");
-  $scope.menutitle = NavigationService.makeactive("Whats Hot");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
+    $scope.template = TemplateService.changecontent("whats-hot");
+    $scope.menutitle = NavigationService.makeactive("Whats Hot");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
 
-})
-.controller('CustomisationCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  })
+  .controller('CustomisationCtrl', function($scope, TemplateService, NavigationService, $timeout) {
 
-  $scope.template = TemplateService.changecontent("customisation");
-  $scope.menutitle = NavigationService.makeactive("Customisation");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
+    $scope.template = TemplateService.changecontent("customisation");
+    $scope.menutitle = NavigationService.makeactive("Customisation");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
 
-})
+  })
 
 .controller('headerctrl', function($scope, TemplateService) {
   $scope.template = TemplateService;

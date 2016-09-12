@@ -154,7 +154,7 @@ a {
   }
 }
 .marg3 {
-  margin: 3% 0 2%;
+  margin: 5% 0 0%;
 }
 .subbt {
   font-weight: 600;
@@ -204,7 +204,7 @@ a {
   background: #fff;
 }
 .footimg {
-  width: 46% !important;
+  width: 50% !important;
   margin-left: -14%;
 }
 //MODAL CSS Starts here//
@@ -285,6 +285,7 @@ $yellow-brand: #fcd116;
     left: 50%;
     font-size: 14px;
     font-weight: 600;
+    background: transparent;
     @include transform(translate(-50%,-50%));
     &:hover {
       text-decoration: none;
