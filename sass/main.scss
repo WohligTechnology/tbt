@@ -564,7 +564,7 @@ figure .links {
   }
 }
 .footb2 {
-  background: #002b7f;
+  background: #263778;
   .fc {
     padding: 2% 0 0;
   }
@@ -581,6 +581,9 @@ figure .links {
   background: #012B7F;
 }
 //destination css start
+.pdt15 {
+  padding-bottom: 30px;
+}
 .fsiz {
   font-size: 80px;
 }
@@ -618,7 +621,7 @@ figure .links {
   }
 }
 .lodm {
-  padding: 5% 0 2%;
+  padding: 2% 0;
   a {
     font-weight: 600;
     font-size: 16px;
@@ -626,7 +629,7 @@ figure .links {
     background-image: url("../img/btn-bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding: 10px 31px;
+    padding: 13px 31px;
     width: 199px;
   }
 }
@@ -634,6 +637,61 @@ figure .links {
   margin: 0 2%;
   background: #ffca18 !important;
   padding: 2% 9%;
+}
+.custtitle {
+  color: #002b7f;
+  text-align: center;
+  font-size: 30px;
+  margin: 4% 0 5%;
+}
+//customisation
+.mim8 {
+  margin: -1px 8%;
+}
+.marg4 {
+  margin: 0 4%;
+  background: #FDD116 !important;
+  padding: 2% 5%;
+}
+.pdt10 {
+  padding-bottom: 10px;
+}
+.detailsfom {
+  .text-height {
+    height: auto !important;
+    resize: none;
+  }
+  .padding-r {
+    padding-right: 0;
+  }
+  .padding-l {
+    padding-left: 0;
+  }
+  .form-control {
+    font-size: 13px;
+    height: 45px;
+    border: none;
+    border-radius: 0;
+  }
+}
+.email-form {
+  letter-spacing: -0.9px;
+  cursor: default;
+  font-size: 27px;
+  font-weight: 700;
+  color: #31228d;
+  padding: 2%;
+}
+.padding5 {
+  padding: 0 15px;
+}
+.sendform {
+  float: right !important;
+  padding: 8px 61px !important;
+  margin: 20px 7px !important;
+}
+.paddingabout {
+  padding: 0 12%;
 }
 //bootstrap forms
 /* Start writing sass here */
@@ -673,4 +731,13 @@ figure .links {
       padding-left: 2px;
     }
   }
+}
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: none;
+  outline-offset: 0;
 }

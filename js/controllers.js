@@ -32,9 +32,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("TBTStatic");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
-  TemplateService.header = "views/header2.html";
-  TemplateService.footermenu = "views/footermenu2.html";
-  TemplateService.footer = "views/footer2.html";
+  TemplateService.header = "views/static_header.html";
+  TemplateService.footermenu = "views/static_footermenu.html";
+  TemplateService.footer = "views/static_footer.html";
   $scope.flags = {};
   $scope.flags.thankyou = false;
   $scope.details = function() {
@@ -45,6 +45,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       windowClass: "width80"
     });
   };
+  // $scope.cancel = function() {
+  //                       $modalInstance.dismiss('cancel');
+  //                   };
   $scope.formData = {};
   $scope.submitForm = function() {
     $scope.flags.thankyou = false;
@@ -91,6 +94,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Customisation");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    TemplateService.header = "views/custum_header.html";
+    TemplateService.footermenu = "views/custom_footermenu.html";
+    TemplateService.footer = "views/custom_footer.html";
 
   })
 

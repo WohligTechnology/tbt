@@ -16,7 +16,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     .state('home', {
     url: "/",
     templateUrl: "views/template.html",
-    controller: 'HomeCtrl'
+    controller: 'StaticCtrl'
   })
     .state('customisation', {
     url: "/customisation",
@@ -24,11 +24,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     controller: 'CustomisationCtrl'
   })
   //antu page
-  .state('tbtstatic', {
-  url: "/tbtstatic",
-  templateUrl: "views/template.html",
-  controller: 'StaticCtrl'
-})
+//   .state('tbtstatic', {
+//   url: "/tbtstatic",
+//   templateUrl: "views/template.html",
+//   controller: 'StaticCtrl'
+// })
 
     .state('destination', {
     url: "/destination",

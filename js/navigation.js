@@ -37,8 +37,8 @@ var navigationservice = angular.module('navigationservice', [])
     },
     submitForm: function(mydata, callback) {
       $http({
-        url: 'http://thebachelortrip.com/mail.php',
-        method: 'POST',
+        url: 'http://thebachelortrip.com/mail.php?name='+mydata.name+'&email='+mydata.email+'&mobile='+mydata.mobile+'&message='+mydata.message,
+        method: 'GET',
         withCredentials: true,
         data: mydata
       }).success(callback);

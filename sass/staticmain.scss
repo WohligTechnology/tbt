@@ -110,7 +110,7 @@ a {
   }
 }
 .ap3 {
-  padding: 4% 10%;
+  padding: 4% 8%;  
   line-height: 19%;
   .cp {
     font-size: 25px;
@@ -154,7 +154,12 @@ a {
   }
 }
 .marg3 {
-  margin: 5% 0 0%;
+  margin: 5% 0 0;
+  h2 {
+
+    color: #fcd116;
+    font-weight: 700;
+  }
 }
 .subbt {
   font-weight: 600;
