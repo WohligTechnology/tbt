@@ -45,6 +45,14 @@ img.loading {
   width: 32px !important;
   height: auto;
 }
+a,
+img {
+  outline: none !important;
+}
+a:focus,
+a:hover {
+  text-decoration: none !important;
+}
 .whit_color {
   color: $white !important;
 }
@@ -483,7 +491,6 @@ figure .links {
     font-size: 18px;
     font-weight: 600;
     float: left;
-    font-size: 16px;
     color: #fff;
     background-image: url("../img/btn-bg.png");
     background-repeat: no-repeat;
@@ -645,6 +652,19 @@ figure .links {
   margin: 4% 0 5%;
 }
 //customisation
+.loadimag {
+  margin: 2% 0;
+  a {
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    background-image: url("../img/btn-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 13px 60px;
+    width: 199px;
+  }
+}
 .mim8 {
   margin: -1px 8%;
 }
@@ -660,6 +680,7 @@ figure .links {
   .text-height {
     height: auto !important;
     resize: none;
+    padding: 7px 12px 0 !important;
   }
   .padding-r {
     padding-right: 0;
@@ -668,7 +689,7 @@ figure .links {
     padding-left: 0;
   }
   .form-control {
-    font-size: 13px;
+    font-size: 15px;
     height: 45px;
     border: none;
     border-radius: 0;
@@ -683,7 +704,10 @@ figure .links {
   padding: 2%;
 }
 .padding5 {
-  padding: 0 15px;
+  padding: 14px 15px 0;
+}
+.bordernone {
+  border: none !important;
 }
 .sendform {
   float: right !important;
@@ -692,6 +716,137 @@ figure .links {
 }
 .paddingabout {
   padding: 0 12%;
+}
+.footerfom {
+  .witdhimp {
+    width: 75% !important;
+  }
+  .btn {
+    letter-spacing: 1px;
+    font-size: 19px;
+    color: #333232;
+    width: 100%;
+    margin: 10px 0;
+    background: #fdd116;
+    padding: 2px 12px;
+  }
+  .form-control {
+    font-size: 15px;
+    height: 34px;
+    border: none;
+    border-radius: 0;
+  }
+  padding: 3% 0;
+  .stp {
+    margin: 0 15px 15px;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 2px solid #fff;
+    padding: 0;
+  }
+  .strong-impmarg {
+    margin: 0 0 15px !important;
+  }
+}
+.customf {
+  background: #000;
+}
+.customc {
+  padding: 9px 0;
+  p {
+    font-size: 13px;
+  }
+  .fcenter {
+    text-align: center;
+  }
+  .padding10 {
+    padding-top: 10px;
+  }
+}
+//whats page
+.whatsmain {
+  .pading0 {
+    padding: 1px !important;
+  }
+  .whatsmarg4 {
+    .wtimg {
+      font-weight: 900;
+      font-size: 40px;
+      background-image: url("../img/btn-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      padding: 16px 42px;
+      width: 199px;
+    }
+    .wtvi {
+      font-weight: 900;
+      color: #cacaca !important;
+      font-size: 40px;
+      margin-left: 30px;
+    }
+    .whatspadd3 {
+      padding: 3%;
+    }
+    margin: 0 4%;
+  }
+  .margin3 {
+    margin-top: 3%;
+  }
+}
+.wtsecond {
+  background: #fcd015;
+  margin-top: -11%;
+  .wtsec2 {
+    .colora {
+      color: #002b79;
+    }
+    .margin-15 {
+      margin-left: -15px;
+    }
+    padding: 14% 14% 6%;
+    .font15 {
+      font-size: 13px;
+      color: #002b79;
+    }
+  }
+}
+.wtintro {
+  font-weight: 900;
+  font-size: 24px;
+  margin-left: -20px;
+  color: #002b79;
+}
+.wtlast {
+  margin: -5% 0;
+  background: rgba(255, 255, 255, 0);
+  .wtlast2 {
+    padding: 1% 2%;
+    background: #fff;
+    margin: 0 12%;
+    .tdcolor {
+      color: #fcd015 !important;
+    }
+    .table > thead > tr > th {
+      padding: 14px;
+      vertical-align: bottom;
+      border-bottom: none;
+      font-size: 17px;
+      background: #fff;
+      color: #002b79;
+      border: none;
+    }
+    .table > tbody > tr > td {
+      padding: 8px 25px;
+      line-height: 1.42857;
+      vertical-align: top;
+      border: 1px solid #fff;
+      background: #002b79;
+      color: #fff;
+      font-weight: 900;
+      font-size: 17px;
+    }
+  }
 }
 //bootstrap forms
 /* Start writing sass here */

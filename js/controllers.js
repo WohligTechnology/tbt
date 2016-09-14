@@ -86,6 +86,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Whats Hot");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    TemplateService.header = "views/whats_header.html";
+    TemplateService.footermenu = "views/whats_footermenu.html";
+    TemplateService.footer = "views/whats_footer.html";
 
   })
   .controller('CustomisationCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -94,7 +97,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Customisation");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    TemplateService.header = "views/custum_header.html";
+    TemplateService.header = "views/custom_header.html";
     TemplateService.footermenu = "views/custom_footermenu.html";
     TemplateService.footer = "views/custom_footer.html";
 
