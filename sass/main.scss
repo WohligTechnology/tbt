@@ -53,6 +53,27 @@ a:focus,
 a:hover {
   text-decoration: none !important;
 }
+.pregular {
+  font-family: 'pregular';
+}
+.Roboto {
+  font-family: 'Roboto';
+}
+.Robotor {
+  font-family: 'Robotor';
+}
+.theboldfont {
+  font-family: 'theboldfont';
+}
+.f-bold {
+  font-weight: 700;
+}
+.f-light {
+  font-weight: 300;
+}
+.f-regular {
+  font-weight: 400;
+}
 .whit_color {
   color: $white !important;
 }
@@ -80,8 +101,15 @@ a:hover {
 .grey_color2 {
   color: #bbb8b8 !important;
 }
-.grey_color2 {
+.grey_color2:hover {
   color: #bbb8b8 !important;
+  text-decoration: none;
+}
+.bluecol {
+  color: #002b7f !important;
+}
+.bluecol:hover {
+  color: #002b7f!important;
   text-decoration: none;
 }
 .list {
@@ -95,27 +123,6 @@ img {
 }
 img.doneLoading {
   opacity: 1;
-}
-.pregular {
-  font-family: 'pregular';
-}
-.Roboto {
-  font-family: 'Roboto';
-}
-.Robotor {
-  font-family: 'Robotor';
-}
-.theboldfont {
-  font-family: 'theboldfont';
-}
-.f-bold {
-  font-weight: 700;
-}
-.f-light {
-  font-weight: 300;
-}
-.f-regular {
-  font-weight: 400;
 }
 nav li:hover .dropdown-menu {
   display: block;
@@ -846,6 +853,86 @@ figure .links {
       font-weight: 900;
       font-size: 17px;
     }
+  }
+}
+.wtsocial {
+  width: 4%;
+  margin-top: -33%;
+  margin-right: -3.7%;
+  .socialimg {
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    display: inline-block;
+    width: 29px;
+    padding-right: 7px;
+  }
+  .social1 {
+    height: 98px;
+  }
+  .socialgr {
+    border-radius: 4px;
+    list-style: none;
+    width: 153px;
+    margin-left: -70px;
+    text-align: center;
+    font-size: 14px;
+    background: #002b7f;
+    padding: 7px 0;
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+  }
+  .social2 {
+    margin-left: -12px;
+    margin-top: 22px;
+  }
+  .ulsocial2 {
+    border-radius: 4px;
+    list-style: none;
+    width: 39px;
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+    background: #002b7f;
+    padding: 16px 0;
+    .fontsiz {
+      font-size: 23px;
+    }
+    .ulsocial2i {
+      background-color: white;
+      border-radius: 100%;
+      padding: 5px 2px;
+      height: 25px;
+      width: 25px;
+      text-align: center;
+      margin: 5px 0 4px 6px;
+    }
+  }
+}
+//pattaya css
+.patpack {
+  font-weight: 900;
+  color: #ffca18 !important;
+  font-size: 40px;
+}
+.patpack2 {
+  font-weight: 900;
+  font-size: 40px;
+  background-image: url("../img/btn-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 19px 46px 8px;
+  width: 199px;
+  margin-left: 20px;
+}
+.pattayamarg4 {
+  margin: -4% 5% 1%;
+  background: #ffca18;
+  padding: 3% 8%;
+  p {
+    font-size: 13px;
+    margin: 0;
   }
 }
 //bootstrap forms
