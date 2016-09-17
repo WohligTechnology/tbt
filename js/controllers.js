@@ -55,6 +55,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     NavigationService.submitForm($scope.formData, function(res) {
       if(res.value){
         $scope.flags.thankyou = true;
+        $scope.flags.mailform = true;
         $scope.formData = {};
       }else{
 

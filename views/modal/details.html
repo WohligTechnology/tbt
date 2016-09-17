@@ -16,6 +16,7 @@
     <div class="col-md-6">
       <div class="mod-marg mod-pad">
         <div class="col-md-12 col-sm-12 col-xs-12">
+          <div ng-hide="flags.mailform" >
           <form name="commingSoonForm" ng-submit = "submitForm(formData)">
             <div class="form-col">
               <input type="name" class="form-control form-sty" ng-model="formData.name" placeholder="Name *" name="name" required>
@@ -40,9 +41,10 @@
               <button type="submit" class="btn submit-detail">Submit</button>
             </div>
           </form>
-          <div class="col-md-12 col-sm-12 col-xs-12 marg3" ng-show="flags.thankyou">
+        </div>
+          <!-- <div class="col-md-12 col-sm-12 col-xs-12 marg3" ng-show="flags.thankyou">
             <h2 class="text-center">Thank You</h2>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="thnk-msg text-center" ng-show="flags.thankyou">
