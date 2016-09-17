@@ -110,7 +110,7 @@ a {
   }
 }
 .ap3 {
-  padding: 4% 8%;  
+
   line-height: 19%;
   .cp {
     font-size: 25px;
@@ -309,4 +309,18 @@ $yellow-brand: #fcd116;
   .modal-dialog {
     width: 80%;
   }
+}
+.pd-all {
+    padding: 50px 0px 0px 0px;
+    text-align: center;
+    margin: 0 auto;
+}
+.img-f {
+    margin: 0 auto;
+    text-align: center;
+    img{
+      text-align: center;
+margin: 0 auto;
+padding-top: 25px;
+    }
 }

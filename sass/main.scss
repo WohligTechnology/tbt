@@ -249,10 +249,12 @@ option {
 .fcenter {
   i {
     background-color: white;
-    border-radius: 2px;
-    padding: 5px 3px;
-    width: 20px;
+    border-radius: 50%;
+    width: 30px;
     margin: 2px 0;
+    height: 30px;
+    text-align: center;
+    line-height: 2;
   }
   a {
     color: #000000;
@@ -579,6 +581,7 @@ figure .links {
 }
 .footb2 {
   background: #263778;
+      margin: 0px 0px 15px 0px;
   .fc {
     padding: 2% 0 0;
   }
@@ -982,4 +985,8 @@ figure .links {
 .btn:focus {
   outline: none;
   outline-offset: 0;
+}
+.ln-h{
+  line-height: 110%;
+
 }
