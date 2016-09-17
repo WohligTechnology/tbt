@@ -112,6 +112,13 @@ a:hover {
   color: #002b7f!important;
   text-decoration: none;
 }
+.black {
+  color: black !important;
+}
+.black:hover {
+  color: black!important;
+  text-decoration: none;
+}
 .list {
   list-style: none;
   padding: 3px 0;
@@ -581,7 +588,7 @@ figure .links {
 }
 .footb2 {
   background: #263778;
-      margin: 0px 0px 15px 0px;
+  margin: 0 0 15px;
   .fc {
     padding: 2% 0 0;
   }
@@ -938,6 +945,77 @@ figure .links {
     margin: 0;
   }
 }
+.pattmarg2 {
+  padding: 2%;
+}
+.checkboxrow {
+  padding: 1% 2%;
+  .pading5 {
+    padding-top: 5px;
+  }
+  p {
+    margin: 0 !important;
+    font-size: 20px;
+  }
+  .checkbox {
+    display: inline-block !important;
+    margin: 0 !important;
+    label {
+      font-size: 14px !important;
+      margin-left: 8px !important;
+    }
+  }
+}
+.pattmarg3 {
+  margin-bottom: 3%;
+}
+.pattsocial {
+  width: 4%;
+  margin-top: -12%;
+  margin-right: 2.3%;
+  .socialpatt {
+    list-style: none;
+    width: 178px;
+    margin-left: -70px;
+    text-align: center;
+    font-size: 14px;
+    background: #ffca18;
+    padding: 12px 0;
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    .fontsizep {
+      color: black;
+      font-size: 20px;
+    }
+  }
+}
+.margincheck {
+  margin: 1% 5% -1px;
+}
+.panelhead {
+  padding: 5px 10px;
+  border-top: 2px solid #ffca18;
+  .fontpanel {
+    font-size: 18px;
+    a i {
+      font-size: 14px !important;
+    }
+  }
+}
+.ytp-chrome-top {
+  display: none !important;
+}
+.padding15 {
+  font-size: 15px;
+}
+.padding30 {
+  font-size: 12px;
+  padding: 0 30px;
+}
+.nonlist {
+  list-style-type: none;
+}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
@@ -986,7 +1064,6 @@ figure .links {
   outline: none;
   outline-offset: 0;
 }
-.ln-h{
+.ln-h {
   line-height: 110%;
-
 }
