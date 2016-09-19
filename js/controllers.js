@@ -23,6 +23,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Activity");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    TemplateService.header = "views/Activity_header.html";
 
   })
 
@@ -53,11 +54,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.flags.thankyou = false;
     console.log("ffff", $scope.formData);
     NavigationService.submitForm($scope.formData, function(res) {
-      if(res.value){
+      if (res.value) {
         $scope.flags.thankyou = true;
         $scope.flags.mailform = true;
         $scope.formData = {};
-      }else{
+      } else {
 
       }
     });
@@ -71,6 +72,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Destination");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    TemplateService.header = "views/Destination_header.html";
 
   })
   .controller('PattayaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -81,7 +83,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 
   })
-  .controller('WhatsHotCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  .controller('WhatsHotCtrl', function($scope, TemplateService, NavigationService, $timeout,$uibModal) {
 
     $scope.template = TemplateService.changecontent("whats-hot");
     $scope.menutitle = NavigationService.makeactive("Whats Hot");
@@ -90,7 +92,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.header = "views/whats_header.html";
     TemplateService.footermenu = "views/whats_footermenu.html";
     TemplateService.footer = "views/whats_footer.html";
-
+    $scope.flags = {};
+    $scope.flags.thankyou = false;
+    $scope.details2 = function() {
+      $uibModal.open({
+        animation: true,
+        templateUrl: "views/modal/slider.html",
+        scope: $scope,
+        windowClass: "width80"
+      });
+    };
   })
   .controller('CustomisationCtrl', function($scope, TemplateService, NavigationService, $timeout) {
 

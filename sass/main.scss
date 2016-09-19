@@ -732,7 +732,7 @@ figure .links {
 }
 .sendform {
   float: right !important;
-  padding: 8px 61px !important;
+  padding: 4px 61px !important;
   margin: 20px 7px !important;
 }
 .paddingabout {
@@ -786,6 +786,7 @@ figure .links {
   }
 }
 //whats a hot css
+.curserponter{cursor: pointer;}
 .whatsmain {
   .pading0 {
     padding: 1px !important;
@@ -839,6 +840,7 @@ figure .links {
   color: #002b79;
 }
 .wtlast {
+  padding-bottom: 15%;
   margin: -5% 0;
   background: rgba(255, 255, 255, 0);
   .wtlast2 {
