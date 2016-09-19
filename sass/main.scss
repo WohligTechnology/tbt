@@ -53,6 +53,7 @@ a:focus,
 a:hover {
   text-decoration: none !important;
 }
+//font style start
 .pregular {
   font-family: 'pregular';
 }
@@ -74,6 +75,7 @@ a:hover {
 .f-regular {
   font-weight: 400;
 }
+//font color start
 .whit_color {
   color: $white !important;
 }
@@ -90,6 +92,9 @@ a:hover {
 }
 .yellow_back_color {
   background: #ffca18 !important;
+}
+.yellow_back_lightcolor {
+  background: #fdd116 !important;
 }
 .grey_color {
   color: #807b7b !important;
@@ -347,7 +352,6 @@ option {
     line-height: 100%;
   }
 }
-///new css
 .m8 {
   margin: 8% 0;
   .mr {
@@ -511,7 +515,7 @@ figure .links {
     background-image: url("../img/btn-bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding: 10px 31px;
+    padding: 7px 40px;
   }
   .ge {
     cursor: default;
@@ -528,8 +532,8 @@ figure .links {
       display: block;
       width: 100%;
       height: auto;
-      padding: 6px 12px;
-      font-size: 19px;
+      padding: 8px 12px;
+      font-size: 17px;
       line-height: 1.42857;
       color: #555555;
       background-color: #fff;
@@ -668,7 +672,7 @@ figure .links {
   font-size: 30px;
   margin: 4% 0 5%;
 }
-//customisation
+//customisation css
 .loadimag {
   margin: 2% 0;
   a {
@@ -781,7 +785,7 @@ figure .links {
     padding-top: 10px;
   }
 }
-//whats page
+//whats a hot css
 .whatsmain {
   .pading0 {
     padding: 1px !important;
@@ -921,9 +925,12 @@ figure .links {
   }
 }
 //pattaya css
+.frammargin {
+  margin: 18% 40%;
+}
 .patpack {
   font-weight: 900;
-  color: #ffca18 !important;
+  color: #fdd116 !important;
   font-size: 40px;
 }
 .patpack2 {
@@ -932,13 +939,12 @@ figure .links {
   background-image: url("../img/btn-bg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  padding: 19px 46px 8px;
+  padding: 16px 46px 4px;
   width: 199px;
   margin-left: 20px;
 }
 .pattayamarg4 {
   margin: -4% 5% 1%;
-  background: #ffca18;
   padding: 3% 8%;
   p {
     font-size: 13px;
@@ -949,24 +955,34 @@ figure .links {
   padding: 2%;
 }
 .checkboxrow {
-  padding: 1% 2%;
+  .check_img {
+    display: inline-block;
+    width: 22px;
+  }
+  .check_img2 {
+    height: 20px;
+    width: 5px;
+    margin-top: -6px;
+  }
+  padding: 1% 2% 8%;
   .pading5 {
     padding-top: 5px;
   }
   p {
     margin: 0 !important;
-    font-size: 20px;
+    font-size: 21px;
   }
   .checkbox {
     display: inline-block !important;
     margin: 0 !important;
     label {
-      font-size: 14px !important;
+      font-size: 16px !important;
       margin-left: 8px !important;
     }
   }
 }
 .pattmarg3 {
+  margin-top: -63px;
   margin-bottom: 3%;
 }
 .pattsocial {
@@ -993,6 +1009,10 @@ figure .links {
 .margincheck {
   margin: 1% 5% -1px;
 }
+.paddmain {
+  margin-bottom: 1%;
+  padding-bottom: 4px;
+}
 .panelhead {
   padding: 5px 10px;
   border-top: 2px solid #ffca18;
@@ -1015,6 +1035,106 @@ figure .links {
 }
 .nonlist {
   list-style-type: none;
+}
+.border5 {
+  border-top: 2px solid #ffca18;
+  p {
+    display: inline-block;
+    padding: 0 28px;
+    margin: 0 !important;
+    font-size: 18px;
+  }
+}
+.patmargin3 {
+  margin-top: 2%;
+  .formlabels {
+    button {
+      font-weight: 600;
+      font-size: 12px;
+      color: #fff;
+      background-image: url("../img/btn-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      padding: 3px 25px;
+      border: none;
+      background-color: #ffca18;
+      margin-left: 20%;
+    }
+    .form-group {
+      margin-bottom: 6px !important;
+    }
+    label {
+      word-spacing: 2px;
+      font-size: 13px;
+      display: inline-block;
+      width: 32%;
+      float: left;
+      text-align: right;
+      margin-right: 2%;
+    }
+  }
+}
+.padding6 {
+  padding-top: 19px;
+}
+.borderr {
+  padding-right: 28px;
+}
+.borderright {
+  border-right: 1px solid black;
+  width: 80%;
+}
+.borderwidth {
+  width: 90%;
+  border-right: 1px solid black;
+  padding-right: 7px;
+}
+.img1 {
+  margin-bottom: -5px;
+  display: inline-block;
+  width: 48%;
+}
+.naming {
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+.marg6 {
+  margin-top: 6px;
+}
+.marg14 {
+  margin-left: -46px;
+  margin-top: -13px;
+}
+.marg13 {
+  margin-top: -13px;
+  strong {
+    display: block;
+  }
+}
+.inputform {
+  color: #000000 !important;
+  background-color: rgba(255, 255, 255, 0.65) !important;
+  border: none !important;
+  width: 66% !important;
+  height: 20px !important;
+}
+.patevent {
+  position: relative;
+}
+.cart-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  padding: 0 5px;
+  color: #002b7f;
+  font-size: 11px;
+}
+.image_title {
+  display: inline-block;
+  width: 25px;
+  margin-top: -7px;
+  margin-right: 12px;
 }
 //bootstrap forms
 /* Start writing sass here */
