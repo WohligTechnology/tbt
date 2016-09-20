@@ -598,33 +598,36 @@ figure .links {
         .marg7 {
             padding-top: 7px;
         }
-    }
-    .fcenter2 {
-        text-align: center;
-        a {
-            color: #000000;
-            font-size: 12px;
-            i {
-                background-color: white;
-                border-radius: 50%;
-                width: 24px;
-                margin: 2px 0;
-                height: 22px;
-                text-align: center;
-                line-height: 2;
+        .fcenter2 {
+            text-align: center;
+            a {
+                color: #000000;
+                font-size: 12px;
+                i {
+                    background-color: white;
+                    border-radius: 50%;
+                    width: 24px;
+                    margin: 2px 0;
+                    height: 22px;
+                    text-align: center;
+                    line-height: 2;
+                }
+            }
+            p {
+                margin: 0;
+                font-size: 12px;
+                color: #bbb8b8;
             }
         }
-    }
-    p {
-        margin: 0;
-        font-size: 12px;
-        color: #bbb8b8;
     }
 }
 .footermenu {
     background: #012B7F;
 }
 //destination css start
+.mainwidht {
+    width: 100% !important;
+}
 .pdt15 {
     padding-bottom: 30px;
 }
