@@ -14,36 +14,36 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   $httpProvider.defaults.withCredentials = true;
   $stateProvider
     .state('home', {
-    url: "/",
-    templateUrl: "views/template.html",
-    controller: 'StaticCtrl'
-  })
+      url: "/",
+      templateUrl: "views/template.html",
+      controller: 'StaticCtrl'
+    })
     .state('customisation', {
-    url: "/customisation",
-    templateUrl: "views/template.html",
-    controller: 'CustomisationCtrl'
-  })
+      url: "/customisation",
+      templateUrl: "views/template.html",
+      controller: 'CustomisationCtrl'
+    })
 
-    .state('destination', {
-    url: "/destination",
-    templateUrl: "views/template.html",
-    controller: 'DestinationCtrl'
-  })
+  .state('destination', {
+      url: "/destination",
+      templateUrl: "views/template.html",
+      controller: 'DestinationCtrl'
+    })
     .state('pattaya', {
-    url: "/pattaya",
-    templateUrl: "views/template.html",
-    controller: 'PattayaCtrl'
-  })
+      url: "/pattaya",
+      templateUrl: "views/template.html",
+      controller: 'PattayaCtrl'
+    })
     .state('whats-hot', {
-    url: "/whats-hot",
-    templateUrl: "views/template.html",
-    controller: 'WhatsHotCtrl'
-  })
+      url: "/whats-hot",
+      templateUrl: "views/template.html",
+      controller: 'WhatsHotCtrl'
+    })
     .state('activity', {
-    url: "/activity",
-    templateUrl: "views/template.html",
-    controller: 'ActivityCtrl'
-  });
+      url: "/activity",
+      templateUrl: "views/template.html",
+      controller: 'ActivityCtrl'
+    });
   $urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);
 });
@@ -70,32 +70,32 @@ firstapp.directive('img', function($compile, $parse) {
 });
 
 firstapp.directive('fancyboxBox', function($document) {
-    return {
-        restrict: 'EA',
-        replace: false,
-        link: function(scope, element, attr) {
-            var $element = $(element);
-            var target;
-            if (attr.rel) {
-               target = $("[rel='" + attr.rel + "']");
-            } else {
-                target = element;
-            }
+  return {
+    restrict: 'EA',
+    replace: false,
+    link: function(scope, element, attr) {
+      var $element = $(element);
+      var target;
+      if (attr.rel) {
+        target = $("[rel='" + attr.rel + "']");
+      } else {
+        target = element;
+      }
 
-            target.fancybox({
-                openEffect: 'fade',
-                closeEffect: 'fade',
-                closeBtn: true,
-                helpers: {
-                    media: {}
-                }
-            });
+      target.fancybox({
+        openEffect: 'fade',
+        closeEffect: 'fade',
+        closeBtn: true,
+        helpers: {
+          media: {}
         }
-    };
+      });
+    }
+  };
 });
 
 
-firstapp.config(function ($translateProvider) {
+firstapp.config(function($translateProvider) {
   $translateProvider.translations('en', LanguageEnglish);
   $translateProvider.translations('hi', LanguageHindi);
   $translateProvider.preferredLanguage('en');
