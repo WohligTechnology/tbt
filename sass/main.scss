@@ -258,21 +258,6 @@ option {
   padding: 2%;
   background: #fff;
 }
-.fcenter {
-  i {
-    background-color: white;
-    border-radius: 50%;
-    width: 30px;
-    margin: 2px 0;
-    height: 30px;
-    text-align: center;
-    line-height: 2;
-  }
-  a {
-    color: #000000;
-    font-size: 15px;
-  }
-}
 .hdn {
   padding: 20px 10px 0;
   color: #0b358c;
@@ -579,10 +564,26 @@ figure .links {
 .footb {
   background: #121212;
   .fc {
-    padding: 2% 0 0;
+    padding: 10px 0;
+    .marg7 {
+      padding-top: 7px;
+    }
   }
   .fcenter {
     text-align: center;
+    i {
+      background-color: white;
+      border-radius: 50%;
+      width: 24px;
+      margin: 2px 0;
+      height: 22px;
+      text-align: center;
+      line-height: 2;
+    }
+    a {
+      color: #000000;
+      font-size: 12px;
+    }
   }
   p {
     margin: 0;
@@ -592,12 +593,27 @@ figure .links {
 }
 .footb2 {
   background: #263778;
-  margin: 0 0 15px;
   .fc {
-    padding: 2% 0 0;
+    padding: 10px 0;
+    .marg7 {
+      padding-top: 7px;
+    }
   }
-  .fcenter {
+  .fcenter2 {
     text-align: center;
+    a {
+      color: #000000;
+      font-size: 12px;
+      i {
+        background-color: white;
+        border-radius: 50%;
+        width: 24px;
+        margin: 2px 0;
+        height: 22px;
+        text-align: center;
+        line-height: 2;
+      }
+    }
   }
   p {
     margin: 0;
@@ -786,7 +802,9 @@ figure .links {
   }
 }
 //whats a hot css
-.curserponter{cursor: pointer;}
+.curserpionter {
+  cursor: pointer;
+}
 .whatsmain {
   .pading0 {
     padding: 1px !important;
