@@ -89,9 +89,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Whats Hot");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    TemplateService.header = "views/whats_header.html";
-    TemplateService.footermenu = "views/whats_footermenu.html";
-    TemplateService.footer = "views/whats_footer.html";
     $scope.flags = {};
     $scope.flags.thankyou = false;
     $scope.details2 = function() {
