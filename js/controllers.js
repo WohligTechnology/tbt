@@ -30,7 +30,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('StaticCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
 
   $scope.template = TemplateService.changecontent("tbtstatic");
-  $scope.menutitle = NavigationService.makeactive("TBTStatic");
+  $scope.menutitle = NavigationService.makeactive("The Bachelor Trip");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
   TemplateService.header = "views/static_header.html";

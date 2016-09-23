@@ -52,7 +52,9 @@ a,
 img {
     outline: none !important;
 }
-
+.color-white{
+  color:#fff;
+}
 a:focus,
 a:hover {
     text-decoration: none !important;
@@ -731,8 +733,7 @@ figure .links {
     background: #263778;
 
     .fc {
-        padding: 10px 0;
-
+      padding: 18px 0px 5px 0px;
         .marg7 {
             padding-top: 7px;
         }
@@ -747,11 +748,11 @@ figure .links {
                 i {
                     background-color: white;
                     border-radius: 50%;
-                    width: 24px;
-                    margin: 2px 0;
-                    height: 22px;
-                    text-align: center;
-                    line-height: 2;
+    width: 24px;
+    height: 24px;
+    line-height: 2;
+    text-align: center;
+    vertical-align: baseline
                 }
             }
 
