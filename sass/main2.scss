@@ -225,3 +225,182 @@ option[value=""][disabled] {
 .display2 {
     display: none;
 }
+//UPCOMING CSS START
+
+.lm2 {
+    height: 100% !important;
+    padding: 5% 0;
+    width: 38%;
+    margin: 0 !important;
+    float: right;
+    background: rgba(0, 0, 152, 0.78);
+
+    .hclass {
+        line-height: 57px;
+        margin-bottom: 0;
+    }
+
+    .LMP {
+        font-size: 20px;
+        font-weight: 900;
+        margin-left: 4%;
+    }
+
+    .hclass1 {
+        font-size: 94px;
+    }
+
+    .hclass2 {
+        font-size: 94px;
+        margin-left: 20px;
+    }
+}
+
+.shadow-down2 {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 252, 252, 0.82);
+    height: 35%;
+    width: 100%;
+}
+
+.categoryup {
+    background-color: #fcd116;
+    padding: 20px 40px;
+
+    h1 {
+        font-size: 70px;
+        margin: 6% 0 2%;
+        display: inline-block;
+        width: 50%;
+        line-height: 56px;
+    }
+}
+
+.over-layer2 {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.88);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.events:hover .over-layer2 {
+    display: block;
+}
+
+.events:hover .event-name2,
+.events:hover .shadow-down2 {
+    display: none;
+}
+
+.event-name2 {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%);
+    color: #fff;
+    font-weight: 600;
+    font-family: pregular;
+    width: 100%;
+    text-align: center;
+}
+
+.event-name2 {
+    .eventp {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .eventh2 {
+        margin-bottom: 5px;
+        font-family: pregular;
+        font-weight: 900;
+        letter-spacing: -1px;
+        font-size: 26px;
+    }
+
+    .eventhr {
+        border-top: 3px solid #ffca18 !important;
+        margin: 0 36% 7px !important;
+    }
+}
+
+.hoverhold {
+    font-weight: 600;
+    margin: 28% 0 0;
+
+    .eventp {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .eventh2 {
+        margin-bottom: 5px;
+        font-family: pregular;
+        font-weight: 900;
+        letter-spacing: -1px;
+        font-size: 26px;
+    }
+
+    .eventhr {
+        border-top: 3px solid #ffca18 !important;
+        margin: 0 36% 7px !important;
+    }
+
+    .morebutton {
+        background: none;
+        border: 0;
+        letter-spacing: 2px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #ffffff;
+        background-image: url("../img/btn-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 10px 35px;
+        margin: 3% 0;
+    }
+}
+//PATTAYA2 CSS START
+
+.categoryup2 {
+    background-color: #fcd116;
+    padding: 6%;
+    margin: -5% 6% 45%;
+}
+
+.pattayevents {
+    .tittalep {
+        padding-bottom: 6px;
+        font-weight: 600;
+        margin: 1% 11%;
+    }
+
+    .borderhr {
+        width: 45%;
+        border-bottom: 3px solid #ffca18 !important;
+        padding-bottom: 8px;
+        display: inline-block;
+        font-weight: bolder;
+        letter-spacing: -2px;
+    }
+
+    .list2 {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        word-spacing: 2px;
+    }
+
+    .margin-group {
+        margin: 1px 6%;
+    }
+}
+
+.iconmarg {
+    margin: 54% 0;
+}
