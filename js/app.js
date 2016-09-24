@@ -10,8 +10,19 @@ var firstapp = angular.module('firstapp', [
 ]);
 
 firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
+<<<<<<< HEAD
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
+=======
+  // for http request with session
+  $httpProvider.defaults.withCredentials = true;
+  $stateProvider
+    .state('home', {
+      url: "/",
+      templateUrl: "views/template.html",
+      controller: 'StaticCtrl'
+    })
+>>>>>>> 31e5fdc78608247daed5995c19a5a2207672c6dc
     $stateProvider
         .state('home', {
             url: "/",

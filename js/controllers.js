@@ -27,7 +27,46 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     })
 
+<<<<<<< HEAD
 .controller('UpcomingEventsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+=======
+  $scope.template = TemplateService.changecontent("tbtstatic");
+  $scope.menutitle = NavigationService.makeactive("The Bachelor Trip");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+  TemplateService.header = "views/static_header.html";
+  TemplateService.footermenu = "views/static_footermenu.html";
+  TemplateService.footer = "views/static_footer.html";
+  $scope.flags = {};
+  $scope.flags.thankyou = false;
+  $scope.details = function() {
+    $uibModal.open({
+      animation: true,
+      templateUrl: "views/modal/details.html",
+      scope: $scope,
+      windowClass: "width80"
+    });
+  };
+  // $scope.cancel = function() {
+  //                       $modalInstance.dismiss('cancel');
+  //                   };
+  $scope.formData = {};
+  $scope.submitForm = function() {
+    $scope.flags.thankyou = false;
+    console.log("ffff", $scope.formData);
+    NavigationService.submitForm($scope.formData, function(res) {
+      if (res.value) {
+        $scope.flags.thankyou = true;
+        $scope.flags.mailform = true;
+        $scope.formData = {};
+      } else {
+
+      }
+    });
+  };
+
+})
+>>>>>>> 31e5fdc78608247daed5995c19a5a2207672c6dc
 
     $scope.template = TemplateService.changecontent("upcomingEvents");
     $scope.menutitle = NavigationService.makeactive("UpcomingEvents");
