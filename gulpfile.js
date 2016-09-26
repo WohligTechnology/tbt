@@ -17,11 +17,22 @@ var jsArray = [
     './bower_components/angulartics/dist/angulartics.min.js',
     './bower_components/angulartics-google-analytics/dist/angulartics-google-analytics.min.js',
     './bower_components/angular-swiper/dist/angular-swiper.js',
+    './bower_components/jquery-bridget/jquery-bridget.js',
+    './bower_components/ev-emitter/ev-emitter.js',
+    './bower_components/desandro-matches-selector/matches-selector.js',
+    './bower_components/fizzy-ui-utils/utils.js',
+    './bower_components/get-size/get-size.js',
+    './bower_components/outlayer/item.js',
+    './bower_components/outlayer/outlayer.js',
+    './bower_components/masonry/masonry.js',
+    './bower_components/imagesloaded/imagesloaded.js',
+    './bower_components/angular-masonry/angular-masonry.js',
     './js/app.js',
     './js/language.js',
     './js/controllers.js',
     './js/templateservice.js',
     './js/navigation.js',
+
 
     //please do not change it
     './w/js/templates.js',

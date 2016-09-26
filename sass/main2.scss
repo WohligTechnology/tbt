@@ -266,7 +266,7 @@ option[value=""][disabled] {
 
 .categoryup {
     background-color: #fcd116;
-    padding: 20px 40px;
+    padding: 20px 40px 40px;
 
     h1 {
         font-size: 70px;
@@ -367,10 +367,13 @@ option[value=""][disabled] {
 }
 //PATTAYA2 CSS START
 
+.mim1 {
+    margin: -1px 0 0;
+}
+
 .categoryup2 {
-    background-color: #fcd116;
     padding: 6%;
-    margin: -5% 6% 45%;
+    margin: -5% 6%;
 }
 
 .pattayevents {
@@ -401,6 +404,84 @@ option[value=""][disabled] {
     }
 }
 
+.img-box {
+    width: 260px !important;
+}
+
 .iconmarg {
     margin: 54% 0;
+}
+
+.pattaya2logo {
+    display: inline-block;
+    position: absolute;
+    top: 51%;
+    right: 1%;
+}
+
+.marginicon {
+    margin: 0 10px 10px;
+}
+
+.paddleft {
+    margin-top: 35%;
+    padding-left: 8%;
+
+    p {
+        display: inline-block;
+        padding: 0 28px;
+        margin: 0 !important;
+        font-size: 22px;
+    }
+}
+
+.patayasocial {
+    margin-top: -80% !important;
+    margin-right: -11.4% !important;
+}
+
+.patayasocial2 {
+    margin-top: -17% !important;
+    margin-right: 4.3% !important;
+}
+
+.links2 {
+    margin: 4% 0;
+
+    .loadh1 {
+        line-height: 47px;
+    }
+
+    .pattp1 {
+        font-family: sans-serif;
+        letter-spacing: -1px;
+        margin: 4% 0;
+        text-align: right;
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+    .pattp2 {
+        font-family: sans-serif;
+        letter-spacing: -1px;
+        display: inline-block;
+        float: right;
+        font-weight: bolder;
+        font-size: 21px;
+        padding: 1px 8px;
+    }
+}
+
+.pattayaimg {
+    margin: 0 30%;
+}
+
+.fingurback {
+    background: linear-gradient(rgba(255, 255, 255, 0) 58%, rgb(62, 62, 60));
+}
+
+.pattayah1 {
+    margin: 0;
+    font-size: 100px;
+    font-weight: 800;
 }

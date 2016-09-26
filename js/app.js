@@ -10,24 +10,13 @@ var firstapp = angular.module('firstapp', [
 ]);
 
 firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
-<<<<<<< HEAD
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
-=======
-  // for http request with session
-  $httpProvider.defaults.withCredentials = true;
-  $stateProvider
-    .state('home', {
-      url: "/",
-      templateUrl: "views/template.html",
-      controller: 'StaticCtrl'
-    })
->>>>>>> 31e5fdc78608247daed5995c19a5a2207672c6dc
     $stateProvider
         .state('home', {
             url: "/",
             templateUrl: "views/template.html",
-            controller: 'HomeCtrl'
+            controller: 'StaticCtrl'
         })
     $stateProvider
         .state('tbtstatic', {
@@ -46,11 +35,6 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template.html",
             controller: 'DestinationCtrl'
         })
-        .state('upcomingEvents', {
-            url: "/upcomingEvents",
-            templateUrl: "views/template.html",
-            controller: 'UpcomingEventsCtrl'
-        })
         .state('pattaya', {
             url: "/pattaya",
             templateUrl: "views/template.html",
@@ -60,6 +44,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             url: "/pattaya2",
             templateUrl: "views/template.html",
             controller: 'Pattaya2Ctrl'
+        })
+        .state('upcomingEvents', {
+            url: "/upcomingEvents",
+            templateUrl: "views/template.html",
+            controller: 'upcomingEventsCtrl'
         })
         .state('whats-hot', {
             url: "/whats-hot",

@@ -1,108 +1,79 @@
 <!---banner start ---->
-<figure class="mim8">
-    <img class="img-responsive doneLoading" src="img/4.jpg">
-    <figcaption>
-        <div class="links">
-            <div class="onimg">
+<div class="container">
+    <figure class="mim1">
+        <img class="img-responsive doneLoading" src="img/12.jpg">
+        <figcaption class="fingurback">
+            <div class="links2">
+                <div class="pattayaimg">
+                    <h1 class="pattayah1 theboldfont yellow_color">LOADED</h1>
+                    <h1 class="loadh1 pattayah1 theboldfont">PACKAGE</h1>
+                    <p class=" pattp1">(4 NIGHTS/8 TO 10 PERSONS)</p>
+                    <p class=" pattp2 yellow_back_lightcolor bluecol">START @ 50,000</p>
+                </div>
             </div>
-        </div>
-    </figcaption>
-</figure>
+        </figcaption>
+    </figure>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="categoryup2">
+            <div class="categoryup2 yellow_back_lightcolor">
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12 padd15px">
-                        <div class="pattayevents white_back_color">
-                            <img src="img/rockclimb.png" alt="" class="img-responsive">
-                            <div class="tittalep">
-                                <h2 class="bluecol eventh2 Robotor borderhr">DAY 1</h2>
-                                <ul class="list-group bluecol margin-group">
-                                    <li class="list2 Roboto ">Welcome by our guide at the airport</li>
-                                    <li class="list2 Roboto ">Hotel Transfer (Minivan)</li>
-                                    <li class="list2 Roboto ">Breakfast along the way</li>
-                                    <li class="list2 Roboto ">pool Party</li>
-                                    <li class="list2 Roboto ">Lunch</li>
-                                    <li class="list2 Roboto ">VIP night club</li>
-                                </ul>
+                    <div masonry>
+                        <div class="masonry-brick padd15px" ng-repeat="scope in data">
+                            <div class="marginicon">
+                                <div class="pattayevents white_back_color">
+                                    <img ng-src="{{ scope.img  }}" class="img-box" alt="A masonry scope">
+                                    <div class="tittalep">
+                                        <h2 class="bluecol eventh2 Robotor borderhr">{{ scope.day  }}</h2>
+                                        <ul class="list-group bluecol margin-group">
+                                            <li class="list2 Roboto "> {{ scope.li }} </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 padd15px">
-                        <div class="pattayevents white_back_color">
-                            <img src="img/rockclimb.png" alt="" class="img-responsive">
-                            <div class="tittalep">
-                                <h2 class="bluecol eventh2 Robotor borderhr">DAY 1</h2>
-                                <ul class="list-group bluecol margin-group">
-                                    <li class="list2 Roboto ">Welcome by our guide at the airport</li>
-                                    <li class="list2 Roboto ">Hotel Transfer (Minivan)</li>
-                                    <li class="list2 Roboto ">Breakfast along the way</li>
-                                    <li class="list2 Roboto ">pool Party</li>
-                                    <li class="list2 Roboto ">Lunch</li>
-                                    <li class="list2 Roboto ">VIP night club</li>
-                                </ul>
-                            </div>
+                        <div class="pattaya2logo">
+                            <img src="img/wd.png" alt="" class="img-box">
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 padd15px">
-                        <div class="pattayevents white_back_color">
-                            <img src="img/rockclimb.png" alt="" class="img-responsive">
-                            <div class="tittalep">
-                                <h2 class="bluecol eventh2 Robotor borderhr">DAY 1</h2>
-                                <ul class="list-group bluecol margin-group">
-                                    <li class="list2 Roboto ">Welcome by our guide at the airport</li>
-                                    <li class="list2 Roboto ">Hotel Transfer (Minivan)</li>
-                                    <li class="list2 Roboto ">Breakfast along the way</li>
-                                    <li class="list2 Roboto ">pool Party</li>
-                                    <li class="list2 Roboto ">Lunch</li>
-                                    <li class="list2 Roboto ">VIP night club</li>
-                                </ul>
-                            </div>
-                        </div>
+                </div>
+                <div class="pull-right wtsocial patayasocial">
+                    <div class="col-md-12 social1">
+                        <ul class="list-group socialgr">
+                            <li class="Robotor">
+                                <a class="yellow_color pregular"><img src="img/cart.png" alt="" class="socialimg img-responsive doneLoading">ADD TO CART</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 padd15px">
-                        <div class="pattayevents white_back_color">
-                            <img src="img/rockclimb.png" alt="" class="img-responsive">
-                            <div class="tittalep">
-                                <h2 class="bluecol eventh2 Robotor borderhr">DAY 1</h2>
-                                <ul class="list-group bluecol margin-group">
-                                    <li class="list2 Roboto ">Welcome by our guide at the airport</li>
-                                    <li class="list2 Roboto ">Hotel Transfer (Minivan)</li>
-                                    <li class="list2 Roboto ">Breakfast along the way</li>
-                                    <li class="list2 Roboto ">pool Party</li>
-                                    <li class="list2 Roboto ">Lunch</li>
-                                    <li class="list2 Roboto ">VIP night club</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 padd15px">
-                        <div class="pattayevents white_back_color">
-                            <img src="img/rockclimb.png" alt="" class="img-responsive">
-                            <div class="tittalep">
-                                <h2 class="bluecol eventh2 Robotor borderhr">DAY 1</h2>
-                                <ul class="list-group bluecol margin-group">
-                                    <li class="list2 Roboto ">Welcome by our guide at the airport</li>
-                                    <li class="list2 Roboto ">Hotel Transfer (Minivan)</li>
-                                    <li class="list2 Roboto ">Breakfast along the way</li>
-                                    <li class="list2 Roboto ">pool Party</li>
-                                    <li class="list2 Roboto ">Lunch</li>
-                                    <li class="list2 Roboto ">VIP night club</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 padd15px">
-                        <div class="pattayevents iconmarg">
-                            <img src="img/wd.png" alt="" class="img-responsive">
-                        </div>
+                    <div class="col-md-12 social2">
+                        <ul class="ulsocial2 list-group">
+                            <li class=""><a class="fontsiz yellow_color pregular"><i class="fa fa-share-alt"></i></a></li>
+                            <li class="ulsocial2i "><a class="bluecol pregular"><i class="fa fa-facebook"></i></a></li>
+                            <li class="ulsocial2i "><a class="bluecol pregular"><i class="fa fa-twitter"></i></a></li>
+                            <li class="ulsocial2i "><a class="bluecol pregular"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="pattsocial patayasocial2 pull-right">
+    <div class="col-md-12">
+        <ul class="list-group socialpatt">
+            <li class="Robotor">
+                <a class="black fontsizep Roboto">ENQUIRE NOW</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="paddleft">
+    <p class="pregular bluecol yellow_back_color ">MY CART</p>
+</div>
+
 <div class="paddmain yellow_back_lightcolor">
     <div class="container ">
         <div class="col-md-12 patmargin3">
@@ -181,7 +152,7 @@
         </div>
     </div>
 </div>
-</div>
+
 <!--email update -->
 <div class="eupt ng-scope">
     <div class="container">
