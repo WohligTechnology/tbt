@@ -1185,6 +1185,18 @@ figure .links {
 }
 //pattaya css
 
+.displaynon {
+    display: none;
+}
+
+.active-tab {
+    display: block !important;
+}
+
+.margintop {
+    margin-top: 20%;
+}
+
 .pattform {
     margin-top: -16%;
     position: absolute;
@@ -1213,7 +1225,7 @@ figure .links {
         padding: 9px 12px !important;
         width: 100%;
         background: #002b7f !important;
-        color: #908e8e !important;
+        color: #cacaca !important;
     }
 }
 
@@ -1315,6 +1327,30 @@ figure .links {
     }
 }
 
+.pattsocial2 {
+    z-index: 2;
+    margin-top: 7%;
+    position: absolute;
+    left: -113px;
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+
+    .socialpatt {
+        list-style: none;
+        text-align: center;
+        background: #ffffff;
+        margin: 5px;
+        cursor: pointer;
+        padding: 5px 21px;
+
+        .fontsizep {
+            color: black;
+            font-size: 20px;
+        }
+    }
+}
+
 .margincheck {
     margin: 1% 5% -1px;
 }
@@ -1335,6 +1371,10 @@ figure .links {
             font-size: 14px !important;
         }
     }
+}
+
+.panelhea2 {
+    border-bottom: 2px solid #ffca18;
 }
 
 .ytp-chrome-top {

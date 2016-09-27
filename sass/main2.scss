@@ -424,8 +424,7 @@ option[value=""][disabled] {
 }
 
 .paddleft {
-    margin-top: 35%;
-    padding-left: 8%;
+    padding-left: 9.6%;
 
     p {
         display: inline-block;
@@ -464,11 +463,19 @@ option[value=""][disabled] {
     .pattp2 {
         font-family: sans-serif;
         letter-spacing: -1px;
-        display: inline-block;
         float: right;
         font-weight: bolder;
         font-size: 21px;
         padding: 1px 8px;
+        margin: 0 0 0 20px;
+        height: 100%;
+        transform: skew(-42deg);
+
+        .span {
+            padding: 1px 0 1px 4px;
+            margin: 0;
+            transform: skew(41deg);
+        }
     }
 }
 

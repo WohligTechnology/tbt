@@ -15,14 +15,112 @@
     </div>
 </div>
 <!---FORM start ---->
+
+<!---SELECTION START---->
 <div class="whatsmain">
     <div class="container ">
         <div class="col-md-12 ">
-            <div class="whatsmarg4">
-                <!---POPULAR DESTINATIONS ---->
+            <!---PACKAGES START ---->
+            <div class="{{classp}} whatsmarg4 displaynon" ng-if="tabs=='az'">
                 <div class="row text-center pattmarg2">
-                    <span><a class="patpack theboldfont" ui-sref="home" href="#/">PACKAGES</a></span>
-                    <span><a class="patpack2 whit_color theboldfont " ui-sref="home" href="#/">ACTIVITIES</a></span>
+                    <span><a ng-click="tabchanges('az',1)" class=" patpack2 whit_color theboldfont ">PACKAGES</a></span>
+                    <span><a ng-click="tabchanges('bz',2)" class=" patpack theboldfont ">ACTIVITIES</a></span>
+                </div>
+                <div class="whatsmain">
+                    <div class="margincheck">
+                        <div class="row checkboxrow Robotor bluecol yellow_back_color">
+                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                <p>Customise your trip by adding to cart</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pattmarg3">
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                        <div class="events">
+                            <img src="img/bungee.png" alt="" class="img-responsive">
+                            <div class="cart-sec">
+                                <img src="img/cart.png" alt="" class="img-responsive">
+                            </div>
+                            <div class="shadow-up"></div>
+                            <div class="shadow-down"></div>
+                            <div class="event-name">
+                                <span>ROCK CLIMBING</span><br>
+                                <span>(4 NIGHT)</span>
+                            </div>
+                            <div class="over-layer text-center">
+                                <div class="button-holder">
+                                    <button class="ext-detail">KNOW MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                        <div class="events">
+                            <img src="img/bungee.png" alt="" class="img-responsive">
+                            <div class="cart-sec">
+                                <img src="img/cart.png" alt="" class="img-responsive">
+                            </div>
+                            <div class="shadow-up"></div>
+                            <div class="shadow-down"></div>
+                            <div class="event-name">
+                                <span>ROCK CLIMBING</span>
+                            </div>
+                            <div class="over-layer text-center">
+                                <div class="button-holder">
+                                    <button class="ext-detail">KNOW MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                        <div class="events">
+                            <img src="img/bungee.png" alt="" class="img-responsive">
+                            <div class="cart-sec">
+                                <img src="img/cart.png" alt="" class="img-responsive">
+                            </div>
+                            <div class="shadow-up"></div>
+                            <div class="shadow-down"></div>
+                            <div class="event-name">
+                                <span>ROCK CLIMBING</span>
+                            </div>
+                            <div class="over-layer text-center">
+                                <div class="button-holder">
+                                    <button class="ext-detail">KNOW MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                        <div class="events">
+                            <img src="img/bungee.png" alt="" class="img-responsive">
+                            <div class="cart-sec">
+                                <img src="img/cart.png" alt="" class="img-responsive">
+                            </div>
+                            <div class="shadow-up"></div>
+                            <div class="shadow-down"></div>
+                            <div class="event-name">
+                                <span>ROCK CLIMBING</span>
+                            </div>
+                            <div class="over-layer text-center">
+                                <div class="button-holder">
+                                    <button class="ext-detail">KNOW MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12  col-sm-12 col-xs-12 loadimag text-center ">
+                    <a class="whit_color" ui-sref="home" href="#/">LOAD  MORE</a>
+                </div>
+            </div>
+            <!---PACKAGES END ---->
+
+            <!---ACTIVIES START---->
+            <div class="{{classv}} whatsmarg4 displaynon" ng-if="tabs=='bz'">
+                <div class="row text-center pattmarg2">
+                    <span><a ng-click="tabchanges('az',1)" class=" patpack theboldfont">PACKAGES</a></span>
+                    <span><a ng-click="tabchanges('bz',2)" class=" patpack2 whit_color theboldfont ">ACTIVITIES</a></span>
                 </div>
                 <div class="whatsmain">
                     <div class="margincheck">
@@ -36,12 +134,12 @@
                                 <div class="checkbox">
                                     <label>
                                       <input type="checkbox" value="day">Day</label>
-                                       <img src="img/Vector-Smart-Object1.png" alt="" class="check_img">
+                                    <img src="img/Vector-Smart-Object1.png" alt="" class="check_img">
                                 </div>
                                 <div class="checkbox">
                                     <label>
                                       <input type="checkbox" value="night">Night</label>
-                                      <img src="img/Vector-Smart-Object (1).png" alt="" class="check_img2">
+                                    <img src="img/Vector-Smart-Object (1).png" alt="" class="check_img2">
                                 </div>
                             </div>
                             <div class="col-md-8 col-sm-6 col-xs-12">
@@ -196,132 +294,72 @@
                         </div>
                     </div>
                 </div>
-                <div class="row pattmarg3" style="display:none">
-                  <div class="col-md-3 col-sm-4 col-xs-6 pading0">
-                      <div class="events">
-                          <img src="img/bungee.png" alt="" class="img-responsive">
-                          <div class="cart-sec">
-                              <img src="img/cart.png" alt="" class="img-responsive">
-                          </div>
-                          <div class="shadow-up"></div>
-                          <div class="shadow-down"></div>
-                          <div class="event-name">
-                              <span>ROCK CLIMBING</span>
-                          </div>
-                          <div class="over-layer text-center">
-                              <div class="button-holder">
-                                  <button class="ext-detail">KNOW MORE</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-3 col-sm-4 col-xs-6 pading0">
-                      <div class="events">
-                          <img src="img/bungee.png" alt="" class="img-responsive">
-                          <div class="cart-sec">
-                              <img src="img/cart.png" alt="" class="img-responsive">
-                          </div>
-                          <div class="shadow-up"></div>
-                          <div class="shadow-down"></div>
-                          <div class="event-name">
-                              <span>ROCK CLIMBING</span>
-                          </div>
-                          <div class="over-layer text-center">
-                              <div class="button-holder">
-                                  <button class="ext-detail">KNOW MORE</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-3 col-sm-4 col-xs-6 pading0">
-                      <div class="events">
-                          <img src="img/bungee.png" alt="" class="img-responsive">
-                          <div class="cart-sec">
-                              <img src="img/cart.png" alt="" class="img-responsive">
-                          </div>
-                          <div class="shadow-up"></div>
-                          <div class="shadow-down"></div>
-                          <div class="event-name">
-                              <span>ROCK CLIMBING</span>
-                          </div>
-                          <div class="over-layer text-center">
-                              <div class="button-holder">
-                                  <button class="ext-detail">KNOW MORE</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-3 col-sm-4 col-xs-6 pading0">
-                      <div class="events">
-                          <img src="img/bungee.png" alt="" class="img-responsive">
-                          <div class="cart-sec">
-                              <img src="img/cart.png" alt="" class="img-responsive">
-                          </div>
-                          <div class="shadow-up"></div>
-                          <div class="shadow-down"></div>
-                          <div class="event-name">
-                              <span>ROCK CLIMBING</span>
-                          </div>
-                          <div class="over-layer text-center">
-                              <div class="button-holder">
-                                  <button class="ext-detail">KNOW MORE</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  </div>
                 <div class="col-md-12  col-sm-12 col-xs-12 loadimag text-center ">
                     <a class="whit_color" ui-sref="home" href="#/">LOAD  MORE</a>
                 </div>
             </div>
+            <!---ACTIVIES END  ---->
         </div>
     </div>
 </div>
+
+<!---ENQUIRE FORM START  ---->
 <div class="pattsocial">
     <ul class="list-group socialpatt">
-        <li class="Roboto black fontsizep">ENQUIRE NOW
+        <li class="Roboto black fontsizep" data-toggle="collapse"  data-target="#collapseE" >ENQUIRE NOW
         </li>
     </ul>
 </div>
-<div class="pattform yellow_back_lightcolor">
+
+<div class="pattform yellow_back_lightcolor  panel-collapse collapse" id="collapseE">
+    <div class="pattsocial2 yellow_back_lightcolor">
+        <ul class="list-group socialpatt">
+            <li class="Roboto black fontsizep">ENQUIRE NOW
+            </li>
+        </ul>
+    </div>
     <div class="row">
-        <div class="col-md-6">
-            <input type="text" class="form-control Roboto" placeholder="Interested Cities">
-        </div>
-        <div class="col-md-6">
-            <input type="text" class="form-control Roboto" placeholder="Interested Activities">
-        </div>
-        <div class="col-md-3">
-            <input type="tel" class="form-control Roboto" placeholder="Group Size">
-        </div>
-        <div class="col-md-3"></div>
-        <div class="col-md-3">
-            <input type="tel" class="form-control Roboto" placeholder="From">
-        </div>
-        <div class="col-md-3">
-            <input type="tel" class="form-control Roboto" placeholder="To">
-        </div>
+        <form>
+            <div class="col-md-6">
+                <input type="text" class="form-control Roboto" placeholder="Interested Cities">
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control Roboto" placeholder="Interested Activities">
+            </div>
+            <div class="col-md-3">
+                <input type="tel" class="form-control Roboto" placeholder="Group Size">
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <input type="tel" class="form-control Roboto" placeholder="From">
+            </div>
+            <div class="col-md-3">
+                <input type="tel" class="form-control Roboto" placeholder="To">
+            </div>
 
-        <div class="col-md-12">
-            <textarea type="text" class="form-control Roboto text-height" rows="7" placeholder="Special Comments"></textarea>
-        </div>
+            <div class="col-md-12">
+                <textarea type="text" class="form-control Roboto text-height" rows="7" placeholder="Special Comments"></textarea>
+            </div>
 
-        <div class="col-md-6">
-            <input type="text" class="form-control Roboto" placeholder="Name">
-        </div>
-        <div class="col-md-6">
-            <input type="tel" class="form-control Roboto" placeholder="Phone No">
-        </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control Roboto" placeholder="Name">
+            </div>
+            <div class="col-md-6">
+                <input type="tel" class="form-control Roboto" placeholder="Phone No">
+            </div>
 
-        <div class="col-md-8">
-            <input type="text" class="form-control Roboto" placeholder="Email ID">
-        </div>
-        <div class="col-md-4">
-            <button class="btn btn-submit">Submit</button>
-        </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control Roboto" placeholder="Email ID">
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-submit">Submit</button>
+            </div>
+        </form>
     </div>
 </div>
+<!---ENQUIRE FORM END  ---->
 
+<!---TRIP DETAILS START  ---->
 <div class="whatsmain">
     <div class="container ">
         <div class="col-md-12 margin3">
@@ -333,8 +371,8 @@
                     <div class="panelhead">
                         <div class="panel-heading">
                             <h4 class="panel-title fontpanel Pregular bluecol">  <img src="img/buildings.png" alt="" class="image_title"> Pattaya - The Real City Of Sin
-                      <a data-toggle="collapse"  data-target="#collapse" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
-                  </h4>
+                                <a data-toggle="collapse"  data-target="#collapse" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                            </h4>
                         </div>
                         <div id="collapse" class="panel-collapse collapse">
                             <div class="panel-body">blank</div>
@@ -345,8 +383,8 @@
                     <div class="panelhead">
                         <div class="panel-heading">
                             <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/map-with-placeholder.png" alt="" class="image_title"> City Guide For Stags
-                      <a data-toggle="collapse"  data-target="#collapse2" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
-                  </h4>
+                              <a data-toggle="collapse"  data-target="#collapse2" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                          </h4>
                         </div>
                         <div id="collapse2" class="panel-collapse collapse">
                             <div class="panel-body">blank</div>
@@ -356,8 +394,8 @@
                     <div class="panelhead">
                         <div class="panel-heading">
                             <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/departures.png" alt="" class="image_title"> How To Get To Pattaya
-                      <a data-toggle="collapse"  data-target="#collapse3" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
-                  </h4>
+                              <a data-toggle="collapse"  data-target="#collapse3" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                          </h4>
                         </div>
                         <div id="collapse3" class="panel-collapse collapse">
                             <div class="panel-body">blank</div>
@@ -367,8 +405,8 @@
                     <div class="panelhead">
                         <div class="panel-heading">
                             <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/visa-card.png" alt="" class="image_title"> Visa
-                      <a data-toggle="collapse"  data-target="#collapse4" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
-                  </h4>
+                              <a data-toggle="collapse"  data-target="#collapse4" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                            </h4>
                         </div>
                         <div id="collapse4" class="panel-collapse collapse">
                             <div class="panel-body">blank</div>
@@ -378,8 +416,8 @@
                     <div class="panelhead">
                         <div class="panel-heading">
                             <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/scripting.png" alt="" class="image_title"> City Details
-                      <a data-toggle="collapse"  data-target="#collapse5" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
-                  </h4>
+                              <a data-toggle="collapse"  data-target="#collapse5" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                            </h4>
                         </div>
                         <div id="collapse5" class="panel-collapse collapse">
                             <div class="panel-body yellow_back_color">
@@ -459,94 +497,135 @@
                             <div class="panel-body">blank</div>
                         </div>
                     </div>
-                </div>
-                <div class="row border5">
-                    <p class="pregular bluecol yellow_back_color ">MY CART</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="paddmain yellow_back_lightcolor">
-    <div class="container ">
-        <div class="col-md-12 patmargin3">
-            <div class="whatsmarg4">
-                <!---ACCORDION ---->
-                <div class="row textalign">
-                    <div class="col-md-3 col-sm-6 col-xs-12 padd8 formlabels Roboto">
-                        <form>
-                            <div class="form-group">
-                                <label class="labels bluecol" for="usr">Name:</label>
-                                <input type="text" class="form-control inputform " id="usr">
-                            </div>
-                            <div class="form-group">
-                                <label class="labels bluecol" for="pwd">Email Id:</label>
-                                <input type="text" class="form-control inputform" id="email">
-                            </div>
-                            <div class="form-group">
-                                <label class="labels bluecol" for="pwd">Mob No:</label>
-                                <input type="text" class="form-control inputform" id="number">
-                            </div>
-                            <div class="form-group">
-                                <label class="labels bluecol" for="pwd">Group Size</label>
-                                <input type="text" class="form-control inputform" id="text">
-                            </div>
-                            <div class="row">
-                                <button>SUBMIT</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="col-md-2 col-sm-3 col-xs-6 marg13 padd8">
-                        <div class="borderwidth">
-                            <strong class="naming bluecol">PARIS</strong>
-                            <div class="patevent">
-                                <img src="img/1.png" alt="" class="img-responsive ">
-                                <div class="cart-section">
-                                    <i class="fa fa-times" aria-hidden="true"></i>
-                                </div>
-                            </div>
+                    <!---Clubs ---->
+                    <div class="panelhead">
+                        <div class="panel-heading">
+                            <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/compact-camera.png" alt="" class="image_title"> Action
+                                <a data-toggle="collapse"  data-target="#collapse7" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                          </h4>
+                        </div>
+                        <div id="collapse7" class="panel-collapse collapse">
+                            <div class="panel-body">blank</div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 marg13 padd8">
-                        <div class="borderright"><strong class="naming bluecol">PATTAYA</strong>
-                            <div class="img1">
-                                <div class="patevent">
-                                    <img src="img/2.png" alt="" class="img-responsive ">
-                                    <div class="cart-section">
-                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="img1">
-                                <div class="patevent">
-                                    <img src="img/3.png" alt="" class="img-responsive ">
-                                    <div class="cart-section">
-                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
+                    <!---Clubs ---->
+                    <div class="panelhead">
+                        <div class="panel-heading">
+                            <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/disco-ball.png" alt="" class="image_title"> Night Life
+                                <a data-toggle="collapse"  data-target="#collapse8" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                          </h4>
+                        </div>
+                        <div id="collapse8" class="panel-collapse collapse">
+                            <div class="panel-body">blank</div>
                         </div>
                     </div>
-
-                    <div class="col-md-2 col-sm-6 col-xs-6 marg14 padd8">
-                        <div class="borderr"><strong class="naming bluecol">AMSTERSAM</strong>
-                            <div class="patevent">
-                                <img src="img/1.png" alt="" class="img-responsive ">
-                                <div class="cart-section">
-                                    <i class="fa fa-times" aria-hidden="true"></i>
-                                </div>
-                            </div>
+                    <!---Clubs ---->
+                    <div class="panelhead panelhea2">
+                        <div class="panel-heading">
+                            <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/fireworks.png" alt="" class="image_title"> Dazzling Sights
+                                <a data-toggle="collapse"  data-target="#collapse9" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                          </h4>
+                        </div>
+                        <div id="collapse9" class="panel-collapse collapse">
+                            <div class="panel-body">blank</div>
                         </div>
                     </div>
-                    <div class="col-md-1 marg14"> </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!---ENQUIRE FORM END  ---->
+
+<!---MY CART START  ---->
+<div class="{{classp}} margintop displaynon" ng-if="tabs=='az'"></div>
+
+<div class="{{classv}} displaynon" ng-if="tabs=='bz'">
+    <div class="paddleft">
+        <p class="pregular bluecol yellow_back_color ">MY CART</p>
+    </div>
+
+    <div class="paddmain yellow_back_lightcolor">
+        <div class="container ">
+            <div class="col-md-12 patmargin3">
+                <div class="whatsmarg4">
+                    <div class="row textalign">
+                        <div class="col-md-3 col-sm-6 col-xs-12 padd8 formlabels Roboto">
+                            <form>
+                                <div class="form-group">
+                                    <label class="labels bluecol" for="usr">Name:</label>
+                                    <input type="text" class="form-control inputform " id="usr">
+                                </div>
+                                <div class="form-group">
+                                    <label class="labels bluecol" for="pwd">Email Id:</label>
+                                    <input type="text" class="form-control inputform" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label class="labels bluecol" for="pwd">Mob No:</label>
+                                    <input type="text" class="form-control inputform" id="number">
+                                </div>
+                                <div class="form-group">
+                                    <label class="labels bluecol" for="pwd">Group Size</label>
+                                    <input type="text" class="form-control inputform" id="text">
+                                </div>
+                                <div class="row">
+                                    <button>SUBMIT</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-md-2 col-sm-3 col-xs-6 marg13 padd8">
+                            <div class="borderwidth">
+                                <strong class="naming bluecol">PARIS</strong>
+                                <div class="patevent">
+                                    <img src="img/1.png" alt="" class="img-responsive ">
+                                    <div class="cart-section">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 marg13 padd8">
+                            <div class="borderright"><strong class="naming bluecol">PATTAYA</strong>
+                                <div class="img1">
+                                    <div class="patevent">
+                                        <img src="img/2.png" alt="" class="img-responsive ">
+                                        <div class="cart-section">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="img1">
+                                    <div class="patevent">
+                                        <img src="img/3.png" alt="" class="img-responsive ">
+                                        <div class="cart-section">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-6 col-xs-6 marg14 padd8">
+                            <div class="borderr"><strong class="naming bluecol">AMSTERSAM</strong>
+                                <div class="patevent">
+                                    <img src="img/1.png" alt="" class="img-responsive ">
+                                    <div class="cart-section">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1 marg14"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<!--email update -->
+<!---MY CART END  ---->
+
+<!--EMAIL ALERT-->
 <div class="eupt ng-scope">
     <div class="container">
         <div class="row">
