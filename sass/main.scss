@@ -1185,7 +1185,7 @@ figure .links {
 }
 //pattaya css
 
-.displaynon {
+.displaynonpata {
     display: none;
 }
 
@@ -1196,6 +1196,7 @@ figure .links {
 .margintop {
     margin-top: 20%;
 }
+
 
 .pattform {
     margin-top: -16%;
@@ -1315,7 +1316,6 @@ figure .links {
         list-style: none;
         text-align: center;
         font-size: 14px;
-        background: #ffca18;
         padding: 12px 21px;
         margin: 0;
         cursor: pointer;
@@ -1339,7 +1339,6 @@ figure .links {
     .socialpatt {
         list-style: none;
         text-align: center;
-        background: #ffffff;
         margin: 5px;
         cursor: pointer;
         padding: 5px 21px;
@@ -1526,6 +1525,10 @@ figure .links {
 
 .ln-h {
     line-height: 110%;
+}
+
+.paddtopcart {
+    margin-top: 18%;
 }
 //bootstrap forms
 /* Start writing sass here */

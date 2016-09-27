@@ -1,7 +1,9 @@
 <!---banner start ---->
-<figure class="mim8">
-    <img class="img-responsive" src="img/pattaya-ban.jpg">
-</figure>
+<div class="container">
+    <figure class="mim8">
+        <img class="img-responsive" src="img/pattaya-ban.jpg">
+    </figure>
+</div>
 <div class="whatsmain">
     <div class="container ">
         <div class="col-md-12">
@@ -21,7 +23,7 @@
     <div class="container ">
         <div class="col-md-12 ">
             <!---PACKAGES START ---->
-            <div class="{{classp}} whatsmarg4 displaynon" ng-if="tabs=='az'">
+            <div class="{{classp}} whatsmarg4 displaynonpata" ng-if="tabs=='az'">
                 <div class="row text-center pattmarg2">
                     <span><a ng-click="tabchanges('az',1)" class=" patpack2 whit_color theboldfont ">PACKAGES</a></span>
                     <span><a ng-click="tabchanges('bz',2)" class=" patpack theboldfont ">ACTIVITIES</a></span>
@@ -117,7 +119,7 @@
             <!---PACKAGES END ---->
 
             <!---ACTIVIES START---->
-            <div class="{{classv}} whatsmarg4 displaynon" ng-if="tabs=='bz'">
+            <div class="{{classv}} whatsmarg4 displaynonpata" ng-if="tabs=='bz'">
                 <div class="row text-center pattmarg2">
                     <span><a ng-click="tabchanges('az',1)" class=" patpack theboldfont">PACKAGES</a></span>
                     <span><a ng-click="tabchanges('bz',2)" class=" patpack2 whit_color theboldfont ">ACTIVITIES</a></span>
@@ -304,16 +306,16 @@
 </div>
 
 <!---ENQUIRE FORM START  ---->
-<div class="pattsocial">
-    <ul class="list-group socialpatt">
-        <li class="Roboto black fontsizep" data-toggle="collapse"  data-target="#collapseE" >ENQUIRE NOW
+<div class="pattsocial displaynon">
+    <ul class="list-group socialpatt yellow_back_lightcolor">
+        <li class="Roboto black fontsizep">ENQUIRE NOW
         </li>
     </ul>
 </div>
 
-<div class="pattform yellow_back_lightcolor  panel-collapse collapse" id="collapseE">
+<div class="pattform yellow_back_lightcolor displaynon">
     <div class="pattsocial2 yellow_back_lightcolor">
-        <ul class="list-group socialpatt">
+        <ul class="list-group socialpatt white_back_color">
             <li class="Roboto black fontsizep">ENQUIRE NOW
             </li>
         </ul>
@@ -463,20 +465,17 @@
                                                                 <img class="img-responsive doneLoading" src="img/ply.png">
                                                             </div>
                                                         </div>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="col-md-3 pading0">
-                                                <figure>
-                                                    <img class="img-responsive" src="img/Layer-56.jpg">
-                                                    <figcaption>
-                                                        <div class="lin">
-                                                            <div class="frammargin">
-                                                                <img class="img-responsive doneLoading" src="img/ply.png">
-                                                            </div>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
+                                                        .pattsocialiv class="col-md-3 pading0">
+                                                        <figure>
+                                                            <img class="img-responsive" src="img/Layer-56.jpg">
+                                                            <figcaption>
+                                                                <div class="lin">
+                                                                    <div class="frammargin">
+                                                                        <img class="img-responsive doneLoading" src="img/ply.png">
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
                                             </div>
                                             <div class="col-md-3 pading0">
                                             </div>
@@ -538,9 +537,9 @@
 <!---ENQUIRE FORM END  ---->
 
 <!---MY CART START  ---->
-<div class="{{classp}} margintop displaynon" ng-if="tabs=='az'"></div>
+<div class="{{classp}} margintop displaynonpata" ng-if="tabs=='az'"></div>
 
-<div class="{{classv}} displaynon" ng-if="tabs=='bz'">
+<div class="{{classv}} displaynonpata" ng-if="tabs=='bz'">
     <div class="paddleft">
         <p class="pregular bluecol yellow_back_color ">MY CART</p>
     </div>

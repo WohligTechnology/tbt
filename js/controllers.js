@@ -84,7 +84,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.tabs = 'az';
         $scope.classp = 'active-tab';
         $scope.classv = '';
-
+        
 
         $scope.tabchanges = function(tabs, a) {
 
