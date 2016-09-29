@@ -1197,39 +1197,6 @@ figure .links {
     margin-top: 20%;
 }
 
-
-.pattform {
-    margin-top: -16%;
-    position: absolute;
-    right: 36px;
-    padding: 15px;
-    width: 60%;
-    z-index: 1;
-
-    .form-control {
-        border: none !important;
-        font-size: 17px !important;
-        margin-bottom: 15px !important;
-        height: auto !important;
-        padding: 9px 12px !important;
-    }
-
-    .text-height {
-        resize: none;
-    }
-
-    .btn-submit {
-        border: none !important;
-        font-size: 17px !important;
-        margin-bottom: 15px !important;
-        height: auto !important;
-        padding: 9px 12px !important;
-        width: 100%;
-        background: #002b7f !important;
-        color: #cacaca !important;
-    }
-}
-
 .frammargin {
     margin: 18% 40%;
 }
@@ -1303,49 +1270,71 @@ figure .links {
     margin-bottom: 3%;
 }
 
+.pattform {
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+    .form-control {
+        border: none !important;
+        font-size: 17px !important;
+        margin-bottom: 15px !important;
+        height: auto !important;
+        padding: 9px 12px !important;
+    }
+
+    .text-height {
+        resize: none;
+    }
+
+    .btn-submit {
+        border: none !important;
+        font-size: 17px !important;
+        margin-bottom: 15px !important;
+        height: auto !important;
+        padding: 9px 12px !important;
+        width: 100%;
+        background: #002b7f !important;
+        color: #cacaca !important;
+    }
+}
+
 .pattsocial {
-    z-index: 2;
-    margin-top: -11%;
     position: absolute;
-    right: -25px;
-    transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
+    right: 0;
+    z-index: 2;
 
     .socialpatt {
         list-style: none;
         text-align: center;
-        font-size: 14px;
-        padding: 12px 21px;
-        margin: 0;
         cursor: pointer;
+        padding: 6px;
+        -webkit-transform: rotate(-90deg);
 
         .fontsizep {
-            color: black;
+            padding: 5px 19px;
             font-size: 20px;
         }
     }
 }
 
-.pattsocial2 {
-    z-index: 2;
-    margin-top: 7%;
-    position: absolute;
-    left: -113px;
-    transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
+.rotatating {
     -webkit-transform: rotate(-90deg);
+}
+
+.pattsocial2 {
+    position: absolute;
+    left: -26%;
+    top: 64px;
 
     .socialpatt {
         list-style: none;
         text-align: center;
-        margin: 5px;
         cursor: pointer;
-        padding: 5px 21px;
+        padding: 6px;
 
         .fontsizep {
-            color: black;
-            font-size: 20px;
+            padding: 5px 19px;
+            font-size: 18px;
         }
     }
 }
@@ -1362,6 +1351,7 @@ figure .links {
 .panelhead {
     padding: 5px 10px;
     border-top: 2px solid #ffca18;
+    cursor: pointer;
 
     .fontpanel {
         font-size: 18px;
@@ -1447,7 +1437,6 @@ figure .links {
 
 .borderright {
     border-right: 1px solid black;
-    width: 80%;
 }
 
 .borderwidth {
@@ -1497,6 +1486,7 @@ figure .links {
 }
 
 .cart-section {
+    cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
@@ -1529,6 +1519,66 @@ figure .links {
 
 .paddtopcart {
     margin-top: 18%;
+}
+
+.rotat {
+    position: absolute;
+    z-index: 1;
+    right: 66px;
+}
+
+.show-div {
+    width: 70%;
+    float: right;
+    margin-right: 15px;
+    margin-top: -66px;
+}
+/* when hiding the thing */
+.ng-hide-add {
+    -webkit-animation: 0.5s lightSpeedOut ease;
+    animation: 0.5s lightSpeedOut ease;
+}
+/* when showing the thing */
+.ng-hide-remove {
+    -webkit-animation: 0.5s flipInX ease;
+    animation: 0.5s flipInX ease;
+}
+/* ANIMATIONS (FROM ANIMATE.CSS) */
+/* flip in */
+@keyframes flipInX {
+    100% {
+        opacity: 1;
+    }
+
+    0% {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+        transform: translate3d(100%, 0, 0) skewX(30deg);
+        opacity: 0;
+    }
+}
+/* light speed out */
+@-webkit-keyframes lightSpeedOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+        transform: translate3d(100%, 0, 0) skewX(30deg);
+        opacity: 0;
+    }
+}
+@keyframes lightSpeedOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+        -ms-transform: translate3d(100%, 0, 0) skewX(30deg);
+        transform: translate3d(100%, 0, 0) skewX(30deg);
+        opacity: 0;
+    }
 }
 //bootstrap forms
 /* Start writing sass here */

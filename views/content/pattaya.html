@@ -306,60 +306,68 @@
 </div>
 
 <!---ENQUIRE FORM START  ---->
-<div class="pattsocial displaynon">
-    <ul class="list-group socialpatt yellow_back_lightcolor">
-        <li class="Roboto black fontsizep">ENQUIRE NOW
-        </li>
-    </ul>
-</div>
+<div class="eq displaynon">
+    <div class="container">
+        <div class="rotat">
+            <div class="row">
+                <div class="show-div" ng-show="lions">
+                    <div class="col-md-3 rotatating">
+                        <div class="pattsocial2">
+                            <ul class="list-group socialpatt yellow_back_lightcolor ">
+                                <li class="Roboto black fontsizep white_back_color">ENQUIRE NOW</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-9 yellow_back_lightcolor pattform">
+                        <form>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control Roboto" placeholder="Interested Cities">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control Roboto" placeholder="Interested Activities">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="tel" class="form-control Roboto" placeholder="Group Size">
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <input type="tel" class="form-control Roboto" placeholder="From">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="tel" class="form-control Roboto" placeholder="To">
+                            </div>
 
-<div class="pattform yellow_back_lightcolor displaynon">
-    <div class="pattsocial2 yellow_back_lightcolor">
-        <ul class="list-group socialpatt white_back_color">
-            <li class="Roboto black fontsizep">ENQUIRE NOW
-            </li>
-        </ul>
+                            <div class="col-md-12">
+                                <textarea type="text" class="form-control Roboto text-height" rows="6" placeholder="Special Comments"></textarea>
+                            </div>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control Roboto" placeholder="Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" class="form-control Roboto" placeholder="Phone No">
+                            </div>
+
+                            <div class="col-md-8">
+                                <input type="text" class="form-control Roboto" placeholder="Email ID">
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pattsocial ">
+            <ul class="list-group socialpatt yellow_back_lightcolor">
+                <li ng-click="lions = !lions" ng-class="{ active: lions }" class="Roboto black fontsizep">ENQUIRE NOW
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="row">
-        <form>
-            <div class="col-md-6">
-                <input type="text" class="form-control Roboto" placeholder="Interested Cities">
-            </div>
-            <div class="col-md-6">
-                <input type="text" class="form-control Roboto" placeholder="Interested Activities">
-            </div>
-            <div class="col-md-3">
-                <input type="tel" class="form-control Roboto" placeholder="Group Size">
-            </div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3">
-                <input type="tel" class="form-control Roboto" placeholder="From">
-            </div>
-            <div class="col-md-3">
-                <input type="tel" class="form-control Roboto" placeholder="To">
-            </div>
-
-            <div class="col-md-12">
-                <textarea type="text" class="form-control Roboto text-height" rows="7" placeholder="Special Comments"></textarea>
-            </div>
-
-            <div class="col-md-6">
-                <input type="text" class="form-control Roboto" placeholder="Name">
-            </div>
-            <div class="col-md-6">
-                <input type="tel" class="form-control Roboto" placeholder="Phone No">
-            </div>
-
-            <div class="col-md-8">
-                <input type="text" class="form-control Roboto" placeholder="Email ID">
-            </div>
-            <div class="col-md-4">
-                <button class="btn btn-submit">Submit</button>
-            </div>
-        </form>
-    </div>
 </div>
-<!---ENQUIRE FORM END  ---->
+<!---ENQUIRE FORM END ---->
 
 <!---TRIP DETAILS START  ---->
 <div class="whatsmain">
@@ -372,8 +380,8 @@
                     <!---Parraya---->
                     <div class="panelhead">
                         <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol">  <img src="img/buildings.png" alt="" class="image_title"> Pattaya - The Real City Of Sin
-                                <a data-toggle="collapse"  data-target="#collapse" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse">  <img src="img/buildings.png" alt="" class="image_title"> Pattaya - The Real City Of Sin
+                                <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
                             </h4>
                         </div>
                         <div id="collapse" class="panel-collapse collapse">
@@ -384,8 +392,8 @@
                     <!---City Guide---->
                     <div class="panelhead">
                         <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/map-with-placeholder.png" alt="" class="image_title"> City Guide For Stags
-                              <a data-toggle="collapse"  data-target="#collapse2" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse2"><img src="img/map-with-placeholder.png" alt="" class="image_title"> City Guide For Stags
+                            <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
                           </h4>
                         </div>
                         <div id="collapse2" class="panel-collapse collapse">
@@ -395,8 +403,8 @@
                     <!---How to Get to Pattaya---->
                     <div class="panelhead">
                         <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/departures.png" alt="" class="image_title"> How To Get To Pattaya
-                              <a data-toggle="collapse"  data-target="#collapse3" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse3"><img src="img/departures.png" alt="" class="image_title"> How To Get To Pattaya
+                            <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
                           </h4>
                         </div>
                         <div id="collapse3" class="panel-collapse collapse">
@@ -406,8 +414,8 @@
                     <!---Visa ---->
                     <div class="panelhead">
                         <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/visa-card.png" alt="" class="image_title"> Visa
-                              <a data-toggle="collapse"  data-target="#collapse4" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse4"><img src="img/visa-card.png" alt="" class="image_title"> Visa
+                            <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
                             </h4>
                         </div>
                         <div id="collapse4" class="panel-collapse collapse">
@@ -417,8 +425,8 @@
                     <!---City ---->
                     <div class="panelhead">
                         <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/scripting.png" alt="" class="image_title"> City Details
-                              <a data-toggle="collapse"  data-target="#collapse5" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse5"><img src="img/scripting.png" alt="" class="image_title"> City Details
+                              <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
                             </h4>
                         </div>
                         <div id="collapse5" class="panel-collapse collapse">
@@ -443,7 +451,7 @@
                                             </ul>
                                         </div>
                                         <div class="row padding30">
-                                            <div class="col-md-3 pading0">
+                                            <div class="col-md-3 col-sm-6 col-xs-12  pading0">
                                                 <figure>
                                                     <img class="img-responsive" src="img/Layer-56.jpg">
                                                     <figcaption>
@@ -454,9 +462,8 @@
                                                         </div>
                                                     </figcaption>
                                                 </figure>
-
                                             </div>
-                                            <div class="col-md-3 pading0">
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pading0">
                                                 <figure>
                                                     <img class="img-responsive" src="img/Layer-56.jpg">
                                                     <figcaption>
@@ -465,19 +472,32 @@
                                                                 <img class="img-responsive doneLoading" src="img/ply.png">
                                                             </div>
                                                         </div>
-                                                        .pattsocialiv class="col-md-3 pading0">
-                                                        <figure>
-                                                            <img class="img-responsive" src="img/Layer-56.jpg">
-                                                            <figcaption>
-                                                                <div class="lin">
-                                                                    <div class="frammargin">
-                                                                        <img class="img-responsive doneLoading" src="img/ply.png">
-                                                                    </div>
-                                                                </div>
-                                                            </figcaption>
-                                                        </figure>
+                                                    </figcaption>
+                                                </figure>
                                             </div>
-                                            <div class="col-md-3 pading0">
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pading0">
+                                                <figure>
+                                                    <img class="img-responsive" src="img/Layer-56.jpg">
+                                                    <figcaption>
+                                                        <div class="lin">
+                                                            <div class="frammargin">
+                                                                <img class="img-responsive doneLoading" src="img/ply.png">
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12 pading0">
+                                                <figure>
+                                                    <img class="img-responsive" src="img/Layer-56.jpg">
+                                                    <figcaption>
+                                                        <div class="lin">
+                                                            <div class="frammargin">
+                                                                <img class="img-responsive doneLoading" src="img/ply.png">
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
                                             </div>
                                         </div>
                                     </div>
@@ -488,8 +508,8 @@
                     <!---Clubs ---->
                     <div class="panelhead">
                         <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/drink-beer-jar.png" alt="" class="image_title"> Clubs and Beers
-                                <a data-toggle="collapse"  data-target="#collapse6" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse6"><img src="img/drink-beer-jar.png" alt="" class="image_title"> Clubs and Beers
+                                <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
                           </h4>
                         </div>
                         <div id="collapse6" class="panel-collapse collapse">
@@ -499,8 +519,8 @@
                     <!---Clubs ---->
                     <div class="panelhead">
                         <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/compact-camera.png" alt="" class="image_title"> Action
-                                <a data-toggle="collapse"  data-target="#collapse7" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse7"><img src="img/compact-camera.png" alt="" class="image_title"> Action
+                                <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
                           </h4>
                         </div>
                         <div id="collapse7" class="panel-collapse collapse">
@@ -510,8 +530,8 @@
                     <!---Clubs ---->
                     <div class="panelhead">
                         <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/disco-ball.png" alt="" class="image_title"> Night Life
-                                <a data-toggle="collapse"  data-target="#collapse8" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse8"><img src="img/disco-ball.png" alt="" class="image_title"> Night Life
+                                <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
                           </h4>
                         </div>
                         <div id="collapse8" class="panel-collapse collapse">
@@ -521,8 +541,8 @@
                     <!---Clubs ---->
                     <div class="panelhead panelhea2">
                         <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/fireworks.png" alt="" class="image_title"> Dazzling Sights
-                                <a data-toggle="collapse"  data-target="#collapse9" ><i class=" pull-right fa fa-plus" aria-hidden="true"></i></a>
+                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse9"><img src="img/fireworks.png" alt="" class="image_title"> Dazzling Sights
+                                <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
                           </h4>
                         </div>
                         <div id="collapse9" class="panel-collapse collapse">
@@ -537,49 +557,55 @@
 <!---ENQUIRE FORM END  ---->
 
 <!---MY CART START  ---->
-<div class="{{classp}} margintop displaynonpata" ng-if="tabs=='az'"></div>
+<div class="paddleft">
+    <p class="pregular bluecol yellow_back_color ">MY CART</p>
+</div>
 
-<div class="{{classv}} displaynonpata" ng-if="tabs=='bz'">
-    <div class="paddleft">
-        <p class="pregular bluecol yellow_back_color ">MY CART</p>
-    </div>
-
-    <div class="paddmain yellow_back_lightcolor">
-        <div class="container ">
-            <div class="col-md-12 patmargin3">
-                <div class="whatsmarg4">
-                    <div class="row textalign">
-                        <div class="col-md-3 col-sm-6 col-xs-12 padd8 formlabels Roboto">
-                            <form>
-                                <div class="form-group">
-                                    <label class="labels bluecol" for="usr">Name:</label>
-                                    <input type="text" class="form-control inputform " id="usr">
+<div class="paddmain yellow_back_lightcolor">
+    <div class="container ">
+        <div class="col-md-12 patmargin3">
+            <div class="whatsmarg4">
+                <div class="row textalign">
+                    <div class="col-md-3 col-sm-6 col-xs-12 padd8 formlabels Roboto">
+                        <form>
+                            <div class="form-group">
+                                <label class="labels bluecol" for="usr">Name:</label>
+                                <input type="text" class="form-control inputform " id="usr">
+                            </div>
+                            <div class="form-group">
+                                <label class="labels bluecol" for="pwd">Email Id:</label>
+                                <input type="text" class="form-control inputform" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label class="labels bluecol" for="pwd">Mob No:</label>
+                                <input type="text" class="form-control inputform" id="number">
+                            </div>
+                            <div class="form-group">
+                                <label class="labels bluecol" for="pwd">Group Size</label>
+                                <input type="text" class="form-control inputform" id="text">
+                            </div>
+                            <div class="row">
+                                <button>SUBMIT</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-9 col-sm-3 col-xs-6 ">
+                        <div class="col-md-4 col-sm-6 col-xs-12 marg13 padd8">
+                            <div class="borderright"><strong class="naming bluecol">PARIS</strong>
+                                <div class="img1">
+                                    <div class="patevent">
+                                        <img src="img/2.png" alt="" class="img-responsive ">
+                                        <div class="cart-section">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="labels bluecol" for="pwd">Email Id:</label>
-                                    <input type="text" class="form-control inputform" id="email">
-                                </div>
-                                <div class="form-group">
-                                    <label class="labels bluecol" for="pwd">Mob No:</label>
-                                    <input type="text" class="form-control inputform" id="number">
-                                </div>
-                                <div class="form-group">
-                                    <label class="labels bluecol" for="pwd">Group Size</label>
-                                    <input type="text" class="form-control inputform" id="text">
-                                </div>
-                                <div class="row">
-                                    <button>SUBMIT</button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="col-md-2 col-sm-3 col-xs-6 marg13 padd8">
-                            <div class="borderwidth">
-                                <strong class="naming bluecol">PARIS</strong>
-                                <div class="patevent">
-                                    <img src="img/1.png" alt="" class="img-responsive ">
-                                    <div class="cart-section">
-                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                <div class="img1">
+                                    <div class="patevent">
+                                        <img src="img/3.png" alt="" class="img-responsive ">
+                                        <div class="cart-section">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -604,18 +630,25 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-md-2 col-sm-6 col-xs-6 marg14 padd8">
-                            <div class="borderr"><strong class="naming bluecol">AMSTERSAM</strong>
+                        <div class="col-md-4 col-sm-6 col-xs-12 marg13 padd8">
+                            <strong class="naming bluecol">AMSTERSAM</strong>
+                            <div class="img1">
                                 <div class="patevent">
-                                    <img src="img/1.png" alt="" class="img-responsive ">
+                                    <img src="img/2.png" alt="" class="img-responsive ">
+                                    <div class="cart-section">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="img1">
+                                <div class="patevent">
+                                    <img src="img/3.png" alt="" class="img-responsive ">
                                     <div class="cart-section">
                                         <i class="fa fa-times" aria-hidden="true"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-1 marg14"> </div>
                     </div>
                 </div>
             </div>
