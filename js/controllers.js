@@ -46,9 +46,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             windowClass: "width80"
         });
     };
-    // $scope.cancel = function() {
-    //                       $modalInstance.dismiss('cancel');
-    //                   };
     $scope.formData = {};
     $scope.submitForm = function() {
         $scope.flags.thankyou = false;

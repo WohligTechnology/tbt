@@ -621,17 +621,6 @@ figure .links {
 .eupt {
     background: #CCCCCC;
 
-    p {
-        font-size: 18px;
-        font-weight: 600;
-        float: left;
-        color: #fff;
-        background-image: url("../img/btn-bg.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        padding: 7px 40px;
-    }
-
     .ge {
         cursor: default;
         text-align: center;
@@ -645,6 +634,7 @@ figure .links {
         padding: 2% 0;
 
         .form-control {
+            margin-bottom: 2px;
             border: 0;
             display: block;
             width: 100%;
@@ -666,6 +656,46 @@ figure .links {
 
     .es {
         padding: 2% 1% 1% 2%;
+
+        .error {
+            height: 0;
+            text-align: center;
+            color: red;
+        }
+
+        button {
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            outline: none;
+            font-size: 18px;
+            font-weight: 600;
+            float: left;
+            color: #fff;
+            background-image: url("../img/btn-bg.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding: 7px 40px;
+        }
+    }
+}
+
+.sub {
+    button {
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        outline: none;
+        font-size: 18px;
+        font-weight: 600;
+        float: left;
+        color: #fff;
+        background-image: url("../img/btn-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 7px 40px;
+    }
+
+    .marg12 {
+        margin-bottom: 12px;
     }
 }
 
