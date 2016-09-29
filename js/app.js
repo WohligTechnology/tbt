@@ -45,10 +45,10 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
             templateUrl: "views/template.html",
             controller: 'Pattaya2Ctrl'
         })
-        .state('upcomingEvents', {
-            url: "/upcomingEvents",
+        .state('whats-hot-more', {
+            url: "/whats-hot-more",
             templateUrl: "views/template.html",
-            controller: 'upcomingEventsCtrl'
+            controller: 'Whats-hot-moreCtrl'
         })
         .state('whats-hot', {
             url: "/whats-hot",

@@ -84,7 +84,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.tabs = 'az';
         $scope.classp = 'active-tab';
         $scope.classv = '';
-        
+
 
         $scope.tabchanges = function(tabs, a) {
 
@@ -160,10 +160,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
-    .controller('upcomingEventsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('Whats-hot-moreCtrl', function($scope, TemplateService, NavigationService, $timeout) {
 
-        $scope.template = TemplateService.changecontent("upcomingEvents");
-        $scope.menutitle = NavigationService.makeactive("UpcomingEvents");
+        $scope.template = TemplateService.changecontent("whats-hot-more");
+        $scope.menutitle = NavigationService.makeactive("Whats-hot-more");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
