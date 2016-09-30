@@ -23,7 +23,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Activity");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-        TemplateService.header = "views/Activity_header.html";
 
     })
 
@@ -69,7 +68,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Destination");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-        TemplateService.header = "views/Destination_header.html";
 
     })
     .controller('PattayaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -164,6 +162,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
+
     })
     .controller('WhatsHotCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
 
@@ -181,6 +180,32 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 windowClass: "width80"
             });
         };
+        $scope.mySlides = [{
+            img: "img/qwe.jpg",
+            events: "TOMMOROWLAND",
+            date: "27th Agust,2016"
+
+
+        }, {
+            img: "img/qwe.jpg",
+            events: "TOMMOROWLAND",
+            date: "27th Agust,2016"
+
+
+        }, {
+            img: "img/qwe.jpg",
+            events: "TOMMOROWLAND",
+            date: "27th Agust,2016"
+
+
+        }, {
+            img: "img/qwe.jpg",
+            events: "TOMMOROWLAND",
+            date: "27th Agust,2016"
+
+
+        }];
+
     })
     .controller('CustomisationCtrl', function($scope, TemplateService, NavigationService, $timeout) {
 
@@ -188,7 +213,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Customisation");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-        TemplateService.header = "views/custom_header.html";
         TemplateService.footermenu = "views/custom_footermenu.html";
         TemplateService.footer = "views/custom_footer.html";
 

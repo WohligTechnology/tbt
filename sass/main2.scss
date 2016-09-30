@@ -352,6 +352,7 @@ option[value=""][disabled] {
     }
 
     .morebutton {
+        outline: none;
         background: none;
         border: 0;
         letter-spacing: 2px;
@@ -424,7 +425,7 @@ option[value=""][disabled] {
 }
 
 .paddleft {
-    padding-left: 9.6%;
+    padding-left: 10.2%;
 
     p {
         display: inline-block;
@@ -491,4 +492,16 @@ option[value=""][disabled] {
     margin: 0;
     font-size: 100px;
     font-weight: 800;
+}
+
+#slides_control > div {
+    height: 200px;
+}
+
+#slides_control {
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    top: 20px;
+    margin-left: -200px;
 }

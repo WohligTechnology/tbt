@@ -15,7 +15,6 @@
 @media (max-width: 992px) {
     .navbarleft {
         float: left !important;
-        width: 56% !important;
     }
 
     .navbar-default .navbar-nav > li > a {
@@ -28,13 +27,80 @@
     }
 }
 @media (max-width: 922px) {
+    .fsiz {
+        font-size: 73px;
+        margin-top: 9%;
+    }
+
+    .m4 .m2 .padup {
+        padding: 82% 0 0;
+    }
+
+    .paddleft {
+        padding-left: 13.3%;
+    }
+
+    .marg13 {
+        margin-top: 0;
+    }
+
+    .pattsocial2 {
+        left: -28.5%;
+    }
+
+    .show-div {
+        width: 100%;
+    }
+
+    .events .over-layer .button-holder {
+        font-size: 11px;
+        width: 90%;
+    }
+
+    .pattmarg3 {
+        margin-top: -38px;
+        margin-bottom: 5%;
+    }
+
+    .m4 .m2 .pd15 h1 {
+        font-size: 43px;
+    }
+
+    .detailsfom .text-height {
+        padding: 6px 12px 0 !important;
+    }
+
     .margin4footer {
         margin-bottom: 4%;
+    }
+
+    .wtsocial {
+        margin-top: -44%;
+    }
+
+    .figure922 {
+        margin-top: 43px;
+    }
+
+    .eupt .ge {
+        font-size: 21px;
+    }
+
+    .eupt .ie .form-control {
+        font-size: 14px;
+    }
+
+    .event-name {
+        font-size: 12px;
     }
 }
 @media (max-width: 768px) {
     body {
         padding-top: 50px;
+    }
+
+    .figure922 {
+        margin-top: -1px;
     }
 
     .m8 .mr {
@@ -163,8 +229,8 @@
     }
 
     .wtsocial {
-        margin-top: -64%;
-        margin-right: 3.3%;
+        margin-top: -91%;
+        margin-right: 4.3%;
     }
 
     .wtsocial .socialgr {
@@ -335,12 +401,34 @@
 
     .loadimag,
     .lodm {
-        padding: 8% 0;
+        padding: 4% 0;
 
         a {
             padding: 13px 52px;
             font-size: 11px;
         }
+    }
+
+    .eupt .es button {
+        font-size: 14px;
+        float: initial;
+    }
+
+    .img-box {
+        width: 227px !important;
+    }
+
+    .hoverhold {
+        font-weight: 600;
+        margin: 15% 0 0;
+    }
+
+    .paddleft p {
+        font-size: 16px;
+    }
+
+    .sub button {
+        font-size: 12px;
     }
 
     .custtitle {
@@ -541,7 +629,7 @@
     }
 
     .lm2 .hclass1 {
-        font-size: 31px;
+        font-size: 29px;
     }
 
     .lm2 .hclass2 {
@@ -643,5 +731,9 @@
 
     .pattayevents .list2 {
         font-size: 11px;
+    }
+
+    .flex-control-nav {
+        height: 14px;
     }
 }

@@ -1,6 +1,8 @@
-<figure class="mim8 ng-scope">
-    <img class="img-responsive doneLoading" src="img/avtivity.jpg">
-</figure>
+<div class="container ">
+    <figure class="m1 figure922">
+        <img class="img-responsive doneLoading" src="img/avtivity.jpg">
+    </figure>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-md-12 pd50 activi">
@@ -42,7 +44,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12 padd15px">
+                    <div class="col-md-4 col-sm-4 col-xs-12 padd15px">
                         <div class="events">
                             <img src="img/bungee.png" alt="" class="img-responsive">
                             <div class="cart-sec">
@@ -184,18 +186,20 @@
         </div>
     </div>
 </div>
+
+<!---email update  ---->
 <div class="eupt">
     <div class="container">
         <div class="row">
-          <form name="myForm">
-            <div class="col-md-4 col-sm-6 col-xs-12 ge">GET EMAIL UPDATE</div>
-            <div class="col-md-5 col-sm-6 col-xs-12 ie">
-              <input type="text" placeholder="Your email address" class="form-control" required>
-                <p class="error" ng-show="myForm.email.$error.required && myForm.email.$dirty">Email is required</p>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 es">
-                <button type="submit">SUBSCRIBE</button>
-            </div>
+            <form name="myForm">
+                <div class="col-md-4 col-sm-4 col-xs-12 ge">GET EMAIL UPDATE</div>
+                <div class="col-md-5 col-sm-4 col-xs-12 ie">
+                    <input type="text" placeholder="Your email address" class="form-control" name="email" ng-modal="email.myForm" required>
+                    <p class="error" ng-show="myForm.email.$error.required && myForm.email.$dirty">Email is required</p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12 es">
+                    <button type="submit">SUBSCRIBE</button>
+                </div>
             </form>
         </div>
     </div>

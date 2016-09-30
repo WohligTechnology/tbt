@@ -679,6 +679,12 @@ figure .links {
     }
 }
 
+.error {
+    height: 0;
+    text-align: center;
+    color: red;
+}
+
 .sub {
     button {
         border: none;
@@ -686,7 +692,6 @@ figure .links {
         outline: none;
         font-size: 18px;
         font-weight: 600;
-        float: left;
         color: #fff;
         background-image: url("../img/btn-bg.png");
         background-repeat: no-repeat;
@@ -863,6 +868,10 @@ figure .links {
     }
 }
 
+.m1 {
+    margin-top: -1px;
+}
+
 .lodm {
     padding: 2% 0;
 
@@ -876,6 +885,18 @@ figure .links {
         padding: 13px 31px;
         width: 199px;
     }
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #ffca18 !important;
+}
+
+.navbar-toggle {
+    background-color: #ffca18 !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #0b358c !important;
 }
 
 .padd5 {
@@ -925,7 +946,7 @@ figure .links {
     .text-height {
         height: auto !important;
         resize: none;
-        padding: 7px 12px 0 !important;
+        padding: 18px 12px 0 !important;
     }
 
     .padding-r {
@@ -938,7 +959,7 @@ figure .links {
 
     .form-control {
         font-size: 15px;
-        height: 45px;
+        height: 44px;
         border: none;
         border-radius: 0;
     }
@@ -1028,6 +1049,41 @@ figure .links {
     }
 }
 //whats a hot css
+
+.flex-direction-nav {
+    display: none !important;
+}
+
+.flexslider {
+    text-align: right!important;
+    margin: 0 !important;
+    border: none!important;
+}
+
+.flex-control-nav {
+    width: 27%!important;
+    position: absolute;
+    bottom: 0px!important;
+    text-align: center!important;
+    display: inline-block!important;
+    z-index: 2!important;
+    right: 10%!important;
+}
+
+.flex-control-paging li a.flex-active {
+    background: #000!important;
+    background: rgb(252, 209, 22)!important;
+}
+
+.flex-control-paging li a {
+    background: #fff !important;
+    width: 8px!important;
+    height: 8px!important;
+}
+
+.flex-control-nav li {
+    margin: 2px !important;
+}
 
 .fancybox-close {
     top: -22px;
@@ -1353,8 +1409,8 @@ figure .links {
 
 .pattsocial2 {
     position: absolute;
-    left: -26%;
-    top: 64px;
+    left: -25%;
+    top: 66px;
 
     .socialpatt {
         list-style: none;

@@ -1,6 +1,6 @@
 <!---banner start ---->
 <div class="container">
-    <figure class="mim8">
+    <figure class="m1 figure922">
         <img class="img-responsive" src="img/pattaya-ban.jpg">
     </figure>
 </div>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="row pattmarg3">
-                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                    <div class="col-md-3 col-sm-3 col-xs-6 pading0">
                         <div class="events">
                             <img src="img/bungee.png" alt="" class="img-responsive">
                             <div class="cart-sec">
@@ -57,7 +57,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                    <div class="col-md-3 col-sm-3 col-xs-6 pading0">
                         <div class="events">
                             <img src="img/bungee.png" alt="" class="img-responsive">
                             <div class="cart-sec">
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                    <div class="col-md-3 col-sm-3 col-xs-6 pading0">
                         <div class="events">
                             <img src="img/bungee.png" alt="" class="img-responsive">
                             <div class="cart-sec">
@@ -93,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                    <div class="col-md-3 col-sm-3 col-xs-6 pading0">
                         <div class="events">
                             <img src="img/bungee.png" alt="" class="img-responsive">
                             <div class="cart-sec">
@@ -311,47 +311,56 @@
         <div class="rotat">
             <div class="row">
                 <div class="show-div" ng-show="lions">
-                    <div class="col-md-3 rotatating">
+                    <div class="col-md-3 col-sm-3 rotatating">
                         <div class="pattsocial2">
                             <ul class="list-group socialpatt yellow_back_lightcolor ">
                                 <li class="Roboto black fontsizep white_back_color">ENQUIRE NOW</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-9 yellow_back_lightcolor pattform">
-                        <form>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control Roboto" placeholder="Interested Cities">
+                    <div class="col-md-9 col-sm-9 yellow_back_lightcolor pattform">
+                        <form name="myForm">
+                            <div class="col-md-6  col-sm-6">
+                                <input type="text" class="form-control Roboto" placeholder="Interested Cities" name="city" ng-modal="city.myForm" required>
+                                <p class="error" ng-show="myForm.city.$error.required && myForm.city.$dirty">Interested Cities Size is required</p>
                             </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control Roboto" placeholder="Interested Activities">
+                            <div class="col-md-6 col-sm-6">
+                                <input type="text" class="form-control Roboto" placeholder="Interested Activities" name="activitie" ng-modal="activitie.myForm" required>
+                                <p class="error" ng-show="myForm.activitie.$error.required && myForm.activitie.$dirty">Interested Activities is required</p>
                             </div>
-                            <div class="col-md-3">
-                                <input type="tel" class="form-control Roboto" placeholder="Group Size">
+                            <div class="col-md-3 col-sm-3">
+                                <input type="text pdt15" class="form-control Robotor" placeholder="Group Size" name="size" ng-modal="size.myForm" required>
+                                <p class="error" ng-show="myForm.size.$error.required && myForm.size.$dirty">Group Size is required</p>
                             </div>
-                            <div class="col-md-3"></div>
-                            <div class="col-md-3">
-                                <input type="tel" class="form-control Roboto" placeholder="From">
+                            <div class="col-md-3 col-sm-3"></div>
+                            <div class="col-md-3 col-sm-3">
+                                <input type="text" class="form-control Robotor" placeholder="From" name="from" ng-modal="from.myForm" required>
+                                <p class="error" ng-show="myForm.from.$error.required && myForm.from.$dirty">From is required</p>
                             </div>
-                            <div class="col-md-3">
-                                <input type="tel" class="form-control Roboto" placeholder="To">
-                            </div>
-
-                            <div class="col-md-12">
-                                <textarea type="text" class="form-control Roboto text-height" rows="6" placeholder="Special Comments"></textarea>
-                            </div>
-
-                            <div class="col-md-6">
-                                <input type="text" class="form-control Roboto" placeholder="Name">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="tel" class="form-control Roboto" placeholder="Phone No">
+                            <div class="col-md-3 col-sm-3">
+                                <input type="text" class="form-control Robotor" placeholder="To" name="to" ng-modal="to.myForm" required>
+                                <p class="error" ng-show="myForm.to.$error.required && myForm.to.$dirty">To is required</p>
                             </div>
 
-                            <div class="col-md-8">
-                                <input type="text" class="form-control Roboto" placeholder="Email ID">
+                            <div class="col-md-12 col-sm-12">
+                              <textarea type="text" class="form-control Roboto text-height" rows="6" placeholder="Special Comments" name="comments" ng-modal="comments.myForm" required></textarea>
+                              <p class="error" ng-show="myForm.comments.$error.required && myForm.comments.$dirty">Special Comments is required</p>
                             </div>
-                            <div class="col-md-4">
+
+                            <div class="col-md-6 col-sm-6">
+                                <input type="text" class="form-control Robotor" placeholder="Name" name="name" ng-modal="name.myForm" required>
+                                <p class="error" ng-show="myForm.name.$error.required && myForm.name.$dirty">Name is required</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <input type="text" class="form-control Robotor" placeholder="Phone No" name="phone" ng-modal="phone.myForm" required>
+                                <p class="error" ng-show="myForm.phone.$error.required && myForm.phone.$dirty">Phone No is required</p>
+                            </div>
+
+                            <div class="col-md-8 col-sm-8">
+                                <input type="text" class="form-control Robotor" placeholder="Email ID" name="email" ng-modal="email.myForm" required>
+                                <p class="error" ng-show="myForm.email.$error.required && myForm.email.$dirty">Email ID is required</p>
+                            </div>
+                            <div class="col-md-4 col-sm-3">
                                 <button class="btn btn-submit">Submit</button>
                             </div>
                         </form>
@@ -451,7 +460,7 @@
                                             </ul>
                                         </div>
                                         <div class="row padding30">
-                                            <div class="col-md-3 col-sm-6 col-xs-12  pading0">
+                                            <div class="col-md-3 col-sm-3 col-xs-3  pading0">
                                                 <figure>
                                                     <img class="img-responsive" src="img/Layer-56.jpg">
                                                     <figcaption>
@@ -463,7 +472,7 @@
                                                     </figcaption>
                                                 </figure>
                                             </div>
-                                            <div class="col-md-3 col-sm-6 col-xs-12 pading0">
+                                            <div class="col-md-3 col-sm-3 col-xs-3 pading0">
                                                 <figure>
                                                     <img class="img-responsive" src="img/Layer-56.jpg">
                                                     <figcaption>
@@ -475,7 +484,7 @@
                                                     </figcaption>
                                                 </figure>
                                             </div>
-                                            <div class="col-md-3 col-sm-6 col-xs-12 pading0">
+                                            <div class="col-md-3 col-sm-3 col-xs-3 pading0">
                                                 <figure>
                                                     <img class="img-responsive" src="img/Layer-56.jpg">
                                                     <figcaption>
@@ -487,7 +496,7 @@
                                                     </figcaption>
                                                 </figure>
                                             </div>
-                                            <div class="col-md-3 col-sm-6 col-xs-12 pading0">
+                                            <div class="col-md-3 col-sm-3 col-xs-3 pading0">
                                                 <figure>
                                                     <img class="img-responsive" src="img/Layer-56.jpg">
                                                     <figcaption>
@@ -566,30 +575,34 @@
         <div class="col-md-12 patmargin3">
             <div class="whatsmarg4">
                 <div class="row textalign">
-                    <div class="col-md-3 col-sm-6 col-xs-12 padd8 formlabels Roboto">
-                        <form>
+                    <div class="col-md-3 col-sm-4 col-xs-12 padd8 formlabels Roboto">
+                        <form name="detailForm">
                             <div class="form-group">
-                                <label class="labels bluecol" for="usr">Name:</label>
-                                <input type="text" class="form-control inputform " id="usr">
+                                <label class="labels bluecol">Name:</label>
+                                <input type="text" class="form-control inputform" placeholder="Name" name="name" ng-modal="name.detailForm" required>
+                                <p class="error" ng-show="detailForm.name.$error.required && detailForm.name.$dirty">Name is required</p>
                             </div>
                             <div class="form-group">
-                                <label class="labels bluecol" for="pwd">Email Id:</label>
-                                <input type="text" class="form-control inputform" id="email">
+                                <label class="labels bluecol">Email Id:</label>
+                                <input type="text" class="form-control inputform" placeholder="Email" name="email" ng-modal="email.detailForm" required>
+                                <p class="error" ng-show="detailForm.email.$error.required && detailForm.email.$dirty">Email is required</p>
                             </div>
                             <div class="form-group">
-                                <label class="labels bluecol" for="pwd">Mob No:</label>
-                                <input type="text" class="form-control inputform" id="number">
+                                <label class="labels bluecol">Mob No:</label>
+                                <input type="text" class="form-control inputform" placeholder="Phone" name="phone" ng-modal="phone.detailForm" required>
+                                <p class="error" ng-show="detailForm.phone.$error.required && detailForm.phone.$dirty">Mob No is required</p>
                             </div>
                             <div class="form-group">
-                                <label class="labels bluecol" for="pwd">Group Size</label>
-                                <input type="text" class="form-control inputform" id="text">
+                                <label class="labels bluecol">Group Size</label>
+                                <input type="text pdt15" class="form-control inputform" placeholder="Group Size" name="size" ng-modal="size.myForm" required>
+                                <p class="error" ng-show="detailForm.size.$error.required && detailForm.size.$dirty">Group Size is required</p>
                             </div>
                             <div class="row">
                                 <button>SUBMIT</button>
                             </div>
                         </form>
                     </div>
-                    <div class="col-md-9 col-sm-3 col-xs-6 ">
+                    <div class="col-md-9 col-sm-8 col-xs-12 ">
                         <div class="col-md-4 col-sm-6 col-xs-12 marg13 padd8">
                             <div class="borderright"><strong class="naming bluecol">PARIS</strong>
                                 <div class="img1">
@@ -657,17 +670,20 @@
 </div>
 <!---MY CART END  ---->
 
-<!--EMAIL ALERT-->
-<div class="eupt ng-scope">
+<!---email update  ---->
+<div class="eupt">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12 ge pregular">GET EMAIL UPDATE</div>
-            <div class="col-md-5 col-sm-6 col-xs-12 ie">
-                <input type="text" placeholder="Your email address" class="form-control Roboto">
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 es pregular">
-                <p><a class="whit_color" ui-sref="home" href="#/">SUBSCRIBE</a></p>
-            </div>
+            <form name="myForm">
+                <div class="col-md-4 col-sm-4 col-xs-12 ge">GET EMAIL UPDATE</div>
+                <div class="col-md-5 col-sm-4 col-xs-12 ie">
+                    <input type="text" placeholder="Your email address" class="form-control" name="email" ng-modal="email.myForm" required>
+                    <p class="error" ng-show="myForm.email.$error.required && myForm.email.$dirty">Email is required</p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12 es">
+                    <button type="submit">SUBSCRIBE</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
