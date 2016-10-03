@@ -13,6 +13,16 @@
     }
 }
 @media (max-width: 992px) {
+    .checkboxrow .checkbox label {
+        font-size: 13px !important;
+        margin-left: 8px !important;
+    }
+
+    .checkboxrow p {
+        margin: 0 !important;
+        font-size: 15px;
+    }
+
     .navbarleft {
         float: left !important;
     }
@@ -27,6 +37,34 @@
     }
 }
 @media (max-width: 922px) {
+    .lm2 .hclass1 {
+        font-size: 62px;
+    }
+
+    .lm2 .hclass2 {
+        font-size: 65px;
+        margin-left: 20px;
+    }
+
+    .lm2 .hclass {
+        line-height: 46px;
+        margin-bottom: 0;
+    }
+
+    .categoryup h1 {
+        font-size: 51px;
+        margin: 1% 0;
+        display: inline-block;
+        width: 50%;
+        line-height: 44px;
+    }
+
+    .lm2 .LMP {
+        font-size: 13px;
+        font-weight: 900;
+        margin-left: 4%;
+    }
+
     .fsiz {
         font-size: 73px;
         margin-top: 9%;
@@ -42,6 +80,7 @@
 
     .marg13 {
         margin-top: 0;
+        padding-bottom: 15px;
     }
 
     .pattsocial2 {
@@ -93,8 +132,27 @@
     .event-name {
         font-size: 12px;
     }
+
+    .categoryup2 {
+        background-image: url("/../img/wd.png");
+        background-repeat: no-repeat;
+        background-size: 41%;
+        background-position: 91% 95%;
+        padding: 6%;
+        margin: -5% 6%;
+    }
 }
 @media (max-width: 768px) {
+    .card-container {
+        cursor: pointer;
+        height: 167px;
+    }
+
+    .card-container2 {
+        cursor: pointer;
+        height: 105px !important;
+    }
+
     body {
         padding-top: 50px;
     }
@@ -415,7 +473,7 @@
     }
 
     .img-box {
-        width: 227px !important;
+        width: 301px !important;
     }
 
     .hoverhold {
@@ -722,7 +780,7 @@
 
     .patayasocial {
         margin-top: -363% !important;
-        margin-right: -9.4% !important;
+        margin-right: -5.4% !important;
     }
 
     .pattayevents .borderhr {
@@ -735,5 +793,11 @@
 
     .flex-control-nav {
         height: 14px;
+    }
+}
+@media (max-width: 480px) {
+    .card-container {
+        cursor: pointer;
+        height: 209px;
     }
 }
