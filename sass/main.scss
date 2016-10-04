@@ -267,6 +267,7 @@ a {
     margin: 0 6%;
 
     .form-group input {
+      outline: none;
         border: 0;
         border-bottom: 2px solid #002b7f;
         padding: 5px;
@@ -764,12 +765,14 @@ option[value=""][disabled] {
     position: absolute;
     overflow: hidden;
     width: 100%;
+    z-index: 1;
 }
 
 .card .back {
-    background: #eaeaed;
-    color: #0087cc;
-    line-height: 150px;
+    overflow: auto;
+    padding: 41px 2px 2px;
+    background: rgb(255, 216, 47);
+    color: #333333;
     text-align: center;
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
