@@ -24,7 +24,6 @@
                 <div class="col-md-2 col-sm-2 col-xs-6  padng0">
                     <div class="events">
                         <img src="img/1.jpg" alt="" class="img-responsive">
-                        <div class="shadow-up"></div>
                         <div class="shadow-down"></div>
                         <div class="event-name">
                             <span>AMSTERDAM</span>
@@ -39,7 +38,6 @@
                 <div class="col-md-2 col-sm-2 col-xs-6  padng0">
                     <div class="events">
                         <img src="img/3.jpg" alt="" class="img-responsive">
-                        <div class="shadow-up"></div>
                         <div class="shadow-down"></div>
                         <div class="event-name">
                             <span>CROATIA</span>
@@ -54,7 +52,6 @@
                 <div class="col-md-2 col-sm-2 col-xs-6 padng0 ">
                     <div class="events">
                         <img src="img/2.jpg" alt="" class="img-responsive">
-                        <div class="shadow-up"></div>
                         <div class="shadow-down"></div>
                         <div class="event-name">
                             <span>IBIZA</span>
@@ -69,7 +66,6 @@
                 <div class="col-md-2 col-sm-2 col-xs-6  padng0">
                     <div class="events">
                         <img src="img/1.jpg" alt="" class="img-responsive">
-                        <div class="shadow-up"></div>
                         <div class="shadow-down"></div>
                         <div class="event-name">
                             <span>LAS VEGAS</span>
@@ -94,7 +90,6 @@
                 <div class="col-md-2 col-sm-2 col-xs-6 padng0">
                     <div class="events">
                         <img src="img/3.jpg" alt="" class="img-responsive">
-                        <div class="shadow-up"></div>
                         <div class="shadow-down"></div>
                         <div class="event-name">
                             <span>AMSTERDAM</span>
@@ -177,15 +172,15 @@
 <div class="eupt">
     <div class="container">
         <div class="row">
-          <form name="myForm">
-            <div class="col-md-4 col-sm-6 col-xs-12 ge">GET EMAIL UPDATE</div>
-            <div class="col-md-5 col-sm-6 col-xs-12 ie">
-              <input type="text" placeholder="Your email address" class="form-control" required>
-                <p class="error" ng-show="myForm.email.$error.required && myForm.email.$dirty">Email is required</p>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 es">
-                <button type="submit">SUBSCRIBE</button>
-            </div>
+            <form name="myForm">
+                <div class="col-md-4 col-sm-4 col-xs-12 ge">GET EMAIL UPDATE</div>
+                <div class="col-md-5 col-sm-4 col-xs-12 ie">
+                    <input type="text" placeholder="Your email address" class="form-control" name="email" ng-modal="email.myForm" required>
+                    <p class="error" ng-show="myForm.email.$error.required && myForm.email.$dirty">Email is required</p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12 es">
+                    <button type="submit">SUBSCRIBE</button>
+                </div>
             </form>
         </div>
     </div>

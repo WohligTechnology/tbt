@@ -16,7 +16,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
         .state('home', {
             url: "/",
             templateUrl: "views/template.html",
-            controller: 'StaticCtrl'
+            controller: 'HomeCtrl'
         })
     $stateProvider
         .state('tbtstatic', {

@@ -261,13 +261,18 @@ a {
     padding: 0 50px;
 }
 
+.dropdown-menu {
+    border-radius: 0 !important;
+    width: 100% !important;
+}
+
 .category {
     background-color: #fcd116;
     padding: 20px 40px;
     margin: 0 6%;
 
     .form-group input {
-      outline: none;
+        outline: none;
         border: 0;
         border-bottom: 2px solid #002b7f;
         padding: 5px;
