@@ -810,4 +810,18 @@
         cursor: pointer;
         height: 209px;
     }
+
+    .card-container2 {
+        height: 111px!important;
+    }
+}
+@media (max-width: 320px) {
+    .card-container {
+        cursor: pointer;
+        height: 175px;
+    }
+
+    .card-container2 {
+        height: 86px !important;
+    }
 }
