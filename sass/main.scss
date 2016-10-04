@@ -753,6 +753,8 @@ option[value=""][disabled] {
 .card:hover {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    border: none;
+    outline: none;
 }
 
 .card .side {

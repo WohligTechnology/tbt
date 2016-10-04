@@ -37,6 +37,11 @@
     }
 }
 @media (max-width: 922px) {
+    .card-container {
+        cursor: pointer;
+        height: 164px;
+    }
+
     .lm2 .hclass1 {
         font-size: 62px;
     }
@@ -141,6 +146,11 @@
         padding: 6%;
         margin: -5% 6%;
     }
+
+    .card-container2 {
+        cursor: pointer;
+        height: 217px !important;
+    }
 }
 @media (max-width: 768px) {
     .card-container {
@@ -150,7 +160,7 @@
 
     .card-container2 {
         cursor: pointer;
-        height: 105px !important;
+        height: 217px !important;
     }
 
     body {
