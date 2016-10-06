@@ -1,15 +1,40 @@
 @media only screen and (max-width: 1205px) {
-    .hdn {
-        margin-right: -33px;
-        width: 189px !important;
-        padding: 20px 10px 0 !important;
-        color: #0b358c;
-        font-size: 16px;
-        letter-spacing: 1px;
-    }
+
 
     .tp {
         padding-left: 0 !important;
+    }
+    .hdn {
+        width: 100% !important;
+        font-size: 11px;
+        letter-spacing: 1px;
+        padding: 0px !important;
+        margin: 0;
+    }
+
+    .hdp {
+        width: 261px;
+        padding: 25px 0 4px;
+        font-weight: 700;
+        color: #0b358c;
+        letter-spacing: 2px;
+    }
+}
+@media (max-width: 1000px) {
+    .hdn {
+        width: 100% !important;
+        font-size: 11px;
+        letter-spacing: 1px;
+        padding: 0px !important;
+        margin: 0;
+    }
+
+    .hdp {
+        width: 261px;
+        padding: 25px 0 4px;
+        font-weight: 700;
+        color: #0b358c;
+        letter-spacing: 2px;
     }
 }
 @media (max-width: 992px) {
@@ -21,10 +46,6 @@
     .checkboxrow p {
         margin: 0 !important;
         font-size: 15px;
-    }
-
-    .navbarleft {
-        float: left !important;
     }
 
     .navbar-default .navbar-nav > li > a {
@@ -631,18 +652,13 @@
         font-size: inherit !important;
     }
 
-    .navbarleft {
-        float: inherit !important;
-        width: auto !important;
-    }
-
     .navbar-nav > li {
         float: inherit !important;
     }
 
     .hbc .tp {
-        padding-left: 0;
-    }
+    padding-left: 54px !important;
+}
 
     .navbar-default .navbar-nav > li > a {
         color: #263878;
@@ -837,6 +853,9 @@
     }
 }
 @media (max-width: 480px) {
+  .hbc .tp {
+    padding-left: 0px !important;
+}
     .card-container {
         cursor: pointer;
         height: 209px;

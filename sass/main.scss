@@ -798,9 +798,9 @@ option[value=""][disabled] {
 
     .tp {
         margin-top: 10px;
-        font-size: 13px;
+        font-size: 11px;
         text-align: center;
-        padding-left: 77px;
+        padding-left: 16px;
         color: #000;
     }
 }
@@ -891,9 +891,11 @@ option {
 }
 
 .hdn {
-    padding: 20px 10px 0;
     color: #0b358c;
-    font-size: 16px;
+    font-size: 12px;
+    width: 114px;
+    margin-top: 10px;
+    margin-bottom: 0;
 
     .m10 {
         margin-left: 10px;
