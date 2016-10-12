@@ -216,6 +216,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.footermenu = "views/custom_footermenu.html";
         TemplateService.footer = "views/custom_footer.html";
 
+
     })
 
 .controller('headerctrl', function($scope, TemplateService) {
