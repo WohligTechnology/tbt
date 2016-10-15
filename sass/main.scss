@@ -867,7 +867,7 @@ option[value=""][disabled] {
         border-bottom: 4px solid #FDD116;
         font-size: 34px;
         color: #fdd52b;
-        padding: 0 12px 6px 0;
+        padding:6px;
         height: auto;
         border-top: none;
         border-left: none;
@@ -895,8 +895,10 @@ label {
 }
 
 option {
-    color: #33548e;
-    font-size: 20px;
+  color: #002b7f;
+font-size: 20px;
+background-color: #fdd116;
+font-weight: bolder;
 }
 
 .aboutin {
