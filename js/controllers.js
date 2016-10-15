@@ -9,13 +9,50 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Home");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+        //top slider
+        $scope.mySlidestop = [{
+            img: "img/Group-35.jpg",
+        }, {
+            img: "img/Group-35.jpg",
+        }, {
+            img: "img/Group-35.jpg",
+        }, {
+            img: "img/Group-35.jpg"
+        }];
 
-        $scope.mySlides = [
-            'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-            'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-            'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-            'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
-        ];
+        // whats hot slide
+        $scope.mySlides = [{
+            img: "img/qwe.jpg",
+            events: "TOMMOROWLAND",
+            date: "27th Agust,2016"
+
+
+        }, {
+            img: "img/qwe.jpg",
+            events: "TOMMOROWLAND",
+            date: "27th Agust,2016"
+
+
+        }, {
+            img: "img/qwe.jpg",
+            events: "TOMMOROWLAND",
+            date: "27th Agust,2016"
+
+
+        }, {
+            img: "img/qwe.jpg",
+            events: "TOMMOROWLAND",
+            date: "27th Agust,2016"
+
+
+        }];
+
+        // $scope.mySlides = [
+        //     'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
+        //     'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
+        //     'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
+        //     'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+        // ];
     })
     .controller('ActivityCtrl', function($scope, TemplateService, NavigationService, $timeout) {
 
@@ -80,7 +117,28 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classp = 'active-tab';
         $scope.classv = '';
 
+        $scope.oneAtATime = true;
 
+        $scope.groups = [{
+            title: 'Dynamic Group Header - 1',
+            content: 'Dynamic Group Body - 1'
+        }, {
+            title: 'Dynamic Group Header - 2',
+            content: 'Dynamic Group Body - 2'
+        }];
+
+        $scope.items = ['Item 1', 'Item 2', 'Item 3'];
+
+        $scope.addItem = function() {
+            var newItemNo = $scope.items.length + 1;
+            $scope.items.push('Item ' + newItemNo);
+        };
+
+        $scope.status = {
+            isCustomHeaderOpen: false,
+            isFirstOpen: true,
+            isFirstDisabled: false
+        };
         $scope.tabchanges = function(tabs, a) {
 
             $scope.tabs = tabs;

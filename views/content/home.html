@@ -1,5 +1,24 @@
 <!---top image---->
-<img src="img/Group-35.jpg" class="img-responsive" style="margin-top: -1px;">
+<div class="homeslidr">
+    <flex-slider flex-slide="s in mySlidestop track by $index" class="m1 figure922">
+        <li>
+            <div class="item">
+                <figure class=" ng-scope">
+                    <img class="img-responsive " ng-src="{{s.img}}">
+                    <!-- <figcaption>
+                    <div class="links lm2">
+                        <h1 class="theboldfont hclass">
+                          <p class=" hclass1 yellow_color">WHAT'S</p>
+                          <p class=" hclass2"> HOT</p>
+                        </h1>
+                        <p class="Robotor LMP">{{s.events}}<br>{{s.date}}</p>
+                    </div>
+                </figcaption> -->
+                </figure>
+            </div>
+        </li>
+    </flex-slider>
+</div>
 
 <!---slider images ---->
 <div class="container ">
@@ -132,13 +151,18 @@
             <div class="links">
                 <div class="onimg">
                     <img class="imgab" src="img/6.png">
-                    <p class="himg2"><label class="pregular labsec">I want to go to</label>
+
+                    <form class="himg2">
+                        <label class="pregular labsec">I want to go to</label>
                         <select class="form-control Robotor">
                           <option>Spain</option>
                           <option>India</option>
                           <option>England</option>
                         </select>
-                    </p>
+                        <button type="submit" class="gobtn">GO</button>
+
+                    </form>
+
                 </div>
             </div>
         </figcaption>
@@ -156,16 +180,25 @@
 </div>
 
 <!---date selibration ---->
-<div class="padd padddown">
-    <figure class="m2">
-        <img class="img-responsive" src="img/qwe.jpg">
-        <figcaption>
-            <div class="links lm">
-                <h1 class="theboldfont">WHAT'S HOT</h1>
-                <p class="Robotor">TOMMOROWLAND<br>27th Agust,2016</p>
+<div class="padd padddown homeslid">
+    <flex-slider flex-slide="s in mySlides track by $index" class="m1">
+        <li>
+            <div class="item">
+                <figure class="mim-home ng-scope">
+                    <img class="img-responsive " ng-src="{{s.img}}">
+                    <figcaption>
+                        <div class="links lm2">
+                            <h1 class="theboldfont hclass">
+                            <p class=" hclass1 yellow_color">WHAT'S</p>
+                            <p class=" hclass2"> HOT</p>
+                          </h1>
+                            <p class="Robotor LMP">{{s.events}}<br>{{s.date}}</p>
+                        </div>
+                    </figcaption>
+                </figure>
             </div>
-        </figcaption>
-    </figure>
+        </li>
+    </flex-slider>
 </div>
 
 <!---email update  ---->

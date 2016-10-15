@@ -670,6 +670,13 @@ option[value=""][disabled] {
     }
 }
 
+.paddleft1 {
+    display: inline-block;
+    padding: 0 28px;
+    margin: 0 !important;
+    font-size: 22px;
+}
+
 .patayasocial {
     margin-top: -80% !important;
     margin-right: -11.4% !important;
@@ -843,7 +850,7 @@ option[value=""][disabled] {
 
 .himg2 {
     display: inline-block;
-    width: 44%;
+    width: 50%;
     text-align: left;
     background: rgba(2, 44, 125, 0.77);
     padding: 3% 2% 3% 16%;
@@ -860,13 +867,26 @@ option[value=""][disabled] {
         border-bottom: 4px solid #FDD116;
         font-size: 34px;
         color: #fdd52b;
-        padding: 0 12px 2px 0;
+        padding: 0 12px 6px 0;
         height: auto;
         border-top: none;
         border-left: none;
         border-right: none;
         font-weight: bolder;
-        width: 100%;
+        width: 80%;
+        display: inline-block;
+        background-size: 24px;
+    }
+
+    .gobtn {
+        padding: 0;
+        font-size: 26px;
+        font-family: 'Robotor';
+        background-color: rgba(255, 255, 255, 0);
+        font-weight: bolder;
+        border: none;
+        padding-left: 12px;
+        outline: none;
     }
 }
 
@@ -1468,13 +1488,51 @@ figure .links {
     padding: 2% 9%;
 }
 
+.checkboxrow2 {
+    padding: 7% 2% 0;
+}
+
 .custtitle {
+    display: inline-block;
     color: #002b7f;
     text-align: center;
     font-size: 30px;
     margin: 4% 0 5%;
 }
 //customisation css
+
+.textright {
+    text-align: right;
+}
+
+.custom-select {
+    margin: 6% 0;
+}
+
+.custom-select .form-control {
+    width: 25%;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent url("../img/Vector-Smart-Object.png") no-repeat right center;
+    border-bottom: 1px solid #0b358c;
+    font-size: 22px;
+    color: #777777;
+    padding: 11px 5px;
+    height: auto;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.custom-select option {
+    color: #fdd116;
+    font-size: 17px;
+    background-color: #002b7f;
+    font-weight: bolder;
+    font-family: 'Robotor';
+}
 
 .loadimag {
     margin: 2% 0;
@@ -1621,16 +1679,41 @@ figure .links {
     text-align: right!important;
     margin: 0 !important;
     border: none!important;
+    border-radius: 0 !important;
 }
 
-.flex-control-nav {
-    width: 27%!important;
+.mim-home {
+    margin: 2%;
+}
+
+.homeslidr .flex-control-nav {
     position: absolute;
-    bottom: 0px!important;
-    text-align: center!important;
-    display: inline-block!important;
-    z-index: 2!important;
-    right: 10%!important;
+    bottom: 0 !important;
+    text-align: center !important;
+    display: inline-block !important;
+    z-index: 2 !important;
+    right: 0 !important;
+}
+
+.wts .flex-control-nav {
+    width: 27% !important;
+    position: absolute;
+    bottom: 0 !important;
+    text-align: center !important;
+    display: inline-block !important;
+    z-index: 2 !important;
+    right: 10% !important;
+}
+
+.homeslid .flex-control-nav {
+    width: 18% !important;
+    position: absolute;
+    bottom: 0 !important;
+    text-align: center !important;
+    display: inline-block !important;
+    z-index: 2 !important;
+    right: 10% !important;
+    margin-bottom: 2%;
 }
 
 .flex-control-paging li a.flex-active {
@@ -1882,6 +1965,11 @@ figure .links {
 }
 
 .checkboxrow {
+    padding: 1% 2% 8%;
+}
+
+.checkboxrow,
+.checkboxrow2 {
     .check_img {
         display: inline-block;
         width: 22px;
@@ -1892,7 +1980,6 @@ figure .links {
         width: 5px;
         margin-top: -6px;
     }
-    padding: 1% 2% 8%;
 
     .pading5 {
         padding-top: 5px;

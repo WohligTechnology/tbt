@@ -1,14 +1,13 @@
 @media only screen and (max-width: 1205px) {
-
-
     .tp {
         padding-left: 0 !important;
     }
+
     .hdn {
         width: 100% !important;
         font-size: 11px;
         letter-spacing: 1px;
-        padding: 0px !important;
+        padding: 0 !important;
         margin: 0;
     }
 
@@ -25,7 +24,7 @@
         width: 100% !important;
         font-size: 11px;
         letter-spacing: 1px;
-        padding: 0px !important;
+        padding: 0 !important;
         margin: 0;
     }
 
@@ -142,11 +141,6 @@
 
     .show-div {
         width: 100%;
-    }
-
-    .events .over-layer .button-holder {
-        font-size: 11px;
-        width: 90%;
     }
 
     .pattmarg3 {
@@ -657,8 +651,8 @@
     }
 
     .hbc .tp {
-    padding-left: 54px !important;
-}
+        padding-left: 54px !important;
+    }
 
     .navbar-default .navbar-nav > li > a {
         color: #263878;
@@ -851,11 +845,48 @@
     .card .back {
         font-size: 12px;
     }
+
+    .checkboxrow2 {
+        padding: 0 2% 9%;
+    }
+
+    .custtitle {
+        font-size: 24px;
+    }
+
+    .textright {
+        text-align: center;
+    }
+
+    .custom-select .form-control {
+        width: 49%;
+        font-size: 18px;
+    }
+
+    .events .over-layer .button-holder {
+        font-size: 11px;
+        width: 90%;
+    }
+
+    .himg2 .gobtn {
+        font-size: 19px;
+    }
 }
 @media (max-width: 480px) {
-  .hbc .tp {
-    padding-left: 0px !important;
-}
+    .himg2 .gobtn {
+        font-size: 15px;
+        padding-left: 0;
+    }
+
+    .custom-select .form-control {
+        width: 67%;
+        font-size: 16px;
+    }
+
+    .hbc .tp {
+        padding-left: 0 !important;
+    }
+
     .card-container {
         cursor: pointer;
         height: 209px;
@@ -866,6 +897,10 @@
     }
 }
 @media (max-width: 320px) {
+    .custtitle {
+        font-size: 16px;
+    }
+
     .card-container {
         cursor: pointer;
         height: 175px;
