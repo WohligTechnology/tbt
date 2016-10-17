@@ -945,6 +945,10 @@
     }
 }
 @media (max-width: 375px) {
+    .img-box {
+        width: 272px !important;
+    }
+
     .activ-card {
         height: 224px;
     }
@@ -962,6 +966,47 @@
     }
 }
 @media (max-width: 320px) {
+    .img-box {
+        width: 228px !important;
+    }
+
+    .links2 {
+        margin: 1% 0;
+    }
+
+    .pattayaimg {
+        margin: 0 20%;
+    }
+
+    .panelhead {
+        padding: 5px 0;
+    }
+
+    .checkboxrow p {
+        font-size: 14px;
+    }
+
+    .himg2 .form-control {
+        border-bottom: 1px solid #FDD116;
+        background-size: 16px;
+        font-size: 13px;
+        width: 75%;
+    }
+
+    .lm2 .hclass {
+        line-height: 13px;
+        margin: 0;
+    }
+
+    .lm2 .hclass1 {
+        font-size: 24px;
+    }
+
+    .lm2 .hclass2 {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
     .activ-card2 {
         height: 86px;
     }
