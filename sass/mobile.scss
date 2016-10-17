@@ -1,4 +1,21 @@
 @media only screen and (max-width: 1205px) {
+    .activ-card {
+        height: 230px;
+    }
+
+    .activ-card2 {
+        height: 365px;
+    }
+
+    .desti-card {
+        cursor: pointer;
+        height: 205px;
+    }
+
+    .desti-card2 {
+        height: 322px;
+    }
+
     .tp {
         padding-left: 0 !important;
     }
@@ -20,6 +37,22 @@
     }
 }
 @media (max-width: 1000px) {
+    .activ-card {
+        height: 165px;
+    }
+
+    .activ-card2 {
+        height: 272px;
+    }
+
+    .desti-card {
+        height: 153px;
+    }
+
+    .desti-card2 {
+        height: 247px;
+    }
+
     .hdn {
         width: 100% !important;
         font-size: 11px;
@@ -57,6 +90,10 @@
     }
 }
 @media (max-width: 922px) {
+    .activ-card2 {
+        height: 271px;
+    }
+
     .p2 {
         font-size: 43px;
     }
@@ -82,11 +119,6 @@
 
     .p {
         font-size: 12px;
-    }
-
-    .card-container {
-        cursor: pointer;
-        height: 164px;
     }
 
     .lm2 .hclass1 {
@@ -189,20 +221,25 @@
         margin: -5% 6%;
     }
 
-    .card-container2 {
-        cursor: pointer;
-        height: 217px !important;
+    .activ-card {
+        height: 165px;
     }
 }
 @media (max-width: 768px) {
-    .card-container {
-        cursor: pointer;
-        height: 167px;
+    .activ-card {
+        height: 412px;
     }
 
-    .card-container2 {
-        cursor: pointer;
-        height: 217px !important;
+    .activ-card2 {
+        height: 212px;
+    }
+
+    .desti-card2 {
+        height: 391px;
+    }
+
+    .desti-card {
+        height: 395px;
     }
 
     body {
@@ -871,8 +908,16 @@
     .himg2 .gobtn {
         font-size: 19px;
     }
+
+    .paddactiv {
+        padding-bottom: 11%;
+    }
 }
 @media (max-width: 480px) {
+    .activ-card {
+        height: 257px;
+    }
+
     .himg2 .gobtn {
         font-size: 15px;
         padding-left: 0;
@@ -887,26 +932,53 @@
         padding-left: 0 !important;
     }
 
-    .card-container {
-        cursor: pointer;
-        height: 209px;
+    .activ-card2 {
+        height: 126px;
     }
 
-    .card-container2 {
-        height: 111px!important;
+    .desti-card {
+        height: 234px;
+    }
+
+    .desti-card2 {
+        height: 239px;
+    }
+}
+@media (max-width: 375px) {
+    .activ-card {
+        height: 224px;
+    }
+
+    .activ-card2 {
+        height: 112px;
+    }
+
+    .desti-card {
+        height: 226px;
+    }
+
+    .desti-card2 {
+        height: 228px;
     }
 }
 @media (max-width: 320px) {
-    .custtitle {
-        font-size: 16px;
+    .activ-card2 {
+        height: 86px;
     }
 
-    .card-container {
-        cursor: pointer;
+    .activ-card {
         height: 175px;
     }
 
-    .card-container2 {
-        height: 86px !important;
+    .desti-card {
+        height: 197px;
+    }
+
+    .desti-card2 {
+        height: 193px;
+    }
+
+    .custtitle {
+        font-size: 16px;
     }
 }

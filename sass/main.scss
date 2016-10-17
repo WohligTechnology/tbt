@@ -749,10 +749,6 @@ option[value=""][disabled] {
 }
 //STATIC CSSS END
 
-.card-container {
-    cursor: pointer;
-    height: 287px;
-}
 
 .card {
     height: 100%;
@@ -2318,6 +2314,25 @@ figure .links {
         opacity: 0;
     }
 }
+
+.activ-card {
+    cursor: pointer;
+    height: 287px;
+}
+.activ-card2 {
+    cursor: pointer;
+    height: 450px;
+}
+.desti-card2 {
+    cursor: pointer;
+    height: 402px;
+}
+.desti-card {
+    cursor: pointer;
+    height: 255px;
+}
+
+
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
