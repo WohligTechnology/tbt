@@ -17,9 +17,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
           // console.log($scope.mySlidestop);
           $scope.popularDestination=data.data.popularDestination;
           console.log($scope.popularDestination);
-          $scope.popularAttraction=data.data.popularDestination;
+          $scope.popularAttraction=data.data.popularAttraction;
           console.log($scope.popularAttraction);
+          $scope.dropDown=data.data.DestinationDropdown;
+          console.log($scope.dropDown);
+          $scope.mySlides=data.data.whatsHotBanner;
         });
+
 
         //top slider
       //   $scope.mySlidestop = [
@@ -227,6 +231,25 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
+        $scope.tabs = 'az';
+              $scope.classp = 'active-tab';
+              $scope.classv = '';
+
+              $scope.oneAtATime = true;
+              $scope.tabchanges = function(tabs, a) {
+
+                  $scope.tabs = tabs;
+                  if (a == 1) {
+
+                      $scope.classp = "active-tab";
+                      $scope.classv = '';
+
+                  } else {
+
+                      $scope.classp = '';
+                      $scope.classv = "active-tab";
+                  }
+              };
 
     })
     .controller('WhatsHotCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {

@@ -1,4 +1,5 @@
-var adminurl = "http://localhost:1337/";
+// var adminurl = "http://localhost:1337/";
+var adminurl = "http://192.168.100.105:1337/";
 if(isproduction)
 {
   adminURL =  "http://www.wohlig.co.in/demo/index.php";
@@ -51,6 +52,7 @@ var navigationservice = angular.module('navigationservice', [])
         withCredentials: true
       }).success(callback);
     },
+  
 
   };
 });

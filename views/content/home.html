@@ -108,10 +108,10 @@
             <div class="row">
                 <div class="col-md-2 col-sm-2 col-xs-6 padng0" ng-repeat="x in popularAttraction | limitTo : 4">
                     <div class="events">
-                        <img src="img/3.jpg" alt="" class="img-responsive">
+                        <img src="{{x.image3 | serverimage}}" alt="" class="img-responsive">
                         <div class="shadow-down"></div>
                         <div class="event-name">
-                            <span>AMSTERDAM</span>
+                            <span>{{x.name}}</span>
                         </div>
                         <div class="over-layer text-center">
                             <div class="hoverimg">
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 padng0">
+                <!-- <div class="col-md-2 col-sm-2 col-xs-6 padng0">
                     <img class="img-responsive" src="img/2.jpg">
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-6 padng0">
@@ -128,7 +128,7 @@
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-6 padng0">
                     <img class="img-responsive" src="img/1.jpg">
-                </div>
+                </div> -->
                 <div class="col-md-4 col-sm-4 col-xs-4 displaynon padng0">
                     <p class="p p1 theboldfont">POPULAR</p>
                     <p class="p2 p222 theboldfont">ATTRA <br>CTIONS</p>
@@ -154,10 +154,12 @@
 
                     <form class="himg2">
                         <label class="pregular labsec">I want to go to</label>
+
+
+
+
                         <select class="form-control Robotor">
-                          <option>Spain</option>
-                          <option>India</option>
-                          <option>England</option>
+                      <option ng-repeat="x in dropDown">{{x.name}}</option>
                         </select>
                         <button type="submit" class="gobtn">GO</button>
 
@@ -185,8 +187,8 @@
         <li>
             <div class="item">
                 <figure class="mim-home ng-scope">
-                    <img class="img-responsive " ng-src="{{s.img}}">
-                    <figcaption>
+                    <img class="img-responsive " ng-src="{{s.banner|serverimage}}">
+                    <!-- <figcaption>
                         <div class="links lm2">
                             <h1 class="theboldfont hclass">
                             <p class=" hclass1 yellow_color">WHAT'S</p>
@@ -194,7 +196,7 @@
                           </h1>
                             <p class="Robotor LMP">{{s.events}}<br>{{s.date}}</p>
                         </div>
-                    </figcaption>
+                    </figcaption> -->
                 </figure>
             </div>
         </li>
