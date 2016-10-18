@@ -1,4 +1,4 @@
-var adminURL = "";
+var adminurl = "http://localhost:1337/";
 if(isproduction)
 {
   adminURL =  "http://www.wohlig.co.in/demo/index.php";
@@ -41,6 +41,14 @@ var navigationservice = angular.module('navigationservice', [])
         method: 'GET',
         withCredentials: true,
         data: mydata
+      }).success(callback);
+    },
+
+    HomeSlider: function(callback) {
+      $http({
+        url:adminurl + 'RestApi/getHomeContent',
+        method: 'POST',
+        withCredentials: true
       }).success(callback);
     },
 
