@@ -20,6 +20,10 @@
     }
 }
 @media (max-width: 1000px) {
+    .himg2 .gobtn {
+        padding-left: 1px;
+    }
+
     .hdn {
         width: 100% !important;
         font-size: 11px;
@@ -188,9 +192,17 @@
         height: 165px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     body {
         padding-top: 50px;
+    }
+
+    .borderdown {
+        background: linear-gradient(to right, #ffd72b 71%, #f3cb2c 41%, #ffd72b 40%, #f3cb2c 40%, rgba(255, 255, 255, 0) 40%);
+    }
+
+    .borderup {
+        background: linear-gradient(to right, white 30%, white 30%, white 30%, white 30%, #FDD116 29%);
     }
 
     .figure922 {

@@ -749,7 +749,6 @@ option[value=""][disabled] {
 }
 //STATIC CSSS END
 
-
 .card {
     height: 100%;
     -webkit-transform-style: preserve-3d;
@@ -863,7 +862,7 @@ option[value=""][disabled] {
         border-bottom: 4px solid #FDD116;
         font-size: 34px;
         color: #fdd52b;
-        padding:6px;
+        padding: 6px;
         height: auto;
         border-top: none;
         border-left: none;
@@ -891,10 +890,10 @@ label {
 }
 
 option {
-  color: #002b7f;
-font-size: 20px;
-background-color: #fdd116;
-font-weight: bolder;
+    color: #002b7f;
+    font-size: 20px;
+    background-color: #fdd116;
+    font-weight: bolder;
 }
 
 .aboutin {
@@ -1765,6 +1764,7 @@ figure .links {
             background-size: 100% 100%;
             padding: 16px 42px;
             width: 199px;
+            margin-left: 20px;
         }
 
         .wtvi {
@@ -2315,78 +2315,93 @@ figure .links {
     }
 }
 
+figure {
+    cursor: pointer;
+}
+
 .flipDiv {
-    position:relative;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    float:left;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    float: left;
 }
+
 .flipDiv figure {
-    margin:0;
-    padding:0;
-    position:relative;
-    cursor:pointer;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
 }
+
 .flipDiv figure .front {
-    display:block;
-    position:relative;
-    z-index:10;
+    display: block;
+    position: relative;
+    z-index: 10;
 }
+
 .flipDiv figure figcaption {
-    display:block;
-    position:absolute;
-    z-index:5;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box
+    display: block;
+    position: absolute;
+    z-index: 5;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 .flipDiv figure h2 {
-    font-family:'Lato';
-    color:#fff;
-    font-size:20px;
-    text-align:left
+    font-family: 'Lato';
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
 }
+
 .flipDiv figure p {
-    display:block;
-    font-family:'Lato';
-    font-size:12px;
-    line-height:18px;
-    margin:0;
-    color:#fff;
-    text-align:left
+    display: block;
+    font-family: 'Lato';
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    color: #fff;
+    text-align: left;
 }
+
 .flipDiv figure figcaption {
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    padding:29px 44px;
-    background-color:#ffd82f;
-    text-align:center;
-    backface-visibility:hidden;
-    -webkit-transform:rotateY(-180deg);
-    -moz-transform:rotateY(-180deg);
-    transform:rotateY(-180deg);
-    -webkit-transition:all .5s;
-    -moz-transition:all .5s;
-    transition:all .5s
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 29px 44px;
+    background-color: #ffd82f;
+    text-align: center;
+    backface-visibility: hidden;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
 }
+
 .flipDiv figure .front {
-    backface-visibility:hidden;
-    -webkit-transition:all .5s;
-    -moz-transition:all .5s;
-    transition:all .5s
+    backface-visibility: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
 }
-.flipDiv figure:hover .front,figure.hover .front {
-    -webkit-transform:rotateY(180deg);
-    -moz-transform:rotateY(180deg);
-    transform:rotateY(180deg)
+
+.flipDiv figure:hover .front,
+figure.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
-.flipDiv figure:hover figcaption,figure.hover figcaption {
-    -webkit-transform:rotateY(0);
-    -moz-transform:rotateY(0);
-    transform:rotateY(0)
+
+.flipDiv figure:hover figcaption,
+figure.hover figcaption {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
 }
 //bootstrap forms
 /* Start writing sass here */
