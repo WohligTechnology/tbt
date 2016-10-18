@@ -14,8 +14,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         NavigationService.HomeSlider(function(data){
           console.log(data);
           $scope.mySlidestop=data.data.HomeSlider;
-
-          console.log($scope.mySlidestop);
+          // console.log($scope.mySlidestop);
+          $scope.popularDestination=data.data.popularDestination;
+          console.log($scope.popularDestination);
+          $scope.popularAttraction=data.data.popularDestination;
+          console.log($scope.popularAttraction);
         });
 
         //top slider
@@ -37,26 +40,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             img: "img/qwe.jpg",
             events: "TOMMOROWLAND",
             date: "27th Agust,2016"
-
-
         }, {
             img: "img/qwe.jpg",
             events: "TOMMOROWLAND",
             date: "27th Agust,2016"
-
-
         }, {
             img: "img/qwe.jpg",
             events: "TOMMOROWLAND",
             date: "27th Agust,2016"
-
-
         }, {
             img: "img/qwe.jpg",
             events: "TOMMOROWLAND",
             date: "27th Agust,2016"
-
-
         }];
 
         // $scope.mySlides = [
