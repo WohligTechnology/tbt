@@ -5,43 +5,151 @@
     </figure>
 </div>
 
-<!---FORM start ---->
+<!---SELECTION START---->
 <div class="whatsmain">
     <div class="container ">
         <div class="col-md-12 margin3">
-            <div class="whatsmarg4">
-                <!---POPULAR DESTINATIONS ---->
+            <!---IMAGES START ---->
+            <div class="{{classp}} whatsmarg4 displaynonpata" ng-if="tabs=='az'">
                 <div class="row text-center whatspadd3">
-                    <span><a class="whit_color theboldfont wtimg" ui-sref="home" href="#/">IMAGES</a></span>
-                    <span><a class="wtvi theboldfont" ui-sref="home" href="#/">VIDEOS</a></span>
+                    <span><a ng-click="tabchanges('az',1)" class="whit_color theboldfont wtimg">IMAGES</a></span>
+                    <span><a ng-click="tabchanges('bz',2)" class="wtvi theboldfont">VIDEOS</a></span>
                 </div>
+
+
                 <div class="row">
-                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box>
-                        <img class="img-responsive" src="img/rockclimb1.png">
+                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
+                        <img class="img-responsive doneLoading" src="img/rockclimb1.png">
                     </a>
-                    <a class="col-md-3 col-sm-3 col-xs-3  pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box>
-                        <img class="img-responsive" src="img/rockclimb1.png">
+                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
+                        <img class="img-responsive doneLoading" src="img/rockclimb1.png">
                     </a>
-                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box>
-                        <img class="img-responsive" src="img/rockclimb1.png">
+                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
+                        <img class="img-responsive doneLoading" src="img/rockclimb1.png">
                     </a>
-                    <a class="col-md-3 col-sm-3 col-xs-3  pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box>
-                        <img class="img-responsive" src="img/rockclimb1.png">
+                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
+                        <img class="img-responsive doneLoading" src="img/rockclimb1.png">
                     </a>
-                    <a class="col-md-3 col-sm-3 col-xs-3  pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box>
-                        <img class="img-responsive" src="img/rockclimb1.png">
+                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
+                        <img class="img-responsive doneLoading" src="img/rockclimb1.png">
                     </a>
-                    <a class="col-md-3 col-sm-3 col-xs-3  pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box>
-                        <img class="img-responsive" src="img/rockclimb1.png">
+                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
+                        <img class="img-responsive doneLoading" src="img/rockclimb1.png">
                     </a>
-                    <a class="col-md-3 col-sm-3 col-xs-3  pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box>
-                        <img class="img-responsive" src="img/rockclimb1.png">
+                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
+                        <img class="img-responsive doneLoading" src="img/rockclimb1.png">
                     </a>
-                    <a class="col-md-3 col-sm-3 col-xs-3  pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box>
-                        <img class="img-responsive" src="img/rockclimb1.png">
+                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
+                        <img class="img-responsive doneLoading" src="img/rockclimb1.png">
                     </a>
+
+
+                </div>
+
+            </div>
+            <!---IMAGES END ---->
+
+            <!---VIDEOS START---->
+            <div class="{{classv}} whatsmarg4 displaynonpata" ng-if="tabs=='bz'">
+
+                <div class="row text-center whatspadd3">
+                    <span><a ng-click="tabchanges('az',1)" class=" wtvi theboldfont">IMAGES</a></span>
+                    <span><a ng-click="tabchanges('bz',2)" class=" whit_color theboldfont wtimg">VIDEOS</a></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                        <figure fancybox-box="" href="img/Layer-56.jpg">
+                          <img class="img-responsive doneLoading" src="img/Layer-56.jpg">
+                            <figcaption>
+                                <div class="lin">
+                                    <div class="frammargin">
+                                        <img class="img-responsive doneLoading" src="img/ply.png">
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                        <figure><img class="img-responsive doneLoading" src="img/Layer-56.jpg">
+                            <figcaption>
+                                <div class="lin">
+                                    <div class="frammargin">
+                                        <img class="img-responsive doneLoading" src="img/ply.png">
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                        <figure><img class="img-responsive doneLoading" src="img/Layer-56.jpg">
+                            <figcaption>
+                                <div class="lin">
+                                    <div class="frammargin">
+                                        <img class="img-responsive doneLoading" src="img/ply.png">
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                        <figure><img class="img-responsive doneLoading" src="img/Layer-56.jpg">
+                            <figcaption>
+                                <div class="lin">
+                                    <div class="frammargin">
+                                        <img class="img-responsive doneLoading" src="img/ply.png">
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                        <figure><img class="img-responsive doneLoading" src="img/Layer-56.jpg">
+                            <figcaption>
+                                <div class="lin">
+                                    <div class="frammargin">
+                                        <img class="img-responsive doneLoading" src="img/ply.png">
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                        <figure><img class="img-responsive doneLoading" src="img/Layer-56.jpg">
+                            <figcaption>
+                                <div class="lin">
+                                    <div class="frammargin">
+                                        <img class="img-responsive doneLoading" src="img/ply.png">
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                        <figure><img class="img-responsive doneLoading" src="img/Layer-56.jpg">
+                            <figcaption>
+                                <div class="lin">
+                                    <div class="frammargin">
+                                        <img class="img-responsive doneLoading" src="img/ply.png">
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                        <figure><img class="img-responsive doneLoading" src="img/Layer-56.jpg">
+                            <figcaption>
+                                <div class="lin">
+                                    <div class="frammargin">
+                                        <img class="img-responsive doneLoading" src="img/ply.png">
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
             </div>
+            <!---VIDEOS END  ---->
         </div>
     </div>
 </div>
