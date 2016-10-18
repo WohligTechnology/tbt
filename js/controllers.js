@@ -9,16 +9,28 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Home");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+
+
+        NavigationService.HomeSlider(function(data){
+          console.log(data);
+          $scope.mySlidestop=data.data.HomeSlider;
+
+          console.log($scope.mySlidestop);
+        });
+
         //top slider
-        $scope.mySlidestop = [{
-            img: "img/Group-35.jpg",
-        }, {
-            img: "img/Group-35.jpg",
-        }, {
-            img: "img/Group-35.jpg",
-        }, {
-            img: "img/Group-35.jpg"
-        }];
+      //   $scope.mySlidestop = [
+      //
+      //   //   {
+      //   //     img: "img/Group-35.jpg",
+      //   // }, {
+      //   //     img: "img/Group-35.jpg",
+      //   // }, {
+      //   //     img: "img/Group-35.jpg",
+      //   // }, {
+      //   //     img: "img/Group-35.jpg"
+      //   // }
+      // ];
 
         // whats hot slide
         $scope.mySlides = [{
