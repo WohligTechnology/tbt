@@ -40,12 +40,12 @@
                     <p class="p2 p22 theboldfont">DESTIN ATIONS</p>
                 </div>
 
-                <div class="col-md-2 col-sm-2 col-xs-6  padng0">
+                <div class="col-md-2 col-sm-2 col-xs-6  padng0" ng-repeat="x in popularDestination | limitTo : 4" >
                     <div class="events">
-                        <img src="img/1.jpg" alt="" class="img-responsive">
+                        <img ng-src="{{x.image|serverimage}}" alt="" class="img-responsive">
                         <div class="shadow-down"></div>
                         <div class="event-name">
-                            <span>AMSTERDAM</span>
+                            <span>{{x.name}}</span>
                         </div>
                         <div class="over-layer text-center">
                             <div class="hoverimg">
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-2 col-xs-6  padng0">
+                <!-- <div class="col-md-2 col-sm-2 col-xs-6  padng0">
                     <div class="events">
                         <img src="img/3.jpg" alt="" class="img-responsive">
                         <div class="shadow-down"></div>
@@ -95,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -106,7 +106,7 @@
                 <img src="img/+img.png" alt="" class="img-responsive">
             </div>
             <div class="row">
-                <div class="col-md-2 col-sm-2 col-xs-6 padng0">
+                <div class="col-md-2 col-sm-2 col-xs-6 padng0" ng-repeat="x in popularAttraction | limitTo : 4">
                     <div class="events">
                         <img src="img/3.jpg" alt="" class="img-responsive">
                         <div class="shadow-down"></div>
