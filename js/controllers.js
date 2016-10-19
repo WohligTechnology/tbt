@@ -12,15 +12,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
         NavigationService.HomeSlider(function(data){
-          console.log(data);
+          // console.log(data);
           $scope.mySlidestop=data.data.HomeSlider;
           // console.log($scope.mySlidestop);
           $scope.popularDestination=data.data.popularDestination;
-          console.log($scope.popularDestination);
+          // console.log($scope.popularDestination);
           $scope.popularAttraction=data.data.popularAttraction;
-          console.log($scope.popularAttraction);
+          // console.log($scope.popularAttraction);
           $scope.dropDown=data.data.DestinationDropdown;
-          console.log($scope.dropDown);
+          // console.log($scope.dropDown);
           $scope.mySlidesss=data.data.whatsHotBanner;
           console.log("$scope.mySlides",$scope.mySlidesss);
         });
@@ -183,14 +183,74 @@ $scope.formComplete =true;
                 $scope.classv = "active-tab";
             }
         };
+$scope.viewLess=false;
+$scope.more=false;
+$scope.checkIt={};
+// $scope.viewMore=true;
 
         NavigationService.cityDetails($stateParams.id,function(data){
           console.log("data",data.data);
+          $scope.getTitle=data.data.getTitle;
+          console.log('$scope.getTitle',$scope.getTitle);
           $scope.getActivity=data.data.getActivity;
+         $scope.getActivity=_.take($scope.getActivity, 8);
+
+        //  _.forEach($scope.getActivity,function(key){
+        //    $scope.getActivity.type=="all"
+         //
+         //
+        //  })
           $scope.getDestination=data.data.getDestination;
           $scope.getPackage=data.data.getPackage;
+          $scope.getPackage=_.take($scope.getPackage, 8);
+          console.log('$scope.getPackage',$scope.getPackage);
+          $scope.loadMorePackage =function(){
+            $scope.getPackage=data.data.getPackage;
+            $scope.viewLess=true;
 
-        })
+          };
+          $scope.loadLessPackage =function(){
+            $scope.getPackage=_.take($scope.getPackage, 8);
+            $timeout(function () {
+              $scope.viewLess=false;
+            }, 100);
+
+
+          };
+
+          $scope.loadMoreActivity =function(){
+            $scope.more=true;
+            $scope.getActivity=data.data.getActivity;
+          };
+          $scope.loadLessActivity =function(){
+          $scope.more=false;
+            $scope.getActivity=_.take($scope.getActivity, 8);
+          };
+
+
+
+        });
+        $scope.goTofunction=function(id){
+          console.log("id",id);
+          NavigationService.DestinationContent(function(data){
+            console.log("data",data);
+          });
+
+        };
+        // NavigationService.DestinationTitle(function(data) {
+        //     console.log(data.data);
+        //     $scope.getTitle=data.data.getTitle;
+        //     console.log("$scope.getTitle",$scope.getTitle);
+        // })
+// $scope.searchFun=function(){
+//   switch (expression) {
+//     case expression:
+//
+//       break;
+//     default:
+//
+//   }
+// }
 
     })
     .controller('Pattaya2Ctrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -345,7 +405,7 @@ $scope.formComplete =true;
 .controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
 
     $scope.changeLanguage = function() {
-        console.log("Language CLicked");
+        // console.log("Language CLicked");
 
         if (!$.jStorage.get("language")) {
             $translate.use("hi");
