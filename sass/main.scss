@@ -2082,10 +2082,28 @@ figure .links {
     padding-bottom: 4px;
 }
 
-.panelhead {
-    padding: 5px 10px;
-    border-top: 2px solid #ffca18;
-    cursor: pointer;
+.panel-group {
+    margin-bottom: 0 !important;
+}
+
+.panel-default > .panel-heading {
+    background-color: #fff !important;
+    border-radius: 0 !important;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border: none !important;
+}
+
+.panelacor {
+    padding: 5px 10px !important;
+    border-top: 2px solid #ffca18 !important;
+    border-bottom: 0 solid #ffca18 !important;
+    border-left: 0 solid #ffca18 !important;
+    border-right: 0 solid #ffca18 !important;
+    cursor: pointer !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
 
     .fontpanel {
         font-size: 18px;
