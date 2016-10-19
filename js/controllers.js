@@ -169,6 +169,15 @@ $scope.formComplete =true;
             isFirstOpen: true,
             isFirstDisabled: false
         };
+
+        $scope.goToFunction=function(id){
+          console.log("id",id);
+          NavigationService.DestinationContent(id,function(data){
+            console.log("data",data);
+            $scope.DestinationTitle=data.data.getTitle;
+            console.log("$scope.DestinationTitle",$scope.DestinationTitle);
+          });
+        };
         $scope.tabchanges = function(tabs, a) {
 
             $scope.tabs = tabs;
@@ -230,13 +239,9 @@ $scope.checkIt={};
 
 
         });
-        $scope.goTofunction=function(id){
-          console.log("id",id);
-          NavigationService.DestinationContent(function(data){
-            console.log("data",data);
-          });
 
-        };
+
+
         // NavigationService.DestinationTitle(function(data) {
         //     console.log(data.data);
         //     $scope.getTitle=data.data.getTitle;

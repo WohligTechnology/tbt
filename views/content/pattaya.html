@@ -503,8 +503,8 @@
                             <p>blank</p>
                         </div> -->
                         <!---City ---->
-                        <div uib-accordion-group  class="panel-default panelacor" ng-class="{'yellow_back_color': status.open4, '': !status.open4}" ng-repeat="data in getTitle" >
-                            <uib-accordion-heading class="panel-heading" ng-click="goTofunction(data._id)">
+                        <div uib-accordion-group  class="panel-default panelacor" ng-class="{'yellow_back_color': status.open4, '': !status.open4}" ng-repeat="data in getTitle" ng-click="goToFunction(data._id)">
+                            <uib-accordion-heading class="panel-heading">
                                 <div class="accord-title" >
                                     <h4 class="panel-title fontpanel Pregular bluecol"><img src="{{data.thumbnail | serverimage}}" alt="" class="image_title" >  {{data.title}}
                                       <i class="pull-right fa " ng-class="{'fa fa-minus': status.open4, 'fa fa-plus': !status.open4}"></i>
@@ -514,23 +514,29 @@
                             <div class="panel-body yellow_back_color">
                                 <div class="whatsmain">
                                     <div class="col-md-12">
-                                        <div class="row padding30">
+
+<!-- Please Remove the Below Comment -->
+                                        <div class="row padding30"ng-repeat="x in DestinationTitle">
                                             <ul class="list-group socialpatt">
                                                 <li class="Robotor bluecol">
-                                                    <strong class="padding15">Distance from Mumbai</strong>
+                                                    <strong class="padding15">{{x.name}}</strong>
                                                 </li>
-                                                <li class="Robotor nonlist bluecol">
-                                                    <p>Four and a half hours by flight followed by a two and a half hour road trip</p>
-                                                </li>
-                                                <li class="Robotor bluecol">
+
+                                                    <p>{{x.description}}</p>
+
+                                                <!-- <li class="Robotor bluecol">
                                                     <strong class="padding15">distance from dubai</strong>
                                                 </li>
                                                 <li class="Robotor nonlist bluecol">
                                                     <p>Nine hours and fifteen minutes by flight followed by a two and a half hour rpad trip
                                                         <p/>
-                                                </li>
+                                                </li> -->
                                             </ul>
-                                        </div>
+
+
+
+
+
                                         <div class="row padding30">
                                             <div class="col-md-3 col-sm-3 col-xs-3  pading0">
                                                 <figure>
@@ -556,7 +562,7 @@
                                                     </figcaption>
                                                 </figure>
                                             </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-3 pading0">
+                                            <!-- <div class="col-md-3 col-sm-3 col-xs-3 pading0">
                                                 <figure>
                                                     <img class="img-responsive" src="img/Layer-56.jpg">
                                                     <figcaption>
@@ -579,8 +585,11 @@
                                                         </div>
                                                     </figcaption>
                                                 </figure>
-                                            </div>
+                                            </div> -->
                                         </div>
+  </div>
+
+
                                     </div>
                                 </div>
                             </div>
