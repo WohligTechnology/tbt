@@ -446,69 +446,60 @@
 
                 <!---ACCORDION ---->
                 <div class="row pregular">
-
-                    <!-- <uib-accordion-group is-open="status.open3 ">
-                      <uib-accordion-heading>
-                          <i class="pull-right fa icon " ng-class="{ 'fa-angle-up': status.open3, 'fa-angle-down': !status.open3} "></i>
-                          <span class="block ">Rental Price</span>
-                      </uib-accordion-heading>
-                      <div class="price-rangeslider ">
-                          <div >sdsdsdsdsd</div>
-                      </div>
-                  </uib-accordion-group> -->
-                    <!---Parraya---->
-                    <div class="panelhead">
-                        <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse">  <img src="img/buildings.png" alt="" class="image_title"> Pattaya - The Real City Of Sin
-                                <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
-                            </h4>
+                    <uib-accordion close-others="oneAtATime">
+                        <!---Pattaya---->
+                        <div uib-accordion-group is-open="status.open" class="panel-default panelacor" ng-class="{'yellow_back_color': status.open, '': !status.open}">
+                            <uib-accordion-heading class="panel-heading">
+                                <div class="accord-title">
+                                    <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/buildings.png" alt="" class="image_title"> Pattaya - The Real City Of Sin
+                                      <i class="pull-right fa " ng-class="{'fa fa-minus': status.open, 'fa fa-plus': !status.open}"></i>
+                                    </h4>
+                                </div>
+                            </uib-accordion-heading>
+                            <p>blank</p>
                         </div>
-                        <div id="collapse" class="panel-collapse collapse">
-                            <div class="panel-body">blank</div>
+                        <!---City Guide---->
+                        <div uib-accordion-group is-open="status.open1" class="panel-default panelacor" ng-class="{'yellow_back_color': status.open1, '': !status.open1}">
+                            <uib-accordion-heading class="panel-heading">
+                                <div class="accord-title">
+                                    <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/map-with-placeholder.png" alt="" class="image_title"> City Guide For Stags
+                                      <i class="pull-right fa " ng-class="{'fa fa-minus': status.open1, 'fa fa-plus': !status.open1}"></i>
+                                    </h4>
+                                </div>
+                            </uib-accordion-heading>
+                            <p>blank</p>
                         </div>
-                    </div>
-
-                    <!---City Guide---->
-                    <div class="panelhead">
-                        <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse2"><img src="img/map-with-placeholder.png" alt="" class="image_title"> City Guide For Stags
-                            <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
-                          </h4>
+                        <!---How to Get to Pattaya---->
+                        <div uib-accordion-group is-open="status.open2" class="panel-default panelacor" ng-class="{'yellow_back_color': status.open2, '': !status.open2}">
+                            <uib-accordion-heading class="panel-heading">
+                                <div class="accord-title">
+                                    <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/departures.png" alt="" class="image_title"> How To Get To Pattaya
+                                      <i class="pull-right fa " ng-class="{'fa fa-minus': status.open2, 'fa fa-plus': !status.open2}"></i>
+                                    </h4>
+                                </div>
+                            </uib-accordion-heading>
+                            <p>blank</p>
                         </div>
-                        <div id="collapse2" class="panel-collapse collapse">
-                            <div class="panel-body">blank</div>
+                        <!---Visa ---->
+                        <div uib-accordion-group is-open="status.open3" class="panel-default panelacor" ng-class="{'yellow_back_color': status.open3, '': !status.open3}">
+                            <uib-accordion-heading class="panel-heading">
+                                <div class="accord-title">
+                                    <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/visa-card.png" alt="" class="image_title"> Visa
+                                      <i class="pull-right fa " ng-class="{'fa fa-minus': status.open3, 'fa fa-plus': !status.open3}"></i>
+                                    </h4>
+                                </div>
+                            </uib-accordion-heading>
+                            <p>blank</p>
                         </div>
-                    </div>
-                    <!---How to Get to Pattaya---->
-                    <div class="panelhead">
-                        <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse3"><img src="img/departures.png" alt="" class="image_title"> How To Get To Pattaya
-                            <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
-                          </h4>
-                        </div>
-                        <div id="collapse3" class="panel-collapse collapse">
-                            <div class="panel-body">blank</div>
-                        </div>
-                    </div>
-                    <!---Visa ---->
-                    <div class="panelhead">
-                        <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse4"><img src="img/visa-card.png" alt="" class="image_title"> Visa
-                            <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
-                            </h4>
-                        </div>
-                        <div id="collapse4" class="panel-collapse collapse">
-                            <div class="panel-body">blank</div>
-                        </div>
-                    </div>
-                    <!---City ---->
-                    <div class="panelhead">
-                        <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse5"><img src="img/scripting.png" alt="" class="image_title"> City Details
-                              <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
-                            </h4>
-                        </div>
-                        <div id="collapse5" class="panel-collapse collapse">
+                        <!---City ---->
+                        <div uib-accordion-group is-open="status.open4" class="panel-default panelacor" ng-class="{'yellow_back_color': status.open4, '': !status.open4}">
+                            <uib-accordion-heading class="panel-heading">
+                                <div class="accord-title">
+                                    <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/scripting.png" alt="" class="image_title"> City Details
+                                      <i class="pull-right fa " ng-class="{'fa fa-minus': status.open4, 'fa fa-plus': !status.open4}"></i>
+                                    </h4>
+                                </div>
+                            </uib-accordion-heading>
                             <div class="panel-body yellow_back_color">
                                 <div class="whatsmain">
                                     <div class="col-md-12">
@@ -583,51 +574,42 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!---Clubs ---->
-                    <div class="panelhead">
-                        <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse6"><img src="img/drink-beer-jar.png" alt="" class="image_title"> Clubs and Beers
-                                <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
-                          </h4>
+
+                        <!---Clubs ---->
+                        <div uib-accordion-group is-open="status.open5" class="panel-default panelacor" ng-class="{'yellow_back_color': status.open5, '': !status.open5}">
+                            <uib-accordion-heading class="panel-heading">
+                                <div class="accord-title">
+                                    <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/drink-beer-jar.png" alt="" class="image_title"> Clubs and Beers
+                                      <i class="pull-right fa " ng-class="{'fa fa-minus': status.open5, 'fa fa-plus': !status.open5}"></i>
+                                    </h4>
+                                </div>
+                            </uib-accordion-heading>
+                            <p>blank</p>
                         </div>
-                        <div id="collapse6" class="panel-collapse collapse">
-                            <div class="panel-body">blank</div>
+
+                        <!---Action ---->
+                        <div uib-accordion-group is-open="status.open6" class="panel-default panelacor" ng-class="{'yellow_back_color': status.open6, '': !status.open6}">
+                            <uib-accordion-heading class="panel-heading">
+                                <div class="accord-title">
+                                    <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/compact-camera.png" alt="" class="image_title"> Action
+                                      <i class="pull-right fa " ng-class="{'fa fa-minus': status.open6, 'fa fa-plus': !status.open6}"></i>
+                                    </h4>
+                                </div>
+                            </uib-accordion-heading>
+                            <p>blank</p>
                         </div>
-                    </div>
-                    <!---Clubs ---->
-                    <div class="panelhead">
-                        <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse7"><img src="img/compact-camera.png" alt="" class="image_title"> Action
-                                <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
-                          </h4>
+                        <!---Dazzling ---->
+                        <div uib-accordion-group is-open="status.open7" class="panel-default panelacor" ng-class="{'yellow_back_color': status.open7, '': !status.open7}">
+                            <uib-accordion-heading class="panel-heading">
+                                <div class="accord-title">
+                                    <h4 class="panel-title fontpanel Pregular bluecol"><img src="img/fireworks.png" alt="" class="image_title"> Dazzling Sights
+                                    <i class="pull-right fa " ng-class="{'fa fa-minus': status.open7, 'fa fa-plus': !status.open7}"></i>
+                                  </h4>
+                                </div>
+                            </uib-accordion-heading>
+                            <p>blank</p>
                         </div>
-                        <div id="collapse7" class="panel-collapse collapse">
-                            <div class="panel-body">blank</div>
-                        </div>
-                    </div>
-                    <!---Clubs ---->
-                    <div class="panelhead">
-                        <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse8"><img src="img/disco-ball.png" alt="" class="image_title"> Night Life
-                                <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
-                          </h4>
-                        </div>
-                        <div id="collapse8" class="panel-collapse collapse">
-                            <div class="panel-body">blank</div>
-                        </div>
-                    </div>
-                    <!---Clubs ---->
-                    <div class="panelhead panelhea2">
-                        <div class="panel-heading">
-                            <h4 class="panel-title fontpanel Pregular bluecol" data-toggle="collapse" data-target="#collapse9"><img src="img/fireworks.png" alt="" class="image_title"> Dazzling Sights
-                                <i class=" pull-right fa fa-plus" aria-hidden="true"></i>
-                          </h4>
-                        </div>
-                        <div id="collapse9" class="panel-collapse collapse">
-                            <div class="panel-body">blank</div>
-                        </div>
-                    </div>
+                    </uib-accordion>
                     <!---MY CART START  ---->
                     <p class="paddleft1 pregular bluecol yellow_back_color ">MY CART</p>
                     <!---MY CART END  ---->
@@ -738,7 +720,7 @@
         </div>
     </div>
 </div>
-<!---MY CART END  ---->
+<!---TRIP DETAILS END ---->
 
 <!---email update  ---->
 <div class="eupt">
