@@ -21,9 +21,26 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
           console.log($scope.popularAttraction);
           $scope.dropDown=data.data.DestinationDropdown;
           console.log($scope.dropDown);
-          $scope.mySlides=data.data.whatsHotBanner;
+          $scope.mySlidesss=data.data.whatsHotBanner;
+          console.log("$scope.mySlides",$scope.mySlidesss);
         });
 
+  $scope.formData={};
+  $scope.formComplete=false;
+$scope.formSubmit=function (formData) {
+  console.log("formData",formData);
+  NavigationService.subscribe(formData,function(data){
+    console.log("data",data.value);
+    if (data.value === true) {
+$scope.formComplete =true;
+    }
+    $timeout(function () {
+        $scope.formComplete = false;
+        $scope.formData = {};
+    }, 2000);
+
+  })
+}
 
         //top slider
       //   $scope.mySlidestop = [
@@ -118,7 +135,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
-    .controller('PattayaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('PattayaCtrl', function($scope, TemplateService, NavigationService, $timeout,$stateParams) {
 
         $scope.template = TemplateService.changecontent("pattaya");
         $scope.menutitle = NavigationService.makeactive("Pattaya");
@@ -129,6 +146,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.classv = '';
 
         $scope.oneAtATime = true;
+
+        TemplateService.menu = "";
 
         $scope.groups = [{
             title: 'Dynamic Group Header - 1',
@@ -164,6 +183,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 $scope.classv = "active-tab";
             }
         };
+
+        NavigationService.cityDetails($stateParams.id,function(data){
+          console.log("data",data.data);
+          $scope.getActivity=data.data.getActivity;
+          $scope.getDestination=data.data.getDestination;
+          $scope.getPackage=data.data.getPackage;
+
+        })
 
     })
     .controller('Pattaya2Ctrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -268,31 +295,31 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 windowClass: "width80"
             });
         };
-        $scope.mySlides = [{
-            img: "img/qwe.jpg",
-            events: "TOMMOROWLAND",
-            date: "27th Agust,2016"
-
-
-        }, {
-            img: "img/qwe.jpg",
-            events: "TOMMOROWLAND",
-            date: "27th Agust,2016"
-
-
-        }, {
-            img: "img/qwe.jpg",
-            events: "TOMMOROWLAND",
-            date: "27th Agust,2016"
-
-
-        }, {
-            img: "img/qwe.jpg",
-            events: "TOMMOROWLAND",
-            date: "27th Agust,2016"
-
-
-        }];
+        // $scope.mySlides = [{
+        //     img: "img/qwe.jpg",
+        //     events: "TOMMOROWLAND",
+        //     date: "27th Agust,2016"
+        //
+        //
+        // }, {
+        //     img: "img/qwe.jpg",
+        //     events: "TOMMOROWLAND",
+        //     date: "27th Agust,2016"
+        //
+        //
+        // }, {
+        //     img: "img/qwe.jpg",
+        //     events: "TOMMOROWLAND",
+        //     date: "27th Agust,2016"
+        //
+        //
+        // }, {
+        //     img: "img/qwe.jpg",
+        //     events: "TOMMOROWLAND",
+        //     date: "27th Agust,2016"
+        //
+        //
+        // }];
 
     })
     .controller('CustomisationCtrl', function($scope, TemplateService, NavigationService, $timeout) {

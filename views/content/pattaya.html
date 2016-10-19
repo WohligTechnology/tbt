@@ -1,16 +1,16 @@
 <!---banner start ---->
 <div class="container">
     <figure class="m1 figure922">
-        <img class="img-responsive" src="img/pattaya-ban.jpg">
+        <img class="img-responsive" ng-src="{{getDestination.banner | serverimage}}">
     </figure>
 </div>
 <div class="whatsmain">
     <div class="container ">
         <div class="col-md-12">
             <div class="pattayamarg4 yellow_back_lightcolor">
-                <div class="row Robotor bluecol">
-                    <p>Pattaya also know as'A land of sins'! This city is famous for its informous reputation. Acity definitely not recommended for a feeble hearted.</p>
-                    <p>Let us plan an eic trip for you and your friends, remember bachelor party is not just all about the individual but for the whole royal gang.</p>
+                <div class="row Robotor bluecol" ng-bind-html="getDestination.description">
+                    <!-- <p>Pattaya also know as'A land of sins'! This city is famous for its informous reputation. Acity definitely not recommended for a feeble hearted.</p>
+                    <p>Let us plan an eic trip for you and your friends, remember bachelor party is not just all about the individual but for the whole royal gang.</p> -->
                 </div>
             </div>
         </div>
@@ -38,17 +38,18 @@
                     </div>
                 </div>
                 <div class="row pattmarg3">
-                    <div class="col-md-3 col-sm-3 col-xs-6 pading0">
+                    <div class="col-md-3 col-sm-3 col-xs-6 pading0" ng-repeat="data in getPackage">
                         <div class="events">
-                            <img src="img/bungee.png" alt="" class="img-responsive">
+                            <img ng-src="{{data.image | serverimage}}" alt="" class="img-responsive">
                             <div class="cart-sec">
                                 <img src="img/cart.png" alt="" class="img-responsive">
+                                <img src="img/fav-cart.png" alt="" class="img-responsive">
                             </div>
                             <div class="shadow-up"></div>
                             <div class="shadow-down"></div>
                             <div class="event-name">
-                                <span>ROCK CLIMBING</span><br>
-                                <span>(4 NIGHT)</span>
+                                <span>{{data.name}}</span><br>
+                                <span>({{data.duration}})</span>
                             </div>
                             <div class="over-layer text-center">
                                 <div class="cart-sec">
@@ -60,28 +61,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6 pading0">
-                        <div class="events">
-                            <img src="img/bungee.png" alt="" class="img-responsive">
-                            <div class="cart-sec">
-                                <img src="img/cart.png" alt="" class="img-responsive">
-                            </div>
-                            <div class="shadow-up"></div>
-                            <div class="shadow-down"></div>
-                            <div class="event-name">
-                                <span>ROCK CLIMBING</span>
-                            </div>
-                            <div class="over-layer text-center">
-                                <div class="cart-sec">
-                                    <img src="img/cart.png" alt="" class="img-responsive doneLoading">
-                                </div>
-                                <div class="button-holder">
-                                    <button class="ext-detail">KNOW MORE</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6 pading0">
+                    <!-- <div class="col-md-3 col-sm-3 col-xs-6 pading0">
                         <div class="events">
                             <img src="img/bungee.png" alt="" class="img-responsive">
                             <div class="cart-sec">
@@ -123,6 +103,27 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 pading0">
+                        <div class="events">
+                            <img src="img/bungee.png" alt="" class="img-responsive">
+                            <div class="cart-sec">
+                                <img src="img/cart.png" alt="" class="img-responsive">
+                            </div>
+                            <div class="shadow-up"></div>
+                            <div class="shadow-down"></div>
+                            <div class="event-name">
+                                <span>ROCK CLIMBING</span>
+                            </div>
+                            <div class="over-layer text-center">
+                                <div class="cart-sec">
+                                    <img src="img/cart.png" alt="" class="img-responsive doneLoading">
+                                </div>
+                                <div class="button-holder">
+                                    <button class="ext-detail">KNOW MORE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
                 <div class="col-md-12  col-sm-12 col-xs-12 loadimag text-center ">
                     <a class="whit_color" ui-sref="home" href="#/">LOAD  MORE</a>
@@ -163,7 +164,35 @@
                     </div>
                 </div>
                 <div class="row pattmarg3">
-                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0" ng-repeat="data in getActivity">
+                        <div class="flipDiv">
+                            <figure>
+                                <div class="front">
+                                    <img ng-src="{{data.image3 | serverimage}}" alt="" class="img-responsive doneLoading">
+                                    <div class="cart-sec">
+                                        <img src="img/cart.png" alt="" class="img-responsive">
+                                        <img src="img/fav-cart.png" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="shadow-up"></div>
+                                    <div class="shadow-down"></div>
+                                    <div class="event-name">
+                                        <span>{{data.name}}</span>
+                                    </div>
+                                </div>
+                                <figcaption>
+                                    <div class="cart-sec">
+                                        <img src="img/cart.png" alt="" class="img-responsive doneLoading">
+                                    </div>
+                                    <div ng-bind-html="data.description">
+
+                                    </div>
+                                    <!-- <h2>This is a cool title!</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p> -->
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-3 col-sm-4 col-xs-6 pading0">
                         <div class="flipDiv">
                             <figure>
                                 <div class="front">
@@ -330,31 +359,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
-                        <div class="flipDiv">
-                            <figure>
-                                <div class="front">
-                                    <img src="img/bungee.png" alt="" class="img-responsive doneLoading">
-                                    <div class="cart-sec">
-                                        <img src="img/cart.png" alt="" class="img-responsive doneLoading">
-                                    </div>
-                                    <div class="shadow-up"></div>
-                                    <div class="shadow-down"></div>
-                                    <div class="event-name">
-                                        <span>BUNGEE JUMPING</span>
-                                    </div>
-                                </div>
-                                <figcaption>
-                                    <div class="cart-sec">
-                                        <img src="img/cart.png" alt="" class="img-responsive doneLoading">
-                                    </div>
-                                    <h2>This is a cool title!</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-12  col-sm-12 col-xs-12 loadimag text-center ">
                     <a class="whit_color" ui-sref="home" href="#/">LOAD  MORE</a>

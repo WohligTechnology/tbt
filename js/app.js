@@ -8,7 +8,32 @@ var firstapp = angular.module('firstapp', [
   'angulartics',
   'angulartics.google.analytics'
 ]);
+firstapp.directive('fancybox', function($compile, $parse) {
+    return {
+        restrict: 'EA',
+        replace: false,
+        link: function($scope, element, attrs) {
+            $element = $(element);
 
+            setTimeout(function() {
+                $(".various").fancybox({
+                    maxWidth: 800,
+                    maxHeight: 600,
+                    fitToView: false,
+                    width: '70%',
+                    height: '70%',
+                    autoSize: false,
+                    closeClick: false,
+                    openEffect: 'none',
+                    closeEffect: 'none',
+                    padding: 0
+
+                });
+            }, 100);
+
+        }
+    };
+});
 firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
   // for http request with session
   $httpProvider.defaults.withCredentials = true;
@@ -36,7 +61,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
       controller: 'DestinationCtrl'
     })
     .state('pattaya', {
-      url: "/pattaya",
+      url: "/pattaya/:id",
       templateUrl: "views/template.html",
       controller: 'PattayaCtrl'
     })
