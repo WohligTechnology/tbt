@@ -875,6 +875,10 @@
     }
 }
 @media (max-width: 480px) {
+  .select-main {
+        width: 100%;
+
+  }
     .flipDiv figure figcaption {
         padding: 13px 20px;
         overflow: scroll;

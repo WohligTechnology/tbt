@@ -271,7 +271,8 @@ a {
     padding: 20px 40px;
     margin: 0 6%;
 
-    .form-group input {
+    .form-group select{
+          font-size: 22px;
         outline: none;
         border: 0;
         border-bottom: 2px solid #002b7f;
@@ -407,6 +408,7 @@ a {
 }
 
 .select-main {
+      width: 187px;
     font-size: 18px;
     margin-right: 20px;
 }

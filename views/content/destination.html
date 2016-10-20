@@ -4,7 +4,7 @@
 </div>
 
 <figure>
-    <img class="mainwidht" src="img/qwe.jpg">
+    <img class="mainwidht" ng-src="{{DestinationLand.Banner.banner | serverimage}}">
 </figure>
 
 <div class="pad9">
@@ -16,24 +16,27 @@
                     <h1 class="theboldfont whit_color">POPULAR<br>DESTINATIONS</h1>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12 padding30px ">
+                    <div class="col-md-6 col-sm-6 col-xs-12 pdt15 " ng-repeat ="data in DestinationLand.popularDestination">
                         <div class="flipDiv">
                             <figure>
                                 <div class="front">
-                                    <img src="img/rockclimb.png" alt="" class="img-responsive">
+                                    <img ng-src="{{data.image | serverimage}}" alt="" class="img-responsive">
                                     <div class="shadow-down"></div>
                                     <div class="event-name">
-                                        <span>BUNGEE JUMPING</span>
+                                        <span>{{data.name}}</span>
                                     </div>
                                 </div>
                                 <figcaption>
-                                    <h2>This is a cool title!</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+                                  <div ng-bind-html="data.description">
+
+                                  </div>
+                                    <!-- <h2>This is a cool title!</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p> -->
                                 </figcaption>
                             </figure>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12  ">
+                    <!-- <div class="col-md-6 col-sm-6 col-xs-12  ">
                       <div class="flipDiv">
                           <figure>
                               <div class="front">
@@ -49,7 +52,7 @@
                               </figcaption>
                           </figure>
                       </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!---ALL DESTINATIONS ---->
@@ -57,24 +60,25 @@
                     <h1 class="theboldfont whit_color">ALL<br>DESTINATIONS</h1>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12 pdt15">
+                    <div class="col-md-4 col-sm-4 col-xs-12 pdt15" ng-repeat="data in allDestination">
                       <div class="flipDiv">
                           <figure>
                               <div class="front">
-                                  <img src="img/rafting1.png" alt="" class="img-responsive">
+                                  <img ng-src="{{data.image | serverimage}}" alt="" class="img-responsive">
                                   <div class="shadow-down"></div>
                                   <div class="event-name">
-                                      <span>BUNGEE JUMPING</span>
+                                      <span>{{data.name}}</span>
                                   </div>
                               </div>
                               <figcaption>
-                                  <h2>This is a cool title!</h2>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+                                <div ng-bind-html="data.description"></div>
+                                  <!-- <h2>This is a cool title!</h2>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p> -->
                               </figcaption>
                           </figure>
                       </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 pdt15">
+                    <!-- <div class="col-md-4 col-sm-4 col-xs-12 pdt15">
                       <div class="flipDiv">
                           <figure>
                               <div class="front">
@@ -159,9 +163,12 @@
                               </figcaption>
                           </figure>
                       </div>
+                    </div> -->
+                    <div class="col-md-12 col-sm-12 col-xs-12  lodm text-center ">
+                        <a class="whit_color" ng-click="viewMoreDest()" ng-if="!show">VIEW  MORE</a>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12  lodm text-center ">
-                        <a class="whit_color" ui-sref="home">LOAD  MORE</a>
+                        <a class="whit_color" ng-click="viewLessDest()" ng-if="show" >VIEW  LESS</a>
                     </div>
                 </div>
             </div>

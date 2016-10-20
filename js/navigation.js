@@ -1,5 +1,5 @@
 // var adminurl = "http://localhost:1337/";
-var adminurl = "http://192.168.43.121:1337/";
+var adminurl = "http://192.168.100.102:1337/";
 if (isproduction) {
     adminURL = "http://www.wohlig.co.in/demo/index.php";
 } else {
@@ -57,6 +57,20 @@ var navigationservice = angular.module('navigationservice', [])
                 withCredentials: true
             }).success(callback);
         },
+        DestinationLand: function(callback) {
+            $http({
+                url: adminurl + 'RestApi/DestinationLand',
+                method: 'POST',
+                withCredentials: true
+            }).success(callback);
+        },
+        ActivityLand: function(callback) {
+            $http({
+                url: adminurl + 'RestApi/ActivitiesLand',
+                method: 'POST',
+                withCredentials: true
+            }).success(callback);
+        },
         subscribe: function(formData, callback) {
 
             $http({
@@ -79,6 +93,17 @@ var navigationservice = angular.module('navigationservice', [])
                 data: data
             }).success(callback);
         },
+        ActivitiesImages: function(id, callback) {
+            var data = {
+                destination: id,
+            };
+            $http({
+                url: adminurl + 'RestApi/ActivitiesImages',
+                method: 'POST',
+                withCredentials: true,
+                data: data
+            }).success(callback);
+        },
         DestinationContent: function(id, callback) {
             var data = {
                 id: id,
@@ -90,6 +115,18 @@ var navigationservice = angular.module('navigationservice', [])
                 data: data
             }).success(callback);
         },
+        // addToCart: function(id, callback) {
+        //     var data = {
+        //         id: id,
+        //         name:""
+        //     };
+        //     $http({
+        //         url: adminurl + 'RestApi/addToCart',
+        //         method: 'POST',
+        //         withCredentials: true,
+        //         data: data
+        //     }).success(callback);
+        // },
 
     };
 });
