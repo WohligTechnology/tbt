@@ -105,9 +105,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 $scope.activityLoop = _.times(images.smallImage.length, Number);
             }
             console.log($scope.activityLoop);
-            console.log("$scope.activityLand",$scope.activityLand);
 
 
+
+        });
+        NavigationService.ActivityLand(function(data){
+          $scope.Banner=data.data.Banner;
         });
 
 
