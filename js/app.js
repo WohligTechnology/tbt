@@ -153,7 +153,9 @@ firstapp.config(function($translateProvider) {
 firstapp.filter('youtubethumb', function() {
     return function(input, onlyid) {
         if (input) {
+          console.log(input);
             return "http://img.youtube.com/vi/" + input + "/hqdefault.jpg";
+            // console.log();
         }
     };
 });
