@@ -1,10 +1,9 @@
 <!---banner start ---->
 <div class="container ">
     <figure class="m1 figure922">
-        <img class="img-responsive" src="img/banner2.jpg">
+        <img class="img-responsive" ng-src="{{getOneWhatsHot.banner|serverimage}}">
     </figure>
 </div>
-
 <!---SELECTION START---->
 <div class="whatsmain">
     <div class="container ">
@@ -17,7 +16,10 @@
                 </div>
 
                 <div class="row">
-                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
+                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-repeat="data in getOneWhatsHot.images" ng-href="{{data.image|serverimage}}" rel="gallery1" fancybox-box="" href="{{data.image|serverimage}}" >
+                        <img class="img-responsive doneLoading" ng-src="{{data.image|serverimage}}">
+                    </a>
+                    <!-- <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
                         <img class="img-responsive doneLoading" src="img/rockclimb1.png">
                     </a>
                     <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
@@ -37,10 +39,7 @@
                     </a>
                     <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
                         <img class="img-responsive doneLoading" src="img/rockclimb1.png">
-                    </a>
-                    <a class="col-md-3 col-sm-3 col-xs-3 pading0 curserpionter" ng-href="img/banner.jpg" rel="gallery1" fancybox-box="" href="img/banner.jpg">
-                        <img class="img-responsive doneLoading" src="img/rockclimb1.png">
-                    </a>
+                    </a> -->
 
 
                 </div>
@@ -57,8 +56,21 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
-                        <figure class="various fancybox.iframe" fancybox rel="gallery1"  href="https://www.youtube.com/embed/CuGPpZH0lmc" >
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0" ng-repeat="data in getOneWhatsHot.videos">
+                        <figure class="various fancybox.iframe" fancybox rel="gallery1"  href="http://www.youtube.com/embed/{{data.url}}?autoplay=1&modestbranding=0&showinfo=0&rel=0&loop=1" >
+                            <img class="img-responsive doneLoading" ng-src="{{data.thumbnail|serverimage}}" ng-if="(item.thumbnail || item.thumbnail != '')">
+                            <img class="img-responsive doneLoading" ng-src="{{data.url|youtubethumb}}" ng-if="!(item.thumbnail || item.thumbnail != '')">
+                            <!-- <img ng-src="{{item.thumbnail|uploadpath}}" alt="Dharma Productions" class="img-responsive width100" ng-if="(item.thumbnail || item.thumbnail != '')">
+                            <img ng-src="{{item.url|youtubethumb}}" alt="Dharma Productions" class="img-responsive width100" ng-if="!(item.thumbnail || item.thumbnail != '')"> -->
+                            <figcaption>
+                                <div class="lin">
+                                    <div class="frammargin">
+                                        <img class="img-responsive doneLoading" src="img/ply.png">
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <!-- <figure class="various fancybox.iframe" fancybox rel="gallery1"  href="https://www.youtube.com/embed/CuGPpZH0lmc" >
                             <img class="img-responsive doneLoading" src="img/Layer-56.jpg" >
                             <figcaption>
                                 <div class="lin">
@@ -67,9 +79,9 @@
                                     </div>
                                 </div>
                             </figcaption>
-                        </figure>
+                        </figure> -->
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-6 pading0">
+                    <!-- <div class="col-md-3 col-sm-4 col-xs-6 pading0">
                         <figure><img class="img-responsive doneLoading" src="img/Layer-56.jpg">
                             <figcaption>
                                 <div class="lin">
@@ -145,7 +157,7 @@
                                 </div>
                             </figcaption>
                         </figure>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!---VIDEOS END  ---->
@@ -159,8 +171,9 @@
         <div class="wtsec2">
             <div class="row">
                 <div class="col-md-12 pading0">
-                    <p class="wtintro Robotor">Your Cruise rate includes:</p>
-                    <ul class="list-group">
+                    <p class="wtintro Robotor" ng-bind-html="getOneWhatsHot.cruiserate"></p>
+                    <!-- <p class="wtintro Robotor">Your Cruise rate includes:</p> -->
+                    <!-- <ul class="list-group">
                         <li class="font15 Robotor">4 days and 3 nights accommodation</li>
                         <li class="font15 Robotor">Round trip ceuise from Singapore to Penang</li>
                         <li class="font15 Robotor">All means, including breakfast,lunch,dinner,24-hour room service* (including a gourmet fare in the formal dining rooms and casual outdoor grill)</li>
@@ -170,7 +183,7 @@
                         <li class="font15 Robotor">Complimentary use of mmost of the ship's facilities including casino, swimming pools and whrirlpools, rock-climbing, ice-skating rink,health and firness center.</li>
                     </ul>
                     <p class="font15 margin-15">*Tips and gratuities are NOT included in your cruise rate.</p>
-                    <p class="font15 margin-15">For more info,check out our booking FAQs here :<a class="colora">www.itstheship.com/faq</a></p>
+                    <p class="font15 margin-15">For more info,check out our booking FAQs here :<a class="colora">www.itstheship.com/faq</a></p> -->
                 </div>
             </div>
         </div>
@@ -198,7 +211,7 @@
 <div class="container ">
     <div class="col-md-12 wtlast">
         <div class="wtlast2">
-          <img class="img-responsive" src="img/banner2.jpg">
+          <img class="img-responsive" ng-src="{{getOneWhatsHot.tableImage}}">
             <!-- <div class="row">
                 <div class="col-md-12 pading0">
                     <table class="table">

@@ -86,8 +86,33 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Activity");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-
+        $scope.changeDestination = function(id) {
+            console.log(id);
+            NavigationService.getChangeDestination(id, function(data) {
+                $scope.changeDestData = data.data.Images;
+                console.log($scope.changeDestData.length);
+                var images = _.groupBy($scope.changeDestData, function(n) {
+                    if (_.isEmpty(n.image1)) {
+                        return "bigImage";
+                    } else {
+                        return "smallImage";
+                    }
+                });
+                if (images.smallImage) {
+                    images.smallImage = _.chunk(images.smallImage, 3);
+                }
+                $scope.activityLand = images;
+                if (images.bigImage.length >= images.smallImage.length) {
+                    $scope.activityLoop = _.times(images.bigImage.length, Number);
+                } else {
+                    $scope.activityLoop = _.times(images.smallImage.length, Number);
+                }
+                console.log($scope.activityLoop);
+            });
+        }
         NavigationService.ActivityLand(function(data) {
+            console.log(data);
+            $scope.myDropdown = data.data.DestinationDropdown;
             var images = _.groupBy(data.data.Images, function(n) {
                 if (_.isEmpty(n.image1)) {
                     return "bigImage";
@@ -109,8 +134,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
         });
-        NavigationService.ActivityLand(function(data){
-          $scope.Banner=data.data.Banner;
+        NavigationService.ActivityLand(function(data) {
+            $scope.Banner = data.data.Banner;
         });
 
 
@@ -178,7 +203,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         })
 
     })
-    .controller('PattayaCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
+    .controller('PattayaCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $uibModal) {
 
         $scope.template = TemplateService.changecontent("pattaya");
         $scope.menutitle = NavigationService.makeactive("Pattaya");
@@ -191,7 +216,29 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.oneAtATime = true;
 
         TemplateService.menu = "";
+        $scope.selectedAll = {};
+        $scope.selectedAll.type = true;
+        $scope.checkAllLocation = function() {
+            // if ($scope.selectedAllLocation) {
+            //     $scope.selectedAllLocation = false;
+            // } else {
+            //     $scope.selectedAllLocation = true;
+            // }
+            var toggleStatusLocation = $scope.selectedAll.type;
+            _.forEach($scope.typeArr, function(location) {
+                location.model = toggleStatusLocation;
+            });
+            // $scope.searchExpert();
 
+        };
+
+        $scope.open4 = function() {
+            $scope.modalInstance = $uibModal.open({
+                animation: true,
+                templateUrl: "views/modal/thankYou.html",
+                scope: $scope
+            });
+        };
         $scope.groups = [{
             title: 'Dynamic Group Header - 1',
             content: 'Dynamic Group Body - 1'
@@ -199,7 +246,29 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             title: 'Dynamic Group Header - 2',
             content: 'Dynamic Group Body - 2'
         }];
+        $scope.formComplete = false;
+        $scope.enquiryData = {};
+        $scope.enquirySubmit = function(input) {
+            console.log('input', input);
+            NavigationService.enquiryForm($scope.enquiryData, function(data) {
+                console.log("data", data.value);
+                if (data.value === true) {
+                    //   $timeout(function() {
+                    //     $scope.open4();
+                    //   },1000);
+                    //   // $scope.open4();
+                    //   $timeout(function() {
+                    //     $scope.modalInstance.close();
+                    //       // $scope.formComplete = false;
+                    //       // $scope.enquiryData = {};
+                    //   },6000);
+                    //     // $scope.formComplete = true;
+                }
 
+                // console.log('input',input);
+                // console.log('data',data);
+            });
+        }
         $scope.items = ['Item 1', 'Item 2', 'Item 3'];
 
         $scope.addItem = function() {
@@ -247,16 +316,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.loadLessPackage = function() {
             var myarr = [];
             NavigationService.cityDetails($stateParams.id, function(data) {
-                console.log("data", data.data);
                 $scope.getTitle = data.data.getTitle;
-                console.log('$scope.getTitle', $scope.getTitle);
+                $scope.getDestination = data.data.getDestination;
                 $scope.getPackage = data.data.getPackage;
-
-                $scope.myarr = _.cloneDeep($scope.getPackage);
-                console.log('myarr', $scope.myarr);
+                $scope.getActivity = data.data.getActivity;
+                $scope.getActivityArr = _.cloneDeep($scope.getActivity);
+                $scope.getPackageArr = _.cloneDeep($scope.getPackage);
                 $scope.viewMore = true;
                 $scope.getPackage = _.take($scope.getPackage, 8);
-                console.log('$scope.getTitle111111111111', $scope.getPackage);
+                $scope.getActivity = _.take($scope.getActivity, 4);
             });
 
 
@@ -268,8 +336,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.more = true;
             $scope.viewMore = false;
             $scope.viewLess = true;
-
-            $scope.getPackage = $scope.myarr;
+            $scope.getPackage = $scope.getPackageArr;
+            $scope.getActivity = $scope.getActivityArr;
         };
 
         //         NavigationService.cityDetails($stateParams.id, function(data) {
@@ -335,7 +403,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         // }
 
     })
-    .controller('Pattaya2Ctrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('Pattaya2Ctrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
 
         $scope.template = TemplateService.changecontent("pattaya2");
         $scope.menutitle = NavigationService.makeactive("Pattaya2");
@@ -391,9 +459,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         }]
 
+        NavigationService.RestApiPattaya2($stateParams.id, function(data) {
+            console.log(data.data);
+            $scope.getPattaya2 = data.data.packageDetails;
+            console.log("$scope.getPattaya2", $scope.getPattaya2);
+        })
 
     })
-    .controller('Whats-hot-moreCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('Whats-hot-moreCtrl', function($scope, TemplateService, NavigationService, $timeout,$stateParams) {
 
         $scope.template = TemplateService.changecontent("whats-hot-more");
         $scope.menutitle = NavigationService.makeactive("Whats-hot-more");
@@ -419,6 +492,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 $scope.classv = "active-tab";
             }
         };
+        NavigationService.whatsHotMore($stateParams.id,function(data) {
+            $scope.getOneWhatsHot = data.data.Details[0];
+            console.log(  $scope.getOneWhatsHot);
+        });
 
     })
     .controller('WhatsHotCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
@@ -437,6 +514,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 windowClass: "width80"
             });
         };
+        NavigationService.HomeSlider(function(data) {
+            $scope.mySlidesss = data.data.whatsHotBanner;
+        });
+        NavigationService.whatsHot(function(data) {
+            $scope.myEvents = data.data.Events;
+            console.log(  $scope.myEvents);
+        });
         // $scope.mySlides = [{
         //     img: "img/qwe.jpg",
         //     events: "TOMMOROWLAND",

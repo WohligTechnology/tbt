@@ -1,5 +1,5 @@
 // var adminurl = "http://localhost:1337/";
-var adminurl = "http://192.168.100.102:1337/";
+var adminurl = "http://192.168.100.139:1337/";
 if (isproduction) {
     adminURL = "http://www.wohlig.co.in/demo/index.php";
 } else {
@@ -53,6 +53,13 @@ var navigationservice = angular.module('navigationservice', [])
         DestinationTitle: function(callback) {
             $http({
                 url: adminurl + 'RestApi/DestinationTitle',
+                method: 'POST',
+                withCredentials: true
+            }).success(callback);
+        },
+        whatsHot: function(callback) {
+            $http({
+                url: adminurl + 'RestApi/WhatsHot',
                 method: 'POST',
                 withCredentials: true
             }).success(callback);
@@ -113,6 +120,41 @@ var navigationservice = angular.module('navigationservice', [])
                 method: 'POST',
                 withCredentials: true,
                 data: data
+            }).success(callback);
+        },
+        enquiryForm: function(formData, callback) {
+            //console.log('Navigation form data: ', formData);
+            $http({
+                url: adminurl + 'enquire/save',
+                method: 'POST',
+                data:formData
+            }).success(callback);
+        },
+        RestApiPattaya2: function(id, callback) {
+            // var data = {
+            //     id: id,
+            // };
+            $http({
+                url: adminurl + 'RestApi/Pattaya2',
+                method: 'POST',
+                withCredentials: true,
+                data: {id:id}
+            }).success(callback);
+        },
+        getChangeDestination: function(id, callback) {
+            $http({
+                url: adminurl + 'RestApi/ActivitiesImages',
+                method: 'POST',
+                withCredentials: true,
+                data: {destination:id}
+            }).success(callback);
+        },
+        whatsHotMore: function(id, callback) {
+            $http({
+                url: adminurl + 'RestApi/WhatsHotDetails',
+                method: 'POST',
+                withCredentials: true,
+                data: {id:id}
             }).success(callback);
         },
         // addToCart: function(id, callback) {

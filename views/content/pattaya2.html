@@ -1,15 +1,17 @@
 <!---banner start ---->
 <div class="container">
     <figure class="mim1">
-        <img class="img-responsive" src="img/12.jpg">
+        <img class="img-responsive" ng-src="{{getPattaya2.banner|serverimage}}">
         <figcaption class="fingurback">
             <div class="links2">
                 <div class="pattayaimg">
-                    <h1 class="pattayah1 theboldfont yellow_color">LOADED</h1>
-                    <h1 class="loadh1 pattayah1 theboldfont">PACKAGE</h1>
-                    <p class=" pattp1">(4 NIGHTS/8 TO 10 PERSONS)</p>
+                    <h1 class="pattayah1 theboldfont yellow_color">{{getPattaya2.title1}}</h1>
+                    <h1 class="loadh1 pattayah1 theboldfont">{{getPattaya2.title2}}</h1>
+                    <p class=" pattp1">({{getPattaya2.duration}})</p>
+                    <!-- <p class=" pattp1">(4 NIGHTS/8 TO 10 PERSONS)</p> -->
                     <span class=" pattp2 yellow_back_lightcolor bluecol">
-                      <p class="span">START @ ₹ 50,000</p>
+                      <p class="span">{{getPattaya2.price}}</p>
+                      <!-- <p class="span">START @ ₹ 50,000</p> -->
                     </span>
                 </div>
             </div>
@@ -22,15 +24,16 @@
             <div class="categoryup2 yellow_back_lightcolor">
                 <div class="row">
                     <div masonry>
-                        <div class="masonry-brick padd15px" ng-repeat="scope in data">
+                        <div class="masonry-brick padd15px" ng-repeat="packdata in getPattaya2.pack">
                             <div class="marginicon">
                                 <div class="pattayevents white_back_color">
-                                    <img ng-src="{{ scope.img  }}" class="img-box" alt="A masonry scope">
+                                    <img ng-src="{{ packdata.image|serverimage  }}" class="img-box" alt="A masonry scope">
                                     <div class="tittalep">
-                                        <h2 class="bluecol eventh2 Robotor borderhr">{{ scope.day  }}</h2>
-                                        <ul class="list-group bluecol margin-group">
+                                        <h2 class="bluecol eventh2 Robotor borderhr">{{ packdata.day  }}</h2>
+                                        <p ng-bind-html="packdata.description"></p>
+                                        <!-- <ul class="list-group bluecol margin-group">
                                             <li class="list2 Roboto "> {{ scope.li }} </li>
-                                        </ul>
+                                        </ul> -->
                                     </div>
                                 </div>
                             </div>

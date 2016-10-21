@@ -11,19 +11,15 @@
                <div class="col-md-12 paddactiv">
                   <form>
                      <div class="form-group select-main  display-inline">
-
-                        <select class="form-control">
+                       <select ng-options="option.name for option in myDropdown"
+                               ng-model="selectedItem"
+                               ng-change="changeDestination(selectedItem._id)">
+                       </select>
+                        <!-- <select class="form-control" >
                            <option ng-selected="true" value="">Destination</option>
-                           <option value="{{data._id}}" ng-repeat="data in activityLand.DestinationDropdown">{{data.name}}
+                           <option value="" ng-repeat="data in myDropdown" ng-click="changeDestination(data._id)">{{data.name}}
                            </option>
-                        </select>
-                        <!-- <input class=" dropdown-toggle" placeholder="Category" data-toggle="dropdown">
-                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    <ul class="dropdown-menu">
-                                        <li><a >All</a></li>
-                                        <li><a >Day</a></li>
-                                        <li><a >Night</a></li>
-                                    </ul> -->
+                        </select> -->
 
                      </div>
 
@@ -86,8 +82,9 @@
                   </div>
                </div>
             </div>
+            <div ng-if="changeDestData==0"><h1><center>No data Found</center></h1></div>
 
-            <div class="load-more text-center">
+            <div class="load-more text-center" ng-hide="changeDestData==0">
                <div class="over-layer pdt30 pdb30">
                   <div class="button-holder">
                      <button class="ext-detail">LOAD MORE</button>

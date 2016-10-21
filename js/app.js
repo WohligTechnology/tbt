@@ -66,12 +66,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
       controller: 'PattayaCtrl'
     })
     .state('pattaya2', {
-      url: "/pattaya2",
+      url: "/pattaya2/:id",
       templateUrl: "views/template.html",
       controller: 'Pattaya2Ctrl'
     })
     .state('whats-hot-more', {
-      url: "/whats-hot-more",
+      url: "/whats-hot-more/:id",
       templateUrl: "views/template.html",
       controller: 'Whats-hot-moreCtrl'
     })
@@ -149,4 +149,11 @@ firstapp.config(function($translateProvider) {
   $translateProvider.translations('en', LanguageEnglish);
   $translateProvider.translations('hi', LanguageHindi);
   $translateProvider.preferredLanguage('en');
+});
+firstapp.filter('youtubethumb', function() {
+    return function(input, onlyid) {
+        if (input) {
+            return "http://img.youtube.com/vi/" + input + "/hqdefault.jpg";
+        }
+    };
 });
