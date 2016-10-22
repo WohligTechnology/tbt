@@ -232,6 +232,50 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         };
 
+        $scope.typeArr = [];
+
+        $scope.searchExpert = function() {
+            var y = 0;
+            _.each($scope.typeArr, function(n) {
+                if (!n.model || n.model == false) {
+                    $scope.selectedAll.location = false;
+                } else if (n.model == true) {
+                    y++;
+                }
+            })
+            if (y == $scope.typeArr.length) {
+                $scope.selectedAll.location = true;
+            }
+
+            var dataToSend = {
+                destination: $stateParams.id,
+                location: [],
+            };
+            dataToSend.location = _.map(_.filter($scope.locationArr, function(n) {
+                return n.model
+            }), 'value');
+            NavigationService.getSearch(dataToSend, function(data) {
+                if (data.data.length == 0 || $stateParams.search == '') {
+                    $scope.noSearchFound = true;
+                    // $state.go('search', ({
+                    //     search: ''
+                    // }));
+                }
+                console.log(data.data.length);
+                    if ($scope.typeArr.length == 0) {
+                        _.each(data.data.type, function(n) {
+                            $scope.typeArr.push({
+                                value: n,
+                                model: true
+                            });
+                        });
+                    }
+
+            });
+
+        };
+
+
         $scope.open4 = function() {
             $scope.modalInstance = $uibModal.open({
                 animation: true,
@@ -466,7 +510,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         })
 
     })
-    .controller('Whats-hot-moreCtrl', function($scope, TemplateService, NavigationService, $timeout,$stateParams) {
+    .controller('Whats-hot-moreCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
 
         $scope.template = TemplateService.changecontent("whats-hot-more");
         $scope.menutitle = NavigationService.makeactive("Whats-hot-more");
@@ -492,9 +536,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 $scope.classv = "active-tab";
             }
         };
-        NavigationService.whatsHotMore($stateParams.id,function(data) {
+        NavigationService.whatsHotMore($stateParams.id, function(data) {
             $scope.getOneWhatsHot = data.data.Details[0];
-            console.log(  $scope.getOneWhatsHot);
+            console.log($scope.getOneWhatsHot);
         });
 
     })
@@ -519,7 +563,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
         NavigationService.whatsHot(function(data) {
             $scope.myEvents = data.data.Events;
-            console.log(  $scope.myEvents);
+            console.log($scope.myEvents);
         });
         // $scope.mySlides = [{
         //     img: "img/qwe.jpg",
