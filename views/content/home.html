@@ -1,23 +1,28 @@
 <!---top image---->
-<div class="homeslidr">
+<!-- desktop slider-->
+<div class="homeslidr hidden-xs">
     <flex-slider flex-slide="s in mySlidestop track by $index" class="m1 figure922">
         <li>
             <div class="item">
                 <figure class=" ng-scope">
-                <a href={{s.url}} target="_blank">
-                    <img class="img-responsive " ng-src="{{s.image|serverimage}}" >
-                  </a>
-                    <!-- <figcaption>
-                    <div class="links lm2">
-                        <h1 class="theboldfont hclass">
-                          <p class=" hclass1 yellow_color">WHAT'S</p>
-                          <p class=" hclass2"> HOT</p>
-                        </h1>
-                        <p class="Robotor LMP">{{s.events}}<br>{{s.date}}</p>
-                    </div>
-                </figcaption> -->
+                    <a href={{s.url}} target="_blank">
+                        <img class="img-responsive " ng-src="{{s.image|serverimage}}">
+                    </a>
                 </figure>
-
+            </div>
+        </li>
+    </flex-slider>
+</div>
+<!-- mobile slider -->
+<div class="homeslidr hidden-sm hidden-md hidden-lg">
+    <flex-slider flex-slide="s in mySlidestop track by $index" class="m1 figure922">
+        <li>
+            <div class="item">
+                <figure class=" ng-scope">
+                    <a href={{s.url}} target="_blank">
+                        <img class="img-responsive " ng-src="{{s.image2|serverimage}}">
+                    </a>
+                </figure>
             </div>
         </li>
     </flex-slider>
@@ -43,21 +48,21 @@
                     <p class="p2 p22 theboldfont">DESTIN ATIONS</p>
                 </div>
 
-                <div class="col-md-2 col-sm-2 col-xs-6  padng0" ng-repeat="x in popularDestination | limitTo : 4" >
+                <div class="col-md-2 col-sm-2 col-xs-6  padng0" ng-repeat="x in popularDestination | limitTo : 4">
                     <div class="events">
 
-                      <a  ui-sref="pattaya({id:x._id})">
-                        <img ng-src="{{x.image|serverimage}}" alt="" class="img-responsive">
-                        <div class="shadow-down"></div>
-                        <div class="event-name">
-                            <span>{{x.name}}</span>
-                        </div>
-                        <div class="over-layer text-center">
-                            <div class="hoverimg">
-                                <img class="img-responsive" src="img/ggl.png">
+                        <a ui-sref="pattaya({id:x._id})">
+                            <img ng-src="{{x.image|serverimage}}" alt="" class="img-responsive">
+                            <div class="shadow-down"></div>
+                            <div class="event-name">
+                                <span>{{x.name}}</span>
                             </div>
-                        </div>
-                      </a>
+                            <div class="over-layer text-center">
+                                <div class="hoverimg">
+                                    <img class="img-responsive" src="img/ggl.png">
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <!-- <div class="col-md-2 col-sm-2 col-xs-6  padng0">
@@ -137,7 +142,8 @@
                 </div> -->
                 <div class="col-md-4 col-sm-4 col-xs-4 displaynon padng0">
                     <p class="p p1 theboldfont">POPULAR</p>
-                    <p class="p2 p222 theboldfont">ATTRA <br>CTIONS</p>
+                    <p class="p2 p222 theboldfont">ATTRA
+                        <br>CTIONS</p>
                 </div>
             </div>
         </div>
@@ -165,7 +171,7 @@
 
 
                         <select class="form-control Robotor">
-                      <option ng-repeat="x in dropDown">{{x.name}}</option>
+                            <option ng-repeat="x in dropDown">{{x.name}}</option>
                         </select>
                         <button type="submit" class="gobtn">GO</button>
 

@@ -1,5 +1,5 @@
 // var adminurl = "http://localhost:1337/";
-var adminurl = "http://192.168.100.109:1337/";
+var adminurl = "http://192.168.100.103:1337/";
 if (isproduction) {
     adminURL = "http://www.wohlig.co.in/demo/index.php";
 } else {
@@ -155,6 +155,14 @@ var navigationservice = angular.module('navigationservice', [])
                 method: 'POST',
                 withCredentials: true,
                 data: {id:id}
+            }).success(callback);
+        },
+        getSearch: function(formData, callback) {
+
+            $http({
+                url: adminurl + 'RestApi/CategoryFilter',
+                method: 'POST',
+                data: formData
             }).success(callback);
         },
         // addToCart: function(id, callback) {

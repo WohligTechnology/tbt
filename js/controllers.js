@@ -110,35 +110,61 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 console.log($scope.activityLoop);
             });
         }
-        NavigationService.ActivityLand(function(data) {
-            console.log(data);
-            $scope.myDropdown = data.data.DestinationDropdown;
-            var images = _.groupBy(data.data.Images, function(n) {
-                if (_.isEmpty(n.image1)) {
-                    return "bigImage";
-                } else {
-                    return "smallImage";
-                }
-            });
-            if (images.smallImage) {
-                images.smallImage = _.chunk(images.smallImage, 3);
-            }
-            $scope.activityLand = images;
-            if (images.bigImage.length >= images.smallImage.length) {
-                $scope.activityLoop = _.times(images.bigImage.length, Number);
-            } else {
-                $scope.activityLoop = _.times(images.smallImage.length, Number);
-            }
-            console.log($scope.activityLoop);
 
-
-
-        });
         NavigationService.ActivityLand(function(data) {
             $scope.Banner = data.data.Banner;
         });
-
-
+        $scope.viewLess = false;
+        $scope.viewMore = false;
+        $scope.loadLessActivities = function() {
+            NavigationService.ActivityLand(function(data) {
+                console.log(data);
+                $scope.myDropdown = data.data.DestinationDropdown;
+                var images = _.groupBy(data.data.Images, function(n) {
+                    if (_.isEmpty(n.image1)) {
+                        return "bigImage";
+                    } else {
+                        return "smallImage";
+                    }
+                });
+                if (images.smallImage) {
+                    images.smallImage = _.chunk(images.smallImage, 3);
+                    console.log('images.smallImage111111111111111111', images.smallImage);
+                    $scope.smallImageArray = _.cloneDeep(images.smallImage);
+                    images.smallImage = _.take(images.smallImage, 2);
+                }
+                if (images.bigImage) {
+                    $scope.bigImageArray = _.cloneDeep(images.bigImage);
+                    images.bigImage = _.take(images.bigImage, 1);
+                }
+                $scope.activityLand = images;
+                $scope.viewMore = true;
+                if (images.bigImage.length >= images.smallImage.length) {
+                    $scope.activityLoop = _.times(images.bigImage.length, Number);
+                    console.log('if $scope.activityLoop', $scope.activityLoop);
+                } else {
+                    $scope.activityLoop = _.times(images.smallImage.length, Number);
+                    console.log('else $scope.activityLoop', $scope.activityLoop);
+                }
+                // console.log($scope.activityLoop);
+            });
+        }
+        $scope.loadLessActivities();
+        $scope.loadMoreActivities = function() {
+            $scope.viewMore = false;
+            $scope.viewLess = true;
+            var images = [];
+            images.smallImage = $scope.smallImageArray;
+            images.bigImage = $scope.bigImageArray;
+            $scope.activityLand = images;
+            if (images.bigImage.length >= images.smallImage.length) {
+                $scope.activityLoop = _.times(images.bigImage.length, Number);
+                console.log('if $scope.activityLoop', $scope.activityLoop);
+            } else {
+                $scope.activityLoop = _.times(images.smallImage.length, Number);
+                console.log('else $scope.activityLoop', $scope.activityLoop);
+            }
+        }
     })
 
 .controller('StaticCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
@@ -234,42 +260,53 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         $scope.typeArr = [];
 
-        $scope.searchExpert = function() {
-            var y = 0;
-            _.each($scope.typeArr, function(n) {
-                if (!n.model || n.model == false) {
-                    $scope.selectedAll.location = false;
-                } else if (n.model == true) {
-                    y++;
-                }
-            })
-            if (y == $scope.typeArr.length) {
-                $scope.selectedAll.location = true;
-            }
+        $scope.searchChange = function() {
+
 
             var dataToSend = {
                 destination: $stateParams.id,
-                location: [],
+                type: [],
             };
-            dataToSend.location = _.map(_.filter($scope.locationArr, function(n) {
-                return n.model
-            }), 'value');
+            // dataToSend.location = _.map(_.filter($scope.locationArr, function(n) {
+            //     return n.model
+            // }), 'value');
+            console.log('$scope.typeArr',$scope.typeArr.day);
+            if($scope.typeArr.day == true && $scope.typeArr.night == false){
+              console.log('fftghjdrtfgdfgh');
+              $scope.myarr = [];
+
+            dataToSend.type.push("day");
+          }else if($scope.typeArr.night == true && $scope.typeArr.day == false){
+            dataToSend.type = [];
+            dataToSend.type.push("night");
+          }else{
+            console.log('dfgdshfghjgfjhgjdgjhgdjhgjh');
+            dataToSend.type = [];
+            dataToSend.type.push("day","night");
+            console.log(dataToSend.type);
+          }
+          //
+          // $scope.typeArr2=  _.groupBy($scope.typeArr,true);
+          //   console.log('$scope.typeArr2',$scope.typeArr2);
+          //   dataToSend.type = dataToSend.type.push($scope.typeArr);
+            console.log('  dataToSend.type',  dataToSend.type);
             NavigationService.getSearch(dataToSend, function(data) {
-                if (data.data.length == 0 || $stateParams.search == '') {
-                    $scope.noSearchFound = true;
-                    // $state.go('search', ({
-                    //     search: ''
-                    // }));
-                }
-                console.log(data.data.length);
-                    if ($scope.typeArr.length == 0) {
-                        _.each(data.data.type, function(n) {
-                            $scope.typeArr.push({
-                                value: n,
-                                model: true
-                            });
-                        });
-                    }
+              console.log(data.data);
+            $scope.getActivity = data.data.Category;
+
+                // if (data.data.length == 0 || $stateParams.search == '') {
+                //     $scope.noSearchFound = true;
+                //
+                // }
+                // console.log(data.data.length);
+                // if ($scope.typeArr.length == 0) {
+                //     _.each(data.data.type, function(n) {
+                //         $scope.typeArr.push({
+                //             value: n,
+                //             model: true
+                //         });
+                //     });
+                // }
 
             });
 

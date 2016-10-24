@@ -87,7 +87,8 @@
             <div class="load-more text-center" ng-hide="changeDestData==0">
                <div class="over-layer pdt30 pdb30">
                   <div class="button-holder">
-                     <button class="ext-detail">LOAD MORE</button>
+                     <button class="ext-detail" ng-click="loadMoreActivities()" ng-if="viewMore">View More</button>
+                     <button class="ext-detail" ng-if="viewLess && !viewMore" ng-click="loadLessActivities()">View Less</button>
                   </div>
                </div>
             </div>
