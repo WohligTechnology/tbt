@@ -242,58 +242,85 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.oneAtATime = true;
 
         TemplateService.menu = "";
-        $scope.selectedAll = {};
-        $scope.selectedAll.type = true;
-        $scope.checkAllLocation = function() {
-            // if ($scope.selectedAllLocation) {
-            //     $scope.selectedAllLocation = false;
-            // } else {
-            //     $scope.selectedAllLocation = true;
-            // }
-            var toggleStatusLocation = $scope.selectedAll.type;
-            _.forEach($scope.typeArr, function(location) {
-                location.model = toggleStatusLocation;
-            });
-            // $scope.searchExpert();
+        $scope.options = [{
+            value: 'day',
+            selected: false
+        }, {
+            value: 'night',
+            selected: false
+        }];
+        // var valAll = _.each($scope.options,function(o) { return o.selected==true });
+        // console.log('valAll',valAll);
+$scope.isAllSelected = true;
+        $scope.toggleAll = function() {
+                var toggleStatus = !$scope.isAllSelected;
+                angular.forEach($scope.options, function(itm) {
+                    itm.selected = toggleStatus;
+                });
+                // var valAll = _.each($scope.options, ['selected', true]);
+                //   console.log('valAll', valAll);
+                // var valAll2 = _.map(valAll, function(itm) {
+                //   if(itm.selected){
+                //     return itm.value;
+                //   }
+                //
+                // });
+                //   console.log('valAll2', valAll2);
 
-        };
+                // $scope.searchChange(valAll2)
+            }
+            // $scope.selectedAll = {};
+            // $scope.selectedAll.type = true;
+            // $scope.checkAllLocation = function() {
+            //     var toggleStatusLocation = $scope.selectedAll.type;
+            //     _.forEach($scope.typeArr, function(location) {
+            //         location.model = toggleStatusLocation;
+            //     });
 
         $scope.typeArr = [];
+        var dataToSend = {
+            destination: $stateParams.id,
+            type: [],
+        };
 
-        $scope.searchChange = function() {
+        $scope.searchChange = function(val) {
+          console.log(val);
+            $scope.isAllSelected = $scope.options.every(function(itm) {
+                return itm.selected;
+            })
+            var foundIndex = dataToSend.type.indexOf(val);
+            if (foundIndex == -1) {
+                dataToSend.type.push(val);
+                console.log('if  dataToSend.type', dataToSend.type);
+            } else {
+                dataToSend.type.splice(foundIndex, 1);
+                console.log('else  dataToSend.type', dataToSend.type);
+            }
 
-
-            var dataToSend = {
-                destination: $stateParams.id,
-                type: [],
-            };
-            // dataToSend.location = _.map(_.filter($scope.locationArr, function(n) {
-            //     return n.model
-            // }), 'value');
-            console.log('$scope.typeArr',$scope.typeArr.day);
-            if($scope.typeArr.day == true && $scope.typeArr.night == false){
-              console.log('fftghjdrtfgdfgh');
-              $scope.myarr = [];
-
-            dataToSend.type.push("day");
-          }else if($scope.typeArr.night == true && $scope.typeArr.day == false){
-            dataToSend.type = [];
-            dataToSend.type.push("night");
-          }else{
-            console.log('dfgdshfghjgfjhgjdgjhgdjhgjh');
-            dataToSend.type = [];
-            dataToSend.type.push("day","night");
-            console.log(dataToSend.type);
-          }
-          //
-          // $scope.typeArr2=  _.groupBy($scope.typeArr,true);
-          //   console.log('$scope.typeArr2',$scope.typeArr2);
-          //   dataToSend.type = dataToSend.type.push($scope.typeArr);
-            console.log('  dataToSend.type',  dataToSend.type);
+            // console.log('$scope.typeArr',$scope.typeArr);
+            //   if($scope.typeArr.day == true && $scope.typeArr.night == false){
+            //     console.log('fftghjdrtfgdfgh');
+            //     $scope.myarr = [];
+            //
+            //   dataToSend.type.push("day");
+            // }else if($scope.typeArr.night == true && $scope.typeArr.day == false){
+            //   dataToSend.type = [];
+            //   dataToSend.type.push("night");
+            // }else{
+            //   console.log('dfgdshfghjgfjhgjdgjhgdjhgjh');
+            //   dataToSend.type = [];
+            //   dataToSend.type.push("day","night");
+            //   console.log(dataToSend.type);
+            // }
+            //
+            // $scope.typeArr2=  _.groupBy($scope.typeArr,true);
+            //   console.log('$scope.typeArr2',$scope.typeArr2);
+            //   dataToSend.type = dataToSend.type.push($scope.typeArr);
+            // console.log('  dataToSend.type',  dataToSend.type);
             NavigationService.getSearch(dataToSend, function(data) {
-              console.log(data.data);
-            $scope.getActivity = data.data.Category;
-
+                // console.log(data.data);
+                $scope.getActivity = data.data.Category;
+                // console.log('$scope.getActivity',$scope.getActivity);
                 // if (data.data.length == 0 || $stateParams.search == '') {
                 //     $scope.noSearchFound = true;
                 //
@@ -311,6 +338,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             });
 
         };
+        //
+        // $scope.pushorpop = function(val) {
+        //     var foundIndex = $scope.getin.enquiryarr.indexOf(val);
+        //     if (foundIndex == -1) {
+        //         $scope.getin.enquiryarr.push(val);
+        //     } else {
+        //         $scope.getin.enquiryarr.splice(foundIndex, 1);
+        //     }
+        // }
 
 
         $scope.open4 = function() {

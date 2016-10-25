@@ -148,19 +148,24 @@
                             <div class="col-md-4 col-sm-6 col-xs-12  pading5 ">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="{{location.value}}" name="all" ng-model="selectedAll.location" id="all" ng-change=checkAllLocation()>All
+                                        <input type="checkbox" name="all" ng-model="isAllSelected" id="all" ng-click="toggleAll()">All
                                       </label>
                                 </div>
-                                <div class="checkbox">
+                                <div class="checkbox" ng-repeat = "option in options">
                                     <label>
-                                      <input type="checkbox" value="" id="day" ng-model="typeArr.day" ng-change="searchChange()">Day</label>
+                                      <input type="checkbox" ng-model="option.selected" ng-change="searchChange(option.value)">{{option.value}}</label>
+                                    <img src="img/Vector-Smart-Object1.png" alt="" class="check_img">
+                                </div>
+                                <!-- <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="" id="day" ng-click="searchChange('day')">Day</label>
                                     <img src="img/Vector-Smart-Object1.png" alt="" class="check_img">
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                      <input type="checkbox" value="" id="night" ng-model="typeArr.night" ng-change="searchChange()">Night</label>
+                                      <input type="checkbox" value="" id="night" ng-click="searchChange('night')">Night</label>
                                     <img src="img/Vector-Smart-Object (1).png" alt="" class="check_img2">
-                                </div>
+                                </div> -->
                             </div>
                             <div class="col-md-8 col-sm-6 col-xs-12">
                                 <p>Customise your trip by adding to cart</p>
@@ -514,7 +519,7 @@
                         <div uib-accordion-group  class="panel-default panelacor" ng-class="{'yellow_back_color': status.open4, '': !status.open4}" ng-repeat="data in getTitle" ng-click="goToFunction(data._id)">
                             <uib-accordion-heading class="panel-heading">
                                 <div class="accord-title" >
-                                    <h4 class="panel-title fontpanel Pregular bluecol"><img src="{{data.thumbnail | serverimage}}" alt="" class="image_title" >  {{data.title}}
+                                    <h4 class="panel-title fontpanel Pregular bluecol"><img src="{{data.thumbnail | serverimage}}" alt="" class="image_title" >  {{data.name}}
                                       <i class="pull-right fa " ng-class="{'fa fa-minus': status.open4, 'fa fa-plus': !status.open4}"></i>
                                     </h4>
                                 </div>
