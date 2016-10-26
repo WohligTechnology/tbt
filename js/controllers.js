@@ -242,112 +242,152 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.oneAtATime = true;
 
         TemplateService.menu = "";
-        $scope.options = [{
-            value: 'day',
-            selected: false
-        }, {
-            value: 'night',
-            selected: false
-        }];
-        // var valAll = _.each($scope.options,function(o) { return o.selected==true });
-        // console.log('valAll',valAll);
-$scope.isAllSelected = true;
-        $scope.toggleAll = function() {
-                var toggleStatus = !$scope.isAllSelected;
-                angular.forEach($scope.options, function(itm) {
-                    itm.selected = toggleStatus;
-                });
-                // var valAll = _.each($scope.options, ['selected', true]);
-                //   console.log('valAll', valAll);
-                // var valAll2 = _.map(valAll, function(itm) {
-                //   if(itm.selected){
-                //     return itm.value;
-                //   }
-                //
-                // });
-                //   console.log('valAll2', valAll2);
+        // $scope.options = [{
+        //     value: 'day',
+        //     selected: true
+        // }, {
+        //     value: 'night',
+        //     selected: true
+        // }];
+        // $scope.isAllSelected = true;
+        // $scope.toggleAll = function() {
+        //     var toggleStatus = !$scope.isAllSelected;
+        //     angular.forEach($scope.options, function(itm) {
+        //         itm.selected = toggleStatus;
+        //     });
+        // }
+        // $scope.typeArr = [];
+        // var dataToSend = {
+        //     destination: $stateParams.id,
+        //     type: [],
+        // };
+        //
+        // $scope.searchChange = function(val) {
+        //     console.log(val);
+        //     $scope.isAllSelected = $scope.options.every(function(itm) {
+        //         return itm.selected;
+        //     })
+        //     var foundIndex = dataToSend.type.indexOf(val);
+        //     if (foundIndex == -1) {
+        //         dataToSend.type.push(val);
+        //         console.log('if  dataToSend.type', dataToSend.type);
+        //     } else {
+        //         dataToSend.type.splice(foundIndex, 1);
+        //         console.log('else  dataToSend.type', dataToSend.type);
+        //     }
+        //
+        //     NavigationService.getSearch(dataToSend, function(data) {
+        //         $scope.getActivity = data.data.Category;
+        //     });
+        //
+        // };
 
-                // $scope.searchChange(valAll2)
-            }
-            // $scope.selectedAll = {};
-            // $scope.selectedAll.type = true;
-            // $scope.checkAllLocation = function() {
-            //     var toggleStatusLocation = $scope.selectedAll.type;
-            //     _.forEach($scope.typeArr, function(location) {
-            //         location.model = toggleStatusLocation;
-            //     });
 
-        $scope.typeArr = [];
-        var dataToSend = {
-            destination: $stateParams.id,
-            type: [],
-        };
+        $scope.viewLess = false;
+        $scope.viewMore = false;
+        $scope.more = false;
+        $scope.checkIt = {};
 
-        $scope.searchChange = function(val) {
-          console.log(val);
-            $scope.isAllSelected = $scope.options.every(function(itm) {
-                return itm.selected;
-            })
-            var foundIndex = dataToSend.type.indexOf(val);
-            if (foundIndex == -1) {
-                dataToSend.type.push(val);
-                console.log('if  dataToSend.type', dataToSend.type);
-            } else {
-                dataToSend.type.splice(foundIndex, 1);
-                console.log('else  dataToSend.type', dataToSend.type);
-            }
-
-            // console.log('$scope.typeArr',$scope.typeArr);
-            //   if($scope.typeArr.day == true && $scope.typeArr.night == false){
-            //     console.log('fftghjdrtfgdfgh');
-            //     $scope.myarr = [];
-            //
-            //   dataToSend.type.push("day");
-            // }else if($scope.typeArr.night == true && $scope.typeArr.day == false){
-            //   dataToSend.type = [];
-            //   dataToSend.type.push("night");
-            // }else{
-            //   console.log('dfgdshfghjgfjhgjdgjhgdjhgjh');
-            //   dataToSend.type = [];
-            //   dataToSend.type.push("day","night");
-            //   console.log(dataToSend.type);
-            // }
-            //
-            // $scope.typeArr2=  _.groupBy($scope.typeArr,true);
-            //   console.log('$scope.typeArr2',$scope.typeArr2);
-            //   dataToSend.type = dataToSend.type.push($scope.typeArr);
-            // console.log('  dataToSend.type',  dataToSend.type);
-            NavigationService.getSearch(dataToSend, function(data) {
-                // console.log(data.data);
-                $scope.getActivity = data.data.Category;
+        $scope.loadLessPackage = function() {
+            var myarr = [];
+            NavigationService.cityDetails($stateParams.id, function(data) {
+                $scope.getTitle = data.data.getTitle;
+                $scope.getDestination = data.data.getDestination;
+                $scope.getPackage = data.data.getPackage;
+                // $scope.getActivity = data.data.getActivity;
                 // console.log('$scope.getActivity',$scope.getActivity);
-                // if (data.data.length == 0 || $stateParams.search == '') {
-                //     $scope.noSearchFound = true;
-                //
-                // }
-                // console.log(data.data.length);
-                // if ($scope.typeArr.length == 0) {
-                //     _.each(data.data.type, function(n) {
-                //         $scope.typeArr.push({
-                //             value: n,
-                //             model: true
-                //         });
+                $scope.getActivityArr = _.cloneDeep($scope.getActivity);
+                $scope.getPackageArr = _.cloneDeep($scope.getPackage);
+                $scope.viewMore = true;
+                $scope.getPackage = _.take($scope.getPackage, 8);
+                // $scope.getActivity = _.take($scope.getActivity, 4);
+                // _.forEach($scope.getActivity, function(n) {
+                //   console.log(n);
+                //     $scope.locationArr.push({
+                //         value: n.type,
+                //         model: true
                 //     });
-                // }
-
+                // });
+                // console.log($scope.locationArr);
             });
 
-        };
-        //
-        // $scope.pushorpop = function(val) {
-        //     var foundIndex = $scope.getin.enquiryarr.indexOf(val);
-        //     if (foundIndex == -1) {
-        //         $scope.getin.enquiryarr.push(val);
-        //     } else {
-        //         $scope.getin.enquiryarr.splice(foundIndex, 1);
-        //     }
-        // }
 
+        };
+
+        $scope.loadLessPackage();
+        $scope.loadMorePackage = function() {
+            console.log('inside loadmore fun');
+            $scope.more = true;
+            $scope.viewMore = false;
+            $scope.viewLess = true;
+            $scope.getPackage = $scope.getPackageArr;
+            $scope.getActivity = $scope.getActivityArr;
+        };
+
+
+
+        $scope.selectedAll = {};
+        $scope.selectedAll.location = true;
+        $scope.checkAllLocation = function() {
+            var toggleStatusLocation = $scope.selectedAll.location;
+            _.forEach($scope.locationArr, function(location) {
+                location.model = toggleStatusLocation;
+            });
+            $scope.searchExpert();
+        };
+        // $scope.locationArr = [];
+        $scope.locationArr = [{
+            value: 'day',
+            model: true
+        }, {
+            value: 'night',
+            model: true
+        }];
+        $scope.searchExpert = function() {
+            var y = 0;
+            _.forEach($scope.locationArr, function(n) {
+                if (!n.model || n.model == false) {
+                    $scope.selectedAll.location = false;
+                } else if (n.model == true) {
+                    y++;
+                }
+            })
+            if (y == $scope.locationArr.length) {
+                $scope.selectedAll.location = true;
+            }
+            var dataToSend = {
+                destination: $stateParams.id,
+                type: []
+            };
+            console.log('$scope.locationArr', $scope.locationArr);
+            dataToSend.type = _.map(_.filter($scope.locationArr, function(n) {
+                return n.model
+            }), 'value');
+            NavigationService.getSearch(dataToSend, function(data) {
+                $scope.getActivity = data.data.Category;
+                console.log('data.data', $scope.getActivity.length);
+                if($scope.getActivity.length == 0){
+                  $scope.noResult = true;
+                }
+                // NavigationService.cityDetails($stateParams.id, function(data) {
+                //     $scope.getActivity = data.data.getActivity;
+                //     console.log('$scope.getActivity', $scope.getActivity);
+                //     $scope.getActivity = _.take($scope.getActivity, 4);
+                //     if ($scope.locationArr.length == 0) {
+                //         console.log('inside if');
+                //         _.forEach($scope.getActivity, function(n) {
+                //             console.log(n);
+                //             $scope.locationArr.push({
+                //                 value: n.type,
+                //                 model: true
+                //             });
+                //         });
+                //         console.log($scope.locationArr);
+                //     }
+                // });
+            });
+        };
+        $scope.searchExpert();
 
         $scope.open4 = function() {
             $scope.modalInstance = $uibModal.open({
@@ -425,99 +465,8 @@ $scope.isAllSelected = true;
                 $scope.classv = "active-tab";
             }
         };
-        $scope.viewLess = false;
-        $scope.viewMore = false;
-        $scope.more = false;
-        $scope.checkIt = {};
-
-        $scope.loadLessPackage = function() {
-            var myarr = [];
-            NavigationService.cityDetails($stateParams.id, function(data) {
-                $scope.getTitle = data.data.getTitle;
-                $scope.getDestination = data.data.getDestination;
-                $scope.getPackage = data.data.getPackage;
-                $scope.getActivity = data.data.getActivity;
-                $scope.getActivityArr = _.cloneDeep($scope.getActivity);
-                $scope.getPackageArr = _.cloneDeep($scope.getPackage);
-                $scope.viewMore = true;
-                $scope.getPackage = _.take($scope.getPackage, 8);
-                $scope.getActivity = _.take($scope.getActivity, 4);
-            });
 
 
-        };
-
-        $scope.loadLessPackage();
-        $scope.loadMorePackage = function() {
-            console.log('inside loadmore fun');
-            $scope.more = true;
-            $scope.viewMore = false;
-            $scope.viewLess = true;
-            $scope.getPackage = $scope.getPackageArr;
-            $scope.getActivity = $scope.getActivityArr;
-        };
-
-        //         NavigationService.cityDetails($stateParams.id, function(data) {
-        //             console.log("data", data.data);
-        //             $scope.getTitle = data.data.getTitle;
-        //             console.log('$scope.getTitle', $scope.getTitle);
-        //             $scope.getActivity = data.data.getActivity;
-        //             $scope.getActivity = _.take($scope.getActivity, 8);
-        // $scope.viewLess = false;
-        //             //  _.forEach($scope.getActivity,function(key){
-        //             //    $scope.getActivity.type=="all"
-        //             //
-        //             //
-        //             //  })
-        //             $scope.getDestination = data.data.getDestination;
-        //             $scope.getPackage = data.data.getPackage;
-        //             $scope.getPackage = _.take($scope.getPackage, 8);
-        //             console.log('$scope.getPackage', $scope.getPackage);
-        //             $scope.loadMorePackage = function() {
-        //                 $scope.getPackage = data.data.getPackage;
-        //                 $scope.getPackage.tabName = 'View More';
-        //
-        //                 $scope.viewMore = false;
-        //                 $scope.viewLess = true;
-        //
-        //             };
-        //             $scope.loadLessPackage = function() {
-        //                 $scope.getPackage = _.take($scope.getPackage, 8);
-        //
-        //
-        //
-        //             };
-        //
-        //             $scope.loadMoreActivity = function() {
-        //                 $scope.more = true;
-        //                 $scope.getActivity = data.data.getActivity;
-        //                 $scope.getPackage.tabName = 'View Lesss';
-        //             };
-        //             $scope.loadLessActivity = function() {
-        //                 $scope.more = false;
-        //                 $scope.getActivity = _.take($scope.getActivity, 8);
-        //             };
-        //
-        //
-        //
-        //         });
-
-
-
-        // NavigationService.DestinationTitle(function(data) {
-        //     console.log(data.data);
-        //     $scope.getTitle=data.data.getTitle;
-        //     console.log("$scope.getTitle",$scope.getTitle);
-        // })
-        // $scope.searchFun=function(){
-        //   switch (expression) {
-        //     case expression:
-        //
-        //       break;
-        //     default:
-        //
-        //   }
-        // }
 
     })
     .controller('Pattaya2Ctrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {

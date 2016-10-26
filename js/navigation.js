@@ -1,5 +1,5 @@
 // var adminurl = "http://localhost:1337/";
-var adminurl = "http://192.168.100.113:1335/";
+var adminurl = "http://192.168.2.25:1337/";
 if (isproduction) {
     adminURL = "http://www.wohlig.co.in/demo/index.php";
 } else {
