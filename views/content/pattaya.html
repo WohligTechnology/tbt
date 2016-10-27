@@ -173,8 +173,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row pattmarg3">
-                    <div class="col-md-3 col-sm-4 col-xs-6 pading0" ng-repeat="data in getActivity">
+                <div class="row pattmarg3" ng-hide="noResult">
+                    <div class="col-md-3 col-sm-4 col-xs-6 pading0" ng-repeat="data in getActivity" >
                         <div class="flipDiv">
                             <figure>
                                 <div class="front">
@@ -202,7 +202,7 @@
                             </figure>
                         </div>
                     </div>
-                    <div ng-if="noResult"><h1>No Result Found</h1></div>
+
                     <!-- <div class="col-md-3 col-sm-4 col-xs-6 pading0">
                         <div class="flipDiv">
                             <figure>
@@ -372,9 +372,10 @@
                         </div>
                     </div> -->
                 </div>
+                  <div ng-show="noResult"><h1>No Result Found</h1></div>
                 <div class="col-md-12  col-sm-12 col-xs-12 loadimag text-center ">
                     <a class="whit_color" ng-click="loadMorePackage()" ng-if="viewMore">VIEW  MORE</a>
-                      <a class="whit_color" ng-if="viewLess && !viewMore" ng-click="loadLessPackage()" >VIEW  LESS</a>
+                      <a class="whit_color" ng-if="viewLess && !viewMore" ng-click="searchExpert()" >VIEW  LESS</a>
                 </div>
                 <!-- <div class="col-md-12  col-sm-12 col-xs-12 loadimag text-center ">
                     <a class="whit_color" ng-click="loadMoreActivity()" ng-if="!more">VIEW  MORE</a>

@@ -296,7 +296,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 $scope.getPackage = data.data.getPackage;
                 // $scope.getActivity = data.data.getActivity;
                 // console.log('$scope.getActivity',$scope.getActivity);
-                $scope.getActivityArr = _.cloneDeep($scope.getActivity);
+                // $scope.getActivityArr = _.cloneDeep($scope.getActivity);
                 $scope.getPackageArr = _.cloneDeep($scope.getPackage);
                 $scope.viewMore = true;
                 $scope.getPackage = _.take($scope.getPackage, 8);
@@ -343,6 +343,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             value: 'night',
             model: true
         }];
+        $scope.noResult = false;
         $scope.searchExpert = function() {
             var y = 0;
             _.forEach($scope.locationArr, function(n) {
@@ -364,27 +365,33 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 return n.model
             }), 'value');
             NavigationService.getSearch(dataToSend, function(data) {
-                $scope.getActivity = data.data.Category;
-                console.log('data.data', $scope.getActivity.length);
-                if($scope.getActivity.length == 0){
-                  $scope.noResult = true;
+              $scope.viewMore = true;
+                if (data.data.Category.length == 0) {
+                    $scope.noResult = true;
+                } else {
+
+                    $scope.noResult = false;
+                    $scope.getActivity = data.data.Category;
+                    console.log('data.data', $scope.getActivity.length);
+                    $scope.getActivityArr = _.cloneDeep($scope.getActivity);
+                    $scope.getActivity = _.take($scope.getActivity, 4);
+                    // NavigationService.cityDetails($stateParams.id, function(data) {
+                    //     $scope.getActivity = data.data.getActivity;
+                    //     console.log('$scope.getActivity', $scope.getActivity);
+                    //     $scope.getActivity = _.take($scope.getActivity, 4);
+                    //     if ($scope.locationArr.length == 0) {
+                    //         console.log('inside if');
+                    //         _.forEach($scope.getActivity, function(n) {
+                    //             console.log(n);
+                    //             $scope.locationArr.push({
+                    //                 value: n.type,
+                    //                 model: true
+                    //             });
+                    //         });
+                    //         console.log($scope.locationArr);
+                    //     }
+                    // });
                 }
-                // NavigationService.cityDetails($stateParams.id, function(data) {
-                //     $scope.getActivity = data.data.getActivity;
-                //     console.log('$scope.getActivity', $scope.getActivity);
-                //     $scope.getActivity = _.take($scope.getActivity, 4);
-                //     if ($scope.locationArr.length == 0) {
-                //         console.log('inside if');
-                //         _.forEach($scope.getActivity, function(n) {
-                //             console.log(n);
-                //             $scope.locationArr.push({
-                //                 value: n.type,
-                //                 model: true
-                //             });
-                //         });
-                //         console.log($scope.locationArr);
-                //     }
-                // });
             });
         };
         $scope.searchExpert();
